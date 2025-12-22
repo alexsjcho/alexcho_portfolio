@@ -216,7 +216,7 @@ export default function Projects() {
                 alt={project.title}
                 width={400}
                 height={400}
-                className="w-[300px] h-[300px] object-contain mx-auto mb-4"
+                className="w-[300px] h-[300px] object-contain mx-auto mb-4 mt-12"
               />
               <div className="flex items-center mb-2">
                 <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
