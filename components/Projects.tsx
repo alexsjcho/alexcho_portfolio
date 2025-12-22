@@ -117,7 +117,15 @@ const projectsData = [
     tools: ['Terraform', 'AWS', 'GCP', 'Sentinel', 'Terraform Cloud', 'Vault', 'Virtual Machine', 'Compute Engine', 'IAM'],
     dateAdded: '2025-05-10',
   },
-
+  {
+    title: 'IaC Provisioning with StackGen and Aiden AI Agent',
+    description: 'Very simple proof of concept for IaC provisioning with StackGen and Aiden AI Agent',
+    image: `${getBasePath()}/img/stackgen-topology.png`,
+    category: 'Infrastructure',
+    repo: 'https://github.com/alexsjcho/stackgen_demo',
+    tools: ['StackGen', 'Aiden AI Agent', 'Terraform', 'AWS', 'Infrastructure as Code'],
+    dateAdded: '2025-12-22',
+  },
   /*
   {
     title: 'Another AI project TBD',
