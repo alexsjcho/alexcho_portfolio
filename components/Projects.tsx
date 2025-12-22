@@ -13,7 +13,7 @@ type CategoryType = 'AI/ML' | 'Web' | 'UX/UI Design' | 'Infrastructure';
 interface Project {
   title: string;
   description: string;
-  category: CategoryType;  // Use the specific type here
+  category: CategoryType[];  // Allow multiple categories
   image: string;
   demo?: string;
   repo?: string;
@@ -28,7 +28,7 @@ const projectsData = [
     description: 'jQuery app: Find and meet with a mentor near you',
     image: `${getBasePath()}/img/mentornear.png`,
     repo: 'https://github.com/alexsjcho/mentor-near-api-capstone',
-    category: 'Web',
+    category: ['Web'],
     tools: ['jQuery', 'HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Normalize.css', '3rd Party API'],
     dateAdded: '2019-01-15',
   },
@@ -37,7 +37,7 @@ const projectsData = [
     description: 'Allows users to score their sales conversations',
     image: `${getBasePath()}/img/qualified.png`,
     repo: 'https://github.com/alexsjcho/qualified-react-redux-immutable-app',
-    category: 'Web',
+    category: ['Web'],
     tools: ['React', 'Redux', 'React-Router', 'Immutable', 'Bootstrap',  'Jest', 'Enzyme', 'JavaScript', 'CSS', '3rd Party API'],
     dateAdded: '2019-06-20',
   },
@@ -46,7 +46,7 @@ const projectsData = [
     description: 'Automate your goals via everday software tools',
     image: `${getBasePath()}/img/sokrapp.png`,
     repo: 'https://github.com/alexsjcho/smart-okr-react-redux-app',
-    category: 'Web',
+    category: ['Web'],
     tools: ['React', 'Redux', 'JavaScript', '3rd Party API'],
     dateAdded: '2019-09-10',
   },
@@ -54,7 +54,7 @@ const projectsData = [
     title: 'GramPages',
     description: 'GramPages provides engagement analytics for Instagram to empower influencers to make content creation decisions that will yield the greatest impact (no longer hosted, private GitHub repo)',
     image: `${getBasePath()}/img/grampages.png`,
-    category: 'Web',
+    category: ['Web'],
     tools: ['JavaScript', 'CSS', '3rd Party API', 'React', 'Redux', 'React-Router', 'Express', 'Node.js', 'MongoDB', 'Mongoose'],
     dateAdded: '2019-12-15',
   },
@@ -65,7 +65,7 @@ const projectsData = [
     image: `${getBasePath()}/img/rolloutsystem.png`,
     demo: 'https://www.figma.com/proto/NdFRq7UsKkyrfIFddtZitG/RLS-Q32024?node-id=36-27387&t=PDo2dUO7bLGzoPVl-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
     diagram:'https://miro.com/app/board/uXjVIAVfeT0=/?share_link_id=737365740298', 
-    category: 'UX/UI Design',
+    category: ['Infrastructure'],
     tools: ['Figma'],
     dateAdded: '2025-01-15',
   },
@@ -76,7 +76,7 @@ const projectsData = [
     image: `${getBasePath()}/img/bytegate.png`,
     demo: 'https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/feature-gate-Q3-2024?node-id=1-52481&t=td5ZU4pdPnNBlpLM-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
     diagram:'https://miro.com/app/board/uXjVIAKWrLw=/?share_link_id=523562170775', 
-    category: 'UX/UI Design',
+    category: ['Infrastructure'],
     tools: ['Figma'],
     dateAdded: '2025-01-20',
   },
@@ -84,7 +84,7 @@ const projectsData = [
     title: 'Apple Sales Forecasting 2024',
     description: 'Beginner project on Apple sales forecasting for 2024',
     image: `${getBasePath()}/img/correlation_heatmap.png`,
-    category: 'AI/ML',
+    category: ['AI/ML'],
     repo: 'https://github.com/alexsjcho/apple-2024-sales-dataset',
     tools: ['Python', 'Machine Learning', 'Data Analysis', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Jupyter Notebook'],
     dateAdded: '2025-02-03',
@@ -93,7 +93,7 @@ const projectsData = [
     title: 'AI-Powered Customer Service Chatbot',
     description: 'This was a practice project to learn more about AI Agents workflows. Used Langflow as the backend to power my Next.js frontend.',
     image: `${getBasePath()}/img/ai_agent_chatbot.png`,
-    category: 'AI/ML',
+    category: ['AI/ML'],
     repo: 'https://github.com/alexsjcho/customer_support_ai_agent',
     tools: ['Python', 'Langflow', 'OpenAI', 'Astra-DB', 'Next.js'],
     dateAdded: '2025-03-15',
@@ -102,7 +102,7 @@ const projectsData = [
     title: 'Simple Terminal AI Agent',
     description: 'Created a simple AI Agent from scratch using Anthropic\'s Claude API and tools',
     image: `${getBasePath()}/img/ai_agent_terminal.png`,
-    category: 'AI/ML',
+    category: ['AI/ML'],
     repo: 'https://github.com/alexsjcho/aiagent_from_scratch',
     tools: ['Anthropic', 'Claude API', 'Python', 'Wikipedia Search API'],
     dateAdded: '2025-02-01',
@@ -112,7 +112,7 @@ const projectsData = [
     title: 'Terraform Multi-Cloud Provisioning',
     description: 'proof-of-concept multi-cloud provisioning of compute engine resource for AWS and GCP',
     image: `${getBasePath()}/img/terraform_cloud.png`,
-    category: 'Infrastructure',
+    category: ['Infrastructure'],
     repo: 'https://github.com/alexsjcho/terraform_demo_2',
     tools: ['Terraform', 'AWS', 'GCP', 'Sentinel', 'Terraform Cloud', 'Vault', 'Virtual Machine', 'Compute Engine', 'IAM'],
     dateAdded: '2025-05-10',
@@ -121,7 +121,7 @@ const projectsData = [
     title: 'IaC Provisioning with StackGen and Aiden AI Agent',
     description: 'Very simple proof of concept for IaC provisioning with StackGen and Aiden AI Agent',
     image: `${getBasePath()}/img/stackgen-topology.png`,
-    category: 'Infrastructure',
+    category: ['Infrastructure'],
     repo: 'https://github.com/alexsjcho/stackgen_demo',
     tools: ['StackGen', 'Aiden AI Agent', 'Terraform', 'AWS', 'Infrastructure as Code'],
     dateAdded: '2025-12-22',
@@ -131,7 +131,7 @@ const projectsData = [
     title: 'Another AI project TBD',
     description: 'On roadmap. TBD',
     image: `${getBasePath()}/placeholder.svg?height=200&width=300`,
-    category: 'AI/ML',
+    category: ['AI/ML'],
     tools: ['TBD'],
     dateAdded: '2024-12-01',
   },
@@ -161,7 +161,7 @@ export default function Projects() {
   const filteredProjects = useMemo(() => {
     const filtered = selectedCategory === 'All'
       ? projectsData
-      : projectsData.filter(project => project.category === selectedCategory)
+      : projectsData.filter(project => project.category.includes(selectedCategory as CategoryType))
     
     // Sort by dateAdded in descending order (newest first)
     return [...filtered].sort((a, b) => {
@@ -212,11 +212,15 @@ export default function Projects() {
           {paginatedProjects.map((project) => (
             <div key={project.title} className="bg-card text-card-foreground p-6 rounded-lg shadow-md relative border border-border">
               {selectedCategory === 'All' && (
-                <span className={`absolute top-4 left-4 px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[project.category as CategoryType]}`}>
-                  {project.category}
-                </span>
+                <div className="absolute top-4 left-4 flex flex-wrap gap-2 z-10">
+                  {project.category.map((cat) => (
+                    <span key={cat} className={`px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[cat as CategoryType]}`}>
+                      {cat}
+                    </span>
+                  ))}
+                </div>
               )}
-              <span className="absolute top-4 right-4 px-2 py-1 text-xs text-muted-foreground font-medium">
+              <span className="absolute top-4 right-4 px-2 py-1 text-xs text-muted-foreground font-medium z-10">
                 {new Date(project.dateAdded).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
               </span>
               <Image
