@@ -5,8 +5,15 @@ try {
   // ignore error
 }
 
+const isProduction = process.env.NODE_ENV === 'production'
+const repository = 'alexcho_portfolio' // replace with your repository name
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: isProduction ? `/${repository}` : '',
+  assetPrefix: isProduction ? `/${repository}/` : '',
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -20,6 +27,16 @@ const nextConfig = {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
+  },
+  webpack: (config, { dev, isServer }) => {
+    if (dev && !isServer) {
+      config.watchOptions = {
+        ignored: ['**/node_modules', '**/.next', '**/out'],
+        aggregateTimeout: 300,
+        poll: 1000,
+      }
+    }
+    return config
   },
 }
 
