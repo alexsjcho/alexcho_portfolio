@@ -84,11 +84,9 @@ export default function About() {
               Hello World! My name is Alex Cho, a self-taught, multi-disciplinary <span className="font-semibold text-blue-300">Product & Solutions oriented professional</span> with experience ranging from <span className="font-semibold text-green-300">Software Engineering</span>, Full-Cycle Sales from <span className="font-semibold text-gray-300">Lead Generation</span> to <span className="font-semibold text-yellow-300">Customer Success</span>, <span className="font-semibold text-purple-300">UX Design</span>, <span className="font-semibold text-orange-300">Operations </span>, and <span className="font-semibold text-red-300">Marketing</span>.
             </p>
             <p className="text-lg mb-4 text-white font-light leading-relaxed">
-              I travelled to <span className="font-semibold text-pink-300">25+ cities</span> in China and <span className="font-semibold text-pink-300">10+ countries</span> around the world.
+              I travelled to <span className="font-semibold text-pink-300">25+ cities</span> in China and <span className="font-semibold text-pink-300">10+ countries</span> around the world.  Current hobbies include <span className="font-semibold text-blue-300">music</span>: guitar, piano, lead and harmony vocals, <span className="font-semibold text-green-300">video games</span>, and <span className="font-semibold text-yellow-300">traveling</span>. Previously a <span className="font-semibold text-purple-300">b-boy</span> competing in the San Francisco Bay Area.
             </p>
-            <p className="text-lg mb-4 text-white font-light leading-relaxed">
-              Current hobbies include <span className="font-semibold text-blue-300">music</span>: guitar, piano, lead and harmony vocals, <span className="font-semibold text-green-300">video games</span>, and <span className="font-semibold text-yellow-300">traveling</span>. Previously a <span className="font-semibold text-purple-300">b-boy</span> competing in the Bay Area.
-            </p>
+
           </div>
         </div>
       </section>

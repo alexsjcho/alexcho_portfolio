@@ -112,7 +112,7 @@ export default function Skills() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <section>
-        <h2 className="text-4xl font-bold mb-8 text-center text-black font-sans tracking-tight">Skills</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center text-foreground font-sans tracking-tight">Skills</h2>
         <div className="mb-8 w-64 mx-auto">
           <Select onValueChange={(value: SkillCategory | 'All') => setSelectedCategory(value)}>
             <SelectTrigger>
@@ -141,7 +141,7 @@ export default function Skills() {
                 </div>
                 <div className="md:w-3/4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                   {skills.map((skill) => (
-                    <div key={skill} className={`p-4 rounded-lg shadow-md text-center ${color} flex items-center justify-center`}>
+                    <div key={skill} className={`p-4 rounded-lg shadow-md text-center ${color} text-white flex items-center justify-center border border-border/20`}>
                       {skillIcons[skill] || <Code className="w-4 h-4 mr-2" />}
                       {skill}
                     </div>
@@ -154,7 +154,7 @@ export default function Skills() {
           // Regular grid for specific category
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {skillsData[selectedCategory]?.skills.map((skill) => (
-              <div key={skill} className={`p-4 rounded-lg shadow-md text-center ${skillsData[selectedCategory].color} flex items-center justify-center`}>
+              <div key={skill} className={`p-4 rounded-lg shadow-md text-center ${skillsData[selectedCategory].color} text-white flex items-center justify-center border border-border/20`}>
                 {skillIcons[skill] || <Code className="w-4 h-4 mr-2" />}
                 {skill}
               </div>

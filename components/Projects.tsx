@@ -19,6 +19,7 @@ interface Project {
   repo?: string;
   diagram?: string;  // Add diagram property
   tools: string[];  // Add tools array
+  dateAdded: string;  // Date when project was added (YYYY-MM-DD format)
 }
 
 const projectsData = [
@@ -29,6 +30,7 @@ const projectsData = [
     repo: 'https://github.com/alexsjcho/mentor-near-api-capstone',
     category: 'Web',
     tools: ['jQuery', 'HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Normalize.css', '3rd Party API'],
+    dateAdded: '2019-01-15',
   },
   {
     title: 'Qualified',
@@ -37,6 +39,7 @@ const projectsData = [
     repo: 'https://github.com/alexsjcho/qualified-react-redux-immutable-app',
     category: 'Web',
     tools: ['React', 'Redux', 'React-Router', 'Immutable', 'Bootstrap',  'Jest', 'Enzyme', 'JavaScript', 'CSS', '3rd Party API'],
+    dateAdded: '2019-06-20',
   },
   {
     title: 'SmartOKR',
@@ -45,6 +48,7 @@ const projectsData = [
     repo: 'https://github.com/alexsjcho/smart-okr-react-redux-app',
     category: 'Web',
     tools: ['React', 'Redux', 'JavaScript', '3rd Party API'],
+    dateAdded: '2019-09-10',
   },
   {
     title: 'GramPages',
@@ -52,6 +56,7 @@ const projectsData = [
     image: `${getBasePath()}/img/grampages.png`,
     category: 'Web',
     tools: ['JavaScript', 'CSS', '3rd Party API', 'React', 'Redux', 'React-Router', 'Express', 'Node.js', 'MongoDB', 'Mongoose'],
+    dateAdded: '2019-12-15',
   },
   
   {
@@ -62,6 +67,7 @@ const projectsData = [
     diagram:'https://miro.com/app/board/uXjVIAVfeT0=/?share_link_id=737365740298', 
     category: 'UX/UI Design',
     tools: ['Figma'],
+    dateAdded: '2025-01-15',
   },
 
   {
@@ -72,6 +78,7 @@ const projectsData = [
     diagram:'https://miro.com/app/board/uXjVIAKWrLw=/?share_link_id=523562170775', 
     category: 'UX/UI Design',
     tools: ['Figma'],
+    dateAdded: '2025-01-20',
   },
   {
     title: 'Apple Sales Forecasting 2024',
@@ -80,6 +87,7 @@ const projectsData = [
     category: 'AI/ML',
     repo: 'https://github.com/alexsjcho/apple-2024-sales-dataset',
     tools: ['Python', 'Machine Learning', 'Data Analysis', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Jupyter Notebook'],
+    dateAdded: '2025-02-03',
   },
   {
     title: 'AI-Powered Customer Service Chatbot',
@@ -87,7 +95,8 @@ const projectsData = [
     image: `${getBasePath()}/img/ai_agent_chatbot.png`,
     category: 'AI/ML',
     repo: 'https://github.com/alexsjcho/customer_support_ai_agent',
-    tools: ['Python', 'Langflow', 'OpenAI', 'Astra-DB', 'Next.js']
+    tools: ['Python', 'Langflow', 'OpenAI', 'Astra-DB', 'Next.js'],
+    dateAdded: '2025-03-15',
   },
   {
     title: 'Simple Terminal AI Agent',
@@ -95,7 +104,8 @@ const projectsData = [
     image: `${getBasePath()}/img/ai_agent_terminal.png`,
     category: 'AI/ML',
     repo: 'https://github.com/alexsjcho/aiagent_from_scratch',
-    tools: ['Anthropic', 'Claude API', 'Python', 'Wikipedia Search API']
+    tools: ['Anthropic', 'Claude API', 'Python', 'Wikipedia Search API'],
+    dateAdded: '2025-02-01',
   },
  
   {
@@ -104,16 +114,20 @@ const projectsData = [
     image: `${getBasePath()}/img/terraform_cloud.png`,
     category: 'Infrastructure',
     repo: 'https://github.com/alexsjcho/terraform_demo_2',
-    tools: ['Terraform', 'AWS', 'GCP', 'Sentinel', 'Terraform Cloud', 'Vault', 'Virtual Machine', 'Compute Engine', 'IAM']
+    tools: ['Terraform', 'AWS', 'GCP', 'Sentinel', 'Terraform Cloud', 'Vault', 'Virtual Machine', 'Compute Engine', 'IAM'],
+    dateAdded: '2025-05-10',
   },
 
+  /*
   {
     title: 'Another AI project TBD',
     description: 'On roadmap. TBD',
     image: `${getBasePath()}/placeholder.svg?height=200&width=300`,
     category: 'AI/ML',
-    tools: ['TBD']
+    tools: ['TBD'],
+    dateAdded: '2024-12-01',
   },
+  */
 
 ]
 
@@ -124,10 +138,10 @@ type CategoryColors = {
 
 // Define the categoryColors object with the correct type
 const categoryColors: CategoryColors = {
-  'AI/ML': 'bg-blue-100 text-blue-800',
-  'Web': 'bg-green-100 text-green-800',
-  'UX/UI Design': 'bg-orange-100 text-orange-800',
-  'Infrastructure': 'bg-purple-100 text-purple-800'
+  'AI/ML': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
+  'Web': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+  'UX/UI Design': 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
+  'Infrastructure': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200'
 }
 
 const PROJECTS_PER_PAGE = 9
@@ -137,9 +151,16 @@ export default function Projects() {
   const [currentPage, setCurrentPage] = useState(1)
 
   const filteredProjects = useMemo(() => {
-    return selectedCategory === 'All'
+    const filtered = selectedCategory === 'All'
       ? projectsData
       : projectsData.filter(project => project.category === selectedCategory)
+    
+    // Sort by dateAdded in descending order (newest first)
+    return [...filtered].sort((a, b) => {
+      const dateA = new Date(a.dateAdded).getTime()
+      const dateB = new Date(b.dateAdded).getTime()
+      return dateB - dateA
+    })
   }, [selectedCategory])
 
   const totalPages = Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE)
@@ -164,7 +185,7 @@ export default function Projects() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
       <section className="px-4">
-        <h2 className="text-4xl font-bold mb-8 text-center text-black font-sans tracking-tight">Projects</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center text-foreground font-sans tracking-tight">Projects</h2>
         <div className="mb-8 w-64 mx-auto">
           <Select onValueChange={handleCategoryChange}>
             <SelectTrigger>
@@ -181,12 +202,15 @@ export default function Projects() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {paginatedProjects.map((project) => (
-            <div key={project.title} className="bg-white p-6 rounded-lg shadow-md relative">
+            <div key={project.title} className="bg-card text-card-foreground p-6 rounded-lg shadow-md relative border border-border">
               {selectedCategory === 'All' && (
                 <span className={`absolute top-4 left-4 px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[project.category as CategoryType]}`}>
                   {project.category}
                 </span>
               )}
+              <span className="absolute top-4 right-4 px-2 py-1 text-xs text-muted-foreground font-medium">
+                {new Date(project.dateAdded).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+              </span>
               <Image
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
@@ -195,12 +219,12 @@ export default function Projects() {
                 className="w-[300px] h-[300px] object-contain mx-auto mb-4"
               />
               <div className="flex items-center mb-2">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
               </div>
-              <p className="text-gray-600 mb-4">{project.description}</p>
+              <p className="text-muted-foreground mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mt-4 mb-4">
                 {project.tools.map((tool) => (
-                  <span key={tool} className="px-2 py-1 bg-gray-100 rounded-full text-xs">
+                  <span key={tool} className="px-2 py-1 bg-muted text-muted-foreground rounded-full text-xs">
                     {tool}
                   </span>
                 ))}
@@ -245,7 +269,7 @@ export default function Projects() {
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
-            <span className="text-sm font-medium">
+            <span className="text-sm font-medium text-foreground">
               Page {currentPage} of {totalPages}
             </span>
             <Button

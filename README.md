@@ -1,3 +1,17 @@
+### Running Locally
+
+**Install Node Dependencies**
+
+```bash
+npm install
+```
+
+**Run on Localhost (port 3000)**
+
+```bash
+npm run dev
+```
+
 ### Deploying to GitHub Pages
 https://github.com/nextjs/deploy-github-pages
 
