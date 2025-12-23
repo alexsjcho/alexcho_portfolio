@@ -38,7 +38,7 @@ const projectsData = [
     image: `${getBasePath()}/img/qualified.png`,
     repo: 'https://github.com/alexsjcho/qualified-react-redux-immutable-app',
     category: ['Web'],
-    tools: ['React', 'Redux', 'React-Router', 'Immutable', 'Bootstrap',  'Jest', 'Enzyme', 'JavaScript', 'CSS', '3rd Party API'],
+    tools: ['React', 'Redux', 'React-Router', 'Immutable', 'Bootstrap', 'Jest', 'Enzyme', 'JavaScript', 'CSS', '3rd Party API'],
     dateAdded: '2019-06-20',
   },
   {
@@ -58,15 +58,15 @@ const projectsData = [
     tools: ['JavaScript', 'CSS', '3rd Party API', 'React', 'Redux', 'React-Router', 'Express', 'Node.js', 'MongoDB', 'Mongoose'],
     dateAdded: '2019-12-15',
   },
-  
+
   {
     title: 'IaC Deployment App',
     description: 'Intent-based deployment IaC product',
     image: `${getBasePath()}/img/rolloutsystem.png`,
     demo: 'https://www.figma.com/proto/NdFRq7UsKkyrfIFddtZitG/RLS-Q32024?node-id=36-27387&t=PDo2dUO7bLGzoPVl-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
-    diagram:'https://miro.com/app/board/uXjVIAVfeT0=/?share_link_id=737365740298', 
+    diagram: 'https://miro.com/app/board/uXjVIAVfeT0=/?share_link_id=737365740298',
     category: ['Infrastructure'],
-    tools: ['Figma'],
+    tools: ['Figma', , 'React'],
     dateAdded: '2025-01-15',
   },
 
@@ -75,9 +75,9 @@ const projectsData = [
     description: 'Feature flagging product',
     image: `${getBasePath()}/img/bytegate.png`,
     demo: 'https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/feature-gate-Q3-2024?node-id=1-52481&t=td5ZU4pdPnNBlpLM-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
-    diagram:'https://miro.com/app/board/uXjVIAKWrLw=/?share_link_id=523562170775', 
+    diagram: 'https://miro.com/app/board/uXjVIAKWrLw=/?share_link_id=523562170775',
     category: ['Infrastructure'],
-    tools: ['Figma'],
+    tools: ['Figma', , 'React'],
     dateAdded: '2025-01-20',
   },
   {
@@ -107,7 +107,7 @@ const projectsData = [
     tools: ['Anthropic', 'Claude API', 'Python', 'Wikipedia Search API'],
     dateAdded: '2025-02-01',
   },
- 
+
   {
     title: 'Terraform Multi-Cloud Provisioning',
     description: 'proof-of-concept multi-cloud provisioning of compute engine resource for AWS and GCP',
@@ -125,6 +125,15 @@ const projectsData = [
     repo: 'https://github.com/alexsjcho/stackgen_demo',
     tools: ['StackGen', 'Aiden AI Agent', 'Terraform', 'AWS', 'Infrastructure as Code'],
     dateAdded: '2025-12-22',
+  },
+  {
+    title: 'Ansible + Terraform Deployment Orchastration',
+    description: 'Practice project to learn how to use Ansible for deployment orchestration',
+    image: `${getBasePath()}/img/ansible-workflow-diagram.png`,
+    category: ['Infrastructure'],
+    repo: 'https://github.com/alexsjcho/ansible-terraform-demo',
+    tools: ['Ansible', 'Terraform', 'AWS', 'Infrastructure as Code'],
+    dateAdded: '2025-12-23',
   },
   /*
   {
@@ -162,7 +171,7 @@ export default function Projects() {
     const filtered = selectedCategory === 'All'
       ? projectsData
       : projectsData.filter(project => project.category.includes(selectedCategory as CategoryType))
-    
+
     // Sort by dateAdded in descending order (newest first)
     return [...filtered].sort((a, b) => {
       const dateA = new Date(a.dateAdded).getTime()
