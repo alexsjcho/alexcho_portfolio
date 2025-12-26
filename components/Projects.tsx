@@ -118,6 +118,15 @@ const projectsData = [
     dateAdded: '2025-05-10',
   },
   {
+    title: 'Aiden Demo Playground',
+    description: 'Marketing demo playground for Aiden AI Agent for proof-of-concept demos',
+    image: `${getBasePath()}/img/tryaiden-img.png`,
+    category: ['Infrastructure'],
+    demo: 'https://drive.google.com/file/d/1IIhCIssA1yvXj2nYfCpEjm-NIbNBU524/view?usp=sharing',
+    tools: ['StackGen', 'AI Agent', 'Terraform', 'Cloud Infrastructure', 'Infrastructure as Code', 'Cursor AI', 'Next.js', 'Vercel', 'Grafana'],
+    dateAdded: '2025-12-19',
+  },
+  {
     title: 'IaC Provisioning with StackGen and Aiden AI Agent',
     description: 'Very simple proof of concept for IaC provisioning with StackGen and Aiden AI Agent',
     image: `${getBasePath()}/img/stackgen-topology.png`,
@@ -255,7 +264,7 @@ export default function Projects() {
                   <Button asChild>
                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <Globe className="w-4 h-4 mr-2" />
-                      Live Demo
+                      Demo
                     </a>
                   </Button>
                 )}
