@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import Image from 'next/image'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Github, Globe, FileText } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Github, Globe, FileText, X } from 'lucide-react'
 import getBasePath from '../utils/path'
 
 // First, define the valid categories
@@ -144,6 +144,15 @@ const projectsData = [
     tools: ['Ansible', 'Terraform', 'AWS', 'Infrastructure as Code'],
     dateAdded: '2025-12-23',
   },
+  {
+    title: 'Docker Compose Project',
+    description: 'Practice project to learn how to use Docker Compose to deploy a multi-container application',
+    image: `${getBasePath()}/img/docker-img.png`,
+    category: ['Infrastructure'],
+    repo: 'https://github.com/alexsjcho/docker-demo',
+    tools: ['Docker Compose', 'Node.js', 'Redis', 'Next.js'],
+    dateAdded: '2025-12-26',
+  },
   /*
   {
     title: 'Another AI project TBD',
@@ -172,9 +181,17 @@ const categoryColors: CategoryColors = {
 
 const PROJECTS_PER_PAGE = 9
 
+// Helper function to format date without timezone conversion
+const formatDate = (dateString: string): string => {
+  const [year, month, day] = dateString.split('-').map(Number)
+  const date = new Date(year, month - 1, day) // month is 0-indexed
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+}
+
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [currentPage, setCurrentPage] = useState(1)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   const filteredProjects = useMemo(() => {
     const filtered = selectedCategory === 'All'
@@ -208,6 +225,14 @@ export default function Projects() {
     setCurrentPage(prev => Math.min(prev + 1, totalPages))
   }
 
+  const handleImageClick = (project: Project) => {
+    setSelectedProject(project)
+  }
+
+  const handleCloseEnlargedImage = () => {
+    setSelectedProject(null)
+  }
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
       <section className="px-4">
@@ -239,14 +264,15 @@ export default function Projects() {
                 </div>
               )}
               <span className="absolute top-4 right-4 px-2 py-1 text-xs text-muted-foreground font-medium z-10">
-                {new Date(project.dateAdded).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                {formatDate(project.dateAdded)}
               </span>
               <Image
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
                 width={400}
                 height={400}
-                className="w-[300px] h-[300px] object-contain mx-auto mb-4 mt-12"
+                className="w-[300px] h-[300px] object-contain mx-auto mb-4 mt-12 cursor-zoom-in"
+                onClick={() => handleImageClick(project as Project)}
               />
               <div className="flex items-center mb-2">
                 <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
@@ -314,6 +340,29 @@ export default function Projects() {
           </div>
         )}
       </section>
+      {selectedProject && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          onClick={handleCloseEnlargedImage}
+        >
+          <div className="relative" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={handleCloseEnlargedImage}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+              aria-label="Close"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <Image
+              src={selectedProject.image || "/placeholder.svg"}
+              alt={selectedProject.title}
+              width={1600}
+              height={1600}
+              className="w-[1200px] h-[1200px] object-contain"
+            />
+          </div>
+        </div>
+      )}
     </div>
   )
 }
