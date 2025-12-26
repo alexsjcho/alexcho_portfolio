@@ -153,6 +153,15 @@ const projectsData = [
     tools: ['Docker Compose', 'Node.js', 'Redis', 'Next.js'],
     dateAdded: '2025-12-26',
   },
+  {
+    title: 'Kubernetes + Docker Project',
+    description: 'Practice project to learn how to use Kubernetes and Docker to deploy multiple services',
+    image: `${getBasePath()}/img/k8s+docker-img.png`,
+    category: ['Infrastructure'],
+    repo: 'https://github.com/alexsjcho/k8s-docker-project',
+    tools: ['Kubernetes', 'Docker', , 'Node.js', 'Redis', 'Next.js'],
+    dateAdded: '2025-12-27',
+  },
   /*
   {
     title: 'Another AI project TBD',
