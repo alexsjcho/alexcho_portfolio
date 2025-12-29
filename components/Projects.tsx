@@ -162,6 +162,15 @@ const projectsData = [
     tools: ['Kubernetes', 'Docker', , 'Node.js', 'Redis', 'Next.js'],
     dateAdded: '2025-12-27',
   },
+  {
+    title: 'LGTM Observability Stack',
+    description: 'Practice project to learn how to learn the LGTM Observability Stack',
+    image: `${getBasePath()}/img/lgtm_dashboards.png`,
+    category: ['Infrastructure'],
+    repo: 'https://github.com/alexsjcho/lgtm-observability-stack-demo',
+    tools: ['Docker', 'Prometheus', 'Grafana', 'Loki', 'Tempo', 'OpenTelemetry', 'OpenMetrics'],
+    dateAdded: '2025-12-29',
+  },
   /*
   {
     title: 'Another AI project TBD',
