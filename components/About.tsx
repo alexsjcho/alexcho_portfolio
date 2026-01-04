@@ -36,7 +36,7 @@ export default function About() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-16 mt-20">
       <section>
-        <h2 className="text-4xl font-bold mb-8 text-center text-white font-sans tracking-tight hidden sm:block">About Me</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center text-white font-sans tracking-tight hidden sm:block">Product || Solutions || GTM</h2>
         <div className="flex flex-col items-center">
           <div className="w-full relative h-[400px] md:h-[400px] mb-8">
             {images.map((image, index) => (
@@ -45,9 +45,8 @@ export default function About() {
                 src={image.src || "/placeholder.svg"}
                 alt={image.alt}
                 fill
-                className={`object-cover rounded-lg transition-opacity duration-1000 ${
-                  index === currentImage ? 'opacity-100' : 'opacity-0'
-                }`}
+                className={`object-cover rounded-lg transition-opacity duration-1000 ${index === currentImage ? 'opacity-100' : 'opacity-0'
+                  }`}
               />
             ))}
             <div className="absolute inset-0 flex items-center justify-between p-4">
@@ -71,9 +70,8 @@ export default function About() {
                 <button
                   key={`dot-${index}`}
                   onClick={() => setCurrentImage(index)}
-                  className={`w-3 h-3 rounded-full ${
-                    index === currentImage ? 'bg-white' : 'bg-gray-400'
-                  }`}
+                  className={`w-3 h-3 rounded-full ${index === currentImage ? 'bg-white' : 'bg-gray-400'
+                    }`}
                   aria-label={`Go to image ${index + 1}`}
                 />
               ))}
@@ -81,11 +79,27 @@ export default function About() {
           </div>
           <div className="w-full max-w-3xl text-center mb-10">
             <p className="text-lg mb-4 text-white font-light leading-relaxed">
-              Hello World! My name is Alex Cho, a self-taught, multi-disciplinary <span className="font-semibold text-blue-300">Product & Solutions oriented professional</span> with experience ranging from <span className="font-semibold text-green-300">Software Engineering</span>, Full-Cycle Sales from <span className="font-semibold text-gray-300">Lead Generation</span> to <span className="font-semibold text-yellow-300">Customer Success</span>, <span className="font-semibold text-purple-300">UX Design</span>, <span className="font-semibold text-orange-300">Operations </span>, and <span className="font-semibold text-red-300">Marketing</span>.
+              Hello World! I’m Alex Cho, a <span className="font-semibold text-pink-300">self-taught</span>,{" "}
+              <span className="font-semibold text-blue-300">multidisciplinary product professional</span> spanning{" "}
+              <span className="font-semibold text-green-300">software engineering</span>,{" "}
+              <span className="font-semibold text-purple-300">UX design</span>,{" "}
+              <span className="font-semibold text-orange-300">operations</span>, and{" "}
+              <span className="font-semibold text-yellow-300">full-cycle GTM</span>—from{" "}
+              <span className="font-semibold text-gray-300">lead generation</span> and{" "}
+              <span className="font-semibold text-red-300">sales, </span>
+              <span className="font-semibold text-orange-300">solutions</span>,{" "}
+              <span className="font-semibold text-yellow-300">customer success</span>, and{" "}
+              <span className="font-semibold text-red-300">marketing</span>.
             </p>
+
             <p className="text-lg mb-4 text-white font-light leading-relaxed">
-              I travelled to <span className="font-semibold text-pink-300">25+ cities</span> in China and <span className="font-semibold text-pink-300">10+ countries</span> around the world.  Current hobbies include <span className="font-semibold text-blue-300">music</span>: guitar, piano, lead and harmony vocals, <span className="font-semibold text-green-300">video games</span>, and <span className="font-semibold text-yellow-300">traveling</span>. Previously a <span className="font-semibold text-purple-300">b-boy</span> competing in the San Francisco Bay Area.
+              Outside of work, I enjoy{" "}
+              <span className="font-semibold text-pink-300">travel (30+ cities in China and 12+ countries worldwide), </span>
+              <span className="font-semibold text-blue-300">music</span> (guitar, piano, vocals),{" "}
+              <span className="font-semibold text-green-300">gaming</span>, and{" "}
+              <span className="font-semibold text-yellow-300">breakdancing (retired)</span>.
             </p>
+
 
           </div>
         </div>

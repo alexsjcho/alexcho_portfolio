@@ -22,7 +22,7 @@ interface Project {
   dateAdded: string;  // Date when project was added (YYYY-MM-DD format)
 }
 
-const projectsData = [
+const projectsData: Project[] = [
   {
     title: 'MentorNear',
     description: 'jQuery app: Find and meet with a mentor near you',
@@ -49,36 +49,6 @@ const projectsData = [
     category: ['Web'],
     tools: ['React', 'Redux', 'JavaScript', '3rd Party API'],
     dateAdded: '2019-09-10',
-  },
-  {
-    title: 'GramPages',
-    description: 'GramPages provides engagement analytics for Instagram to empower influencers to make content creation decisions that will yield the greatest impact (no longer hosted, private GitHub repo)',
-    image: `${getBasePath()}/img/grampages.png`,
-    category: ['Web'],
-    tools: ['JavaScript', 'CSS', '3rd Party API', 'React', 'Redux', 'React-Router', 'Express', 'Node.js', 'MongoDB', 'Mongoose'],
-    dateAdded: '2019-12-15',
-  },
-
-  {
-    title: 'IaC Deployment App',
-    description: 'Intent-based deployment IaC product',
-    image: `${getBasePath()}/img/rolloutsystem.png`,
-    demo: 'https://www.figma.com/proto/NdFRq7UsKkyrfIFddtZitG/RLS-Q32024?node-id=36-27387&t=PDo2dUO7bLGzoPVl-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
-    diagram: 'https://miro.com/app/board/uXjVIAVfeT0=/?share_link_id=737365740298',
-    category: ['Infrastructure'],
-    tools: ['Figma', , 'React'],
-    dateAdded: '2025-01-15',
-  },
-
-  {
-    title: 'Feature Gate',
-    description: 'Feature flagging product',
-    image: `${getBasePath()}/img/bytegate.png`,
-    demo: 'https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/feature-gate-Q3-2024?node-id=1-52481&t=td5ZU4pdPnNBlpLM-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
-    diagram: 'https://miro.com/app/board/uXjVIAKWrLw=/?share_link_id=523562170775',
-    category: ['Infrastructure'],
-    tools: ['Figma', , 'React'],
-    dateAdded: '2025-01-20',
   },
   {
     title: 'Apple Sales Forecasting 2024',
@@ -118,15 +88,6 @@ const projectsData = [
     dateAdded: '2025-05-10',
   },
   {
-    title: 'Aiden Demo Playground',
-    description: 'Marketing demo playground for Aiden AI Agent for proof-of-concept demos',
-    image: `${getBasePath()}/img/tryaiden-img.png`,
-    category: ['Infrastructure'],
-    demo: 'https://drive.google.com/file/d/1IIhCIssA1yvXj2nYfCpEjm-NIbNBU524/view?usp=sharing',
-    tools: ['StackGen', 'AI Agent', 'Terraform', 'Cloud Infrastructure', 'Infrastructure as Code', 'Cursor AI', 'Next.js', 'Vercel', 'Grafana'],
-    dateAdded: '2025-12-19',
-  },
-  {
     title: 'IaC Provisioning with StackGen and Aiden AI Agent',
     description: 'Very simple proof of concept for IaC provisioning with StackGen and Aiden AI Agent',
     image: `${getBasePath()}/img/stackgen-topology.png`,
@@ -159,7 +120,7 @@ const projectsData = [
     image: `${getBasePath()}/img/k8s+docker-img.png`,
     category: ['Infrastructure'],
     repo: 'https://github.com/alexsjcho/k8s-docker-project',
-    tools: ['Kubernetes', 'Docker', , 'Node.js', 'Redis', 'Next.js'],
+    tools: ['Kubernetes', 'Docker', 'Node.js', 'Redis', 'Next.js'],
     dateAdded: '2025-12-27',
   },
   {
@@ -255,6 +216,7 @@ export default function Projects() {
     <div className="max-w-6xl mx-auto px-4 py-16">
       <section className="px-4">
         <h2 className="text-4xl font-bold mb-8 text-center text-foreground font-sans tracking-tight">Projects</h2>
+        <p className="text-lg mb-4 text-center text-muted-foreground font-light leading-relaxed"> These are some of the projects I have worked on to learn and apply new skills.</p>
         <div className="mb-8 w-64 mx-auto">
           <Select onValueChange={handleCategoryChange}>
             <SelectTrigger>

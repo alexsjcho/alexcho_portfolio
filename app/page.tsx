@@ -3,6 +3,7 @@ import Header from '@/components/Header'
 import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
+import FeaturedWork from '@/components/FeaturedWork'
 import { WavyBackground } from "@/components/ui/wavy-background"
 
 export default function Home() {
@@ -17,6 +18,13 @@ export default function Home() {
             <About />
           </div>
         </WavyBackground>
+      </section>
+
+      {/* Featured Work section with white background */}
+      <section id="featured-work" className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <FeaturedWork />
+        </div>
       </section>
 
       {/* Projects section with white background */}
