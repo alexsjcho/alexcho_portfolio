@@ -4,11 +4,38 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const isProduction = process.env.NODE_ENV === 'production'
+const repository = 'alexcho_portfolio'
+const basePath = isProduction ? `/${repository}` : ''
+const siteUrl = isProduction 
+  ? `https://alexsjcho.github.io${basePath}` 
+  : 'http://localhost:3000'
+
 export const metadata: Metadata = {
   title: 'Alex Cho Portfolio',
-  description: 'Collection of UX Design, Web Development, and AI/ML projects',
+  description: 'Alex Cho Portfolio',
   icons: {
     icon: 'img/about.png',
+  },
+  openGraph: {
+    title: 'Alex Cho Portfolio',
+    description: 'Alex Cho Portfolio',
+    images: [
+      {
+        url: `${basePath}/img/muirwood.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Alex Cho Portfolio',
+      },
+    ],
+    url: siteUrl,
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Alex Cho Portfolio',
+    description: 'Alex Cho Portfolio',
+    images: [`${basePath}/img/muirwood.jpg`],
   },
 }
 
