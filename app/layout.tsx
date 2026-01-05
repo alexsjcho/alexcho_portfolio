@@ -10,6 +10,7 @@ const basePath = isProduction ? `/${repository}` : ''
 const siteUrl = isProduction 
   ? `https://alexsjcho.github.io${basePath}` 
   : 'http://localhost:3000'
+const imageUrl = `${siteUrl}${basePath}/img/muirwood.jpg`
 
 export const metadata: Metadata = {
   title: 'Alex Cho Portfolio',
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Alex Cho Portfolio',
     images: [
       {
-        url: `${basePath}/img/muirwood.jpg`,
+        url: imageUrl,
         width: 1200,
         height: 630,
         alt: 'Alex Cho Portfolio',
@@ -30,12 +31,13 @@ export const metadata: Metadata = {
     ],
     url: siteUrl,
     type: 'website',
+    siteName: 'Alex Cho Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Alex Cho Portfolio',
     description: 'Alex Cho Portfolio',
-    images: [`${basePath}/img/muirwood.jpg`],
+    images: [imageUrl],
   },
 }
 
