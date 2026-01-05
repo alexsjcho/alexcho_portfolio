@@ -36,7 +36,7 @@ export default function About() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-16 mt-20">
       <section>
-        <h2 className="text-4xl font-bold mb-8 text-center text-white font-sans tracking-tight hidden sm:block">Product || Solutions || GTM</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center text-white font-sans tracking-tight hidden sm:block">About</h2>
         <div className="flex flex-col items-center">
           <div className="w-full relative h-[400px] md:h-[400px] mb-8">
             {images.map((image, index) => (

@@ -59,16 +59,18 @@ const featuredWorkData: FeaturedWorkItem[] = [
       { label: "Time-to-PoC", value: "80% faster PoC creation for new  use cases based on recent feature or product releases" },
       { label: "Sign-Ups", value: "Track X% conversion of self-service sign-ups from prompt demo page views" }
     ],
-    description: "GTM playground for Aiden AI Agent to showcase proof-of-concept demos of AI-powered infrastructure automation capabilities.",
+    description: "GTM playground for Aiden AI Agent to showcase proof-of-concept demos of AI-powered infrastructure capabilities.",
     tools: ['StackGen', 'AI Agent', 'Terraform', 'Cloud Infrastructure', 'Infrastructure as Code', 'Cursor AI', 'Next.js', 'Vercel', 'Grafana'],
     demo: 'https://drive.google.com/file/d/1IIhCIssA1yvXj2nYfCpEjm-NIbNBU524/view?usp=sharing',
     caseStudy: {
-      problem: "Demonstrating Aiden AI agent capabilities for infrastructure automation required extensive time to set-up environment with the right integrations, skills, tasks and prompt engineering to ensure certain use cases would work properly which  Sales and marketing teams needed a way to showcase the product's capabilities to potential customers effectively.",
-      solution: "Created an interactive demo playground that showcases Aiden AI Agent's infrastructure automation capabilities with a guided tour of how to set-up Aiden's features like Integrations, Skills, Tasks, and Knowledge Base. Created 13+ prompt use case flows per persona and solution category",
+      problem: "Demonstrating Aiden’s AI infrastructure automation required heavy setup across integrations, skills, tasks, and prompt engineering, making demos fragile and time-consuming. This slowed sales cycles and limited marketing’s ability to consistently showcase real-world use cases.",
+      solution: "Built an interactive demo playground for GTM enablement, featuring guided setup of Aiden’s integrations, skills, tasks, and knowledge base, plus 13+ persona-based prompt flows—enabling repeatable demos, faster sales cycles, and clearer value storytelling.",
       impact: [
-        "Helped generate average 70% increase demo bookings during in-person events like KubeCon and AWS Re:Invent 2025.",
-        "2.6K page views within first 60 days of launch.",
-        "Enable Sales and Marketing to demo PoC for campaigns and outreach faster without spending Solution Engineering or Product Engineering resources to setup and demo PoC for each use case."
+        "Drove a 70% increase in demo bookings at in-person events including KubeCon and AWS re:Invent 2025",
+
+        "Achieved 2.6K page views in the first 60 days post-launch, signaling strong GTM traction",
+
+        "Enabled Sales and Marketing to run PoC demos on demand, eliminating repeated setup and reducing dependency on Solutions and Product Engineering resources"
       ],
       teamOverview: {
         teamSize: "2 (1 engineers, I functioned as the PM, UX Designer, and Frontend Engineer",
@@ -89,23 +91,23 @@ const featuredWorkData: FeaturedWorkItem[] = [
       { label: "Adoption", value: "25+ platform and app engineering teams across ByteDance" },
       { label: "Developer Cost Savings", value: "Average of $XX millions per project" }
     ],
-    description: "0-1 Intent-based deployment IaC product that simplifies global infrastructure provisioning, mamagenent, and deployment orchestration. Integrated into a greater DevOps Platform spanning from feature requirement to observability and monitoring. Targeting overseas (non-China) engineering teams under the ByteDance umbrella.",
+    description: "A 0-to-1 intent-based IaC product that simplifies global infrastructure provisioning, management, and deployment orchestration. Integrated into an end-to-end DevOps platform from requirements to observability, serving overseas (non-China) ByteDance engineering teams.",
     tools: ['Figma', 'React'],
     demo: 'https://www.figma.com/proto/NdFRq7UsKkyrfIFddtZitG/RLS-Q32024?node-id=36-27387&t=PDo2dUO7bLGzoPVl-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
     diagram: 'https://miro.com/app/board/uXjVIAVfeT0=/?share_link_id=737365740298',
     caseStudy: {
-      problem: "Many internal business engineering teams (e.g. TikTok, Lark, CapCut) were using DIY manual methodologies to provision infrastructure without using existing platform tools because it couldn't handle global large scale provisioning and deployments for greenfield and brownfield scenarios.",
-      solution: "Created an intent-based IaC deployment platform that simplifies infrastructure management by focusing on desired outcomes rather than manual configuration in a standardized manner. Rollout System solved the problem of global provisioning and deployments for greenfield and brownfield scenarios by creating an abstraction layer on top of the existing platform tools for a global deployment IaC entity, making it easier for engineering teams to define their desired infrastructure for their app for all global regions vs manually configuring each region.",
+      problem: "Many internal engineering teams (e.g., TikTok, Lark, CapCut) relied on DIY, manual infrastructure provisioning because existing platform tools could not support global, large-scale deployments across both greenfield and brownfield environments.",
+      solution: "Built an intent-based IaC deployment platform that abstracts global infrastructure complexity. By defining desired outcomes instead of manual configs, it enabled consistent greenfield and brownfield deployments across regions through a unified IaC layer on top of existing platform tools.",
       impact: [
-        "Reduced large global greenfield deployment time by 50%",
-        "Reduced large global brownfield deployment time by 30-50% depending on the complexity of the deployment and # of resources being deployed.",
-        "Reduce needed engineering resources by an average of 80% by automating the provisioning and deployment process.",
-        "Helped one TikTok engineering team handle 320K deployments with average of several thousand resources per deployment and roughly $10M of engineering cost savings by saving on engineering resources (200-300 engineers) and provisioning and deployment time.",
+        "Reduced large-scale global greenfield deployment time by 50%",
+        "Reduced large-scale global brownfield deployment time by 30–50%, depending on deployment complexity and resource count",
+        "Reduced required engineering effort by an average of 80% through automated provisioning and deployment",
+        "Enabled a TikTok engineering team to execute 320K deployments, each with thousands of resources, delivering ~$10M in engineering cost savings by reducing 200–300 engineers and deployment time",
 
       ],
       teamOverview: {
         teamSize: "7 (6 engineers, I was the PM & Figma UX Designer)",
-        scope: "All subsidiaries business unit and platform engineering team under the ByteDance (e.g. TikTok, Douyin, Lark, CapCut, etc), but primarily targeting overseas (non-China) teams",
+        scope: "All subsidiary business unit and platform engineering teams under the ByteDance (e.g. TikTok, Douyin, Lark, CapCut, etc), but primarily targeting overseas (non-China) teams",
         keyStakeholders: ["DevOps Engineers", "Platform Engineers", "Tech Leads", "App Developers"]
       }
     }
@@ -121,21 +123,21 @@ const featuredWorkData: FeaturedWorkItem[] = [
       { label: "# of Feature Gates", value: "+80% (489 → 2392)" },
       { label: "Engineering Team Adoption", value: "+81% (44 → 236)" }
     ],
-    description: "A 0-1 Feature flagging product for managing feature rollouts specialized for monorepo architecture. Integrated into a greater DevOps Platform spanning from feature requirement to observability and monitoring. Targeting overseas (non-China) engineering teams under the ByteDance umbrella.",
+    description: "A 0-to-1 feature flagging platform purpose-built for monorepo architectures, enabling controlled feature rollouts. Integrated into an end-to-end DevOps platform from requirements to observability, serving overseas (non-China) ByteDance engineering teams..",
     tools: ['Figma', 'React'],
     demo: 'https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/feature-gate-Q3-2024?node-id=1-52481&t=td5ZU4pdPnNBlpLM-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
     diagram: 'https://miro.com/app/board/uXjVIAKWrLw=/?share_link_id=523562170775',
     caseStudy: {
-      problem: "Teams needed a safe way to speed up product development velocity while reducing risk of production incidents or product readiness blocking code deployment. Moreover, there was a mandate within ByteDance engineering team to migrate to a monorepo architecture and existing internal feature flag solutions did not optimize for this mandate.",
-      solution: "Designed and developed a 0-1 feature flagging product within 1 year that was lightweight and easy to use for the engineering team who wanted to were invested in our product roadmap to optimize for monorepo architecture or just wanted a simple feature flag solution versus waste time on DIY solutions that was not satandardized.",
+      problem: "Teams needed to increase development velocity without raising production risk or blocking deployments. At the same time, ByteDance mandated a move to monorepo architecture, but existing internal feature flag tools and DIY solutions were not designed to support it.",
+      solution: "Designed and launched a 0-to-1 feature flagging product in under a year, optimized for monorepo architectures. It provided a lightweight, standardized alternative to DIY solutions, enabling easy adoption aligned with ByteDance’s monorepo mandate and minimal operational overhead.",
       impact: [
-        "Increased production adoption by 81% from immediate 44 internal engineering team adoption to 236 engineering teams across ByteDance including Volcano Engine, TikTok, Douyin, Lark, CapCut, etc.",
-        "Increased # of feature gate usage by 80% from 489 to 2392 feature gates",
-        "Increased MAU growth by 15x from 30 to 500."
+        "Increased product adoption by 81%, expanding from 44 to 236 engineering teams across ByteDance, including Volcano Engine, TikTok, Douyin, Lark, and CapCut",
+        "Increased feature gate usage by 80%, growing from 489 to 2,392 feature gates",
+        "Increased monthly active usage by 15×, scaling from 30 to 500 MAU"
       ],
       teamOverview: {
         teamSize: "3 (2 engineers, I was the PM & Figma UX Designer)",
-        scope: "All subsidiaries engineering team under the ByteDance (e.g. TikTok, Douyin, Lark, CapCut, etc), but primarily targeting overseas (non-China) teams",
+        scope: "All subsidiary engineering teams under the ByteDance (e.g. TikTok, Douyin, Lark, CapCut, etc), but primarily targeting overseas (non-China) teams",
         keyStakeholders: ["Platform Engineers", "App Developers ", "Product Manager"]
       }
     }
@@ -163,7 +165,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
       ],
       teamOverview: {
         teamSize: "3 (3 engineers. I helped as PM and Frontend Engineer)",
-        scope: "Side project deployed with small usage",
+        scope: "Side project deployed with small organic usage",
         keyStakeholders: ["Social Media Strategist", "Instagram Influencers", 'Marketing Teams']
       }
     }
@@ -371,7 +373,7 @@ export default function FeaturedWork() {
       {/* Case Study Dialog */}
       {selectedWork && (
         <Dialog open={!!selectedWork} onOpenChange={handleCloseCaseStudy}>
-          <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+          <DialogContent className="max-w-7xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <div className="flex items-center gap-3 mb-2">
                 <button
