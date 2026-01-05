@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ['latin'] })
 const isProduction = process.env.NODE_ENV === 'production'
 const repository = 'alexcho_portfolio'
 const basePath = isProduction ? `/${repository}` : ''
-const siteUrl = isProduction 
-  ? `https://alexsjcho.github.io${basePath}` 
+const siteUrl = isProduction
+  ? `https://alexsjcho.github.io${basePath}`
   : 'http://localhost:3000'
 const imageUrl = `${siteUrl}${basePath}/img/muirwood.jpg`
 
@@ -16,7 +16,11 @@ export const metadata: Metadata = {
   title: 'Alex Cho Portfolio',
   description: 'Alex Cho Portfolio',
   icons: {
-    icon: '/img/about.png',
+    icon: [
+      {
+        url: isProduction ? `${siteUrl}/img/about.png` : '/img/about.png',
+      },
+    ],
   },
   openGraph: {
     title: 'Alex Cho Portfolio',
