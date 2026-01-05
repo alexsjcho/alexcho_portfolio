@@ -73,7 +73,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
         "Enabled Sales and Marketing to run PoC demos on demand, eliminating repeated setup and reducing dependency on Solutions and Product Engineering resources"
       ],
       teamOverview: {
-        teamSize: "2 (1 engineers, I functioned as the PM, UX Designer, and Frontend Engineer",
+        teamSize: "2 (1 engineers, I functioned as the PM, UX Designer, and Frontend Engineer)",
         scope: "Used for Marketing campaigns, Sales Outreach, In-Person Event Booth Demos, Website content, blogs, and more",
         keyStakeholders: ["Platform Engineer", "SREs", "App Developers", "DevOps Engineers"]
       }
