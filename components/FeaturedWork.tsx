@@ -60,7 +60,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
       { label: "Time-to-PoC", value: "80% faster PoC creation for new  use cases based on recent feature or product releases" },
       { label: "Sign-Ups", value: "Track X% conversion of self-service sign-ups from prompt demo page views" }
     ],
-    description: "GTM playground for Aiden AI Agent to showcase proof-of-concept demos of AI-powered infrastructure capabilities.",
+    description: "0-1 GTM playground demo website for Aiden AI Agent to showcase proof-of-concept demos of AI-powered infrastructure capabilities.",
     tools: ['StackGen', 'AI Agent', 'Terraform', 'Cloud Infrastructure', 'Infrastructure as Code', 'Cursor AI', 'Next.js', 'Vercel', 'Grafana'],
     demo: 'https://drive.google.com/file/d/1IIhCIssA1yvXj2nYfCpEjm-NIbNBU524/view?usp=sharing',
     website: 'https://tryaiden.stackgen.com/',
