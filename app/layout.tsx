@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: 'Alex Cho Portfolio',
   description: 'Alex Cho Portfolio',
   icons: {
-    icon: 'img/about.png',
+    icon: '/img/about.png',
   },
   openGraph: {
     title: 'Alex Cho Portfolio',

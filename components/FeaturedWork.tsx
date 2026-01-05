@@ -44,6 +44,7 @@ interface FeaturedWorkItem {
   demo?: string;
   repo?: string;
   diagram?: string;
+  website?: string;
   caseStudy: CaseStudy;
 }
 
@@ -62,6 +63,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     description: "GTM playground for Aiden AI Agent to showcase proof-of-concept demos of AI-powered infrastructure capabilities.",
     tools: ['StackGen', 'AI Agent', 'Terraform', 'Cloud Infrastructure', 'Infrastructure as Code', 'Cursor AI', 'Next.js', 'Vercel', 'Grafana'],
     demo: 'https://drive.google.com/file/d/1IIhCIssA1yvXj2nYfCpEjm-NIbNBU524/view?usp=sharing',
+    website: 'https://tryaiden.stackgen.com/',
     caseStudy: {
       problem: "Demonstrating Aiden’s AI infrastructure use cases required heavy setup across integrations, skills, tasks, and prompt engineering, making demos fragile and time-consuming. This slowed sales cycles and limited marketing’s ability to consistently showcase real-world use cases.",
       solution: "Built an interactive demo playground for GTM enablement, featuring guided setup of Aiden’s integrations, skills, tasks, and knowledge base, plus 13+ persona-based prompt flows—enabling repeatable demos, faster sales cycles, and clearer value storytelling.",
@@ -356,6 +358,14 @@ export default function FeaturedWork() {
                         </a>
                       </Button>
                     )}
+                    {work.website && (
+                      <Button asChild size="sm" variant="outline">
+                        <a href={work.website} target="_blank" rel="noopener noreferrer">
+                          <Globe className="w-4 h-4 mr-2" />
+                          Website
+                        </a>
+                      </Button>
+                    )}
                   </div>
 
                   {/* Expand Case Study Button */}
@@ -417,6 +427,14 @@ export default function FeaturedWork() {
                     <a href={selectedWork.diagram} target="_blank" rel="noopener noreferrer">
                       <FileText className="w-3 h-3 mr-1.5" />
                       Diagram
+                    </a>
+                  </Button>
+                )}
+                {selectedWork.website && (
+                  <Button asChild size="sm" variant="outline" className="h-7">
+                    <a href={selectedWork.website} target="_blank" rel="noopener noreferrer">
+                      <Globe className="w-3 h-3 mr-1.5" />
+                      Website
                     </a>
                   </Button>
                 )}
