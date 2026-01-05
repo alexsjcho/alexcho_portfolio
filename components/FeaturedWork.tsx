@@ -63,7 +63,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     tools: ['StackGen', 'AI Agent', 'Terraform', 'Cloud Infrastructure', 'Infrastructure as Code', 'Cursor AI', 'Next.js', 'Vercel', 'Grafana'],
     demo: 'https://drive.google.com/file/d/1IIhCIssA1yvXj2nYfCpEjm-NIbNBU524/view?usp=sharing',
     caseStudy: {
-      problem: "Demonstrating Aiden’s AI infrastructure automation required heavy setup across integrations, skills, tasks, and prompt engineering, making demos fragile and time-consuming. This slowed sales cycles and limited marketing’s ability to consistently showcase real-world use cases.",
+      problem: "Demonstrating Aiden’s AI infrastructure use cases required heavy setup across integrations, skills, tasks, and prompt engineering, making demos fragile and time-consuming. This slowed sales cycles and limited marketing’s ability to consistently showcase real-world use cases.",
       solution: "Built an interactive demo playground for GTM enablement, featuring guided setup of Aiden’s integrations, skills, tasks, and knowledge base, plus 13+ persona-based prompt flows—enabling repeatable demos, faster sales cycles, and clearer value storytelling.",
       impact: [
         "Drove a 70% increase in demo bookings at in-person events including KubeCon and AWS re:Invent 2025",
@@ -97,12 +97,12 @@ const featuredWorkData: FeaturedWorkItem[] = [
     diagram: 'https://miro.com/app/board/uXjVIAVfeT0=/?share_link_id=737365740298',
     caseStudy: {
       problem: "Many internal engineering teams (e.g., TikTok, Lark, CapCut) relied on DIY, manual infrastructure provisioning because existing platform tools could not support global, large-scale deployments across both greenfield and brownfield environments.",
-      solution: "Built an intent-based IaC deployment platform that abstracts global infrastructure complexity. By defining desired outcomes instead of manual configs, it enabled consistent greenfield and brownfield deployments across regions through a unified IaC layer on top of existing platform tools.",
+      solution: "Built an intent-based IaC deployment platform that abstracts global infrastructure complexity. By defining desired outcomes instead of manual configs, it enabled consistent greenfield and brownfield deployments across regions through a unified global IaC layer on top of existing platform tools.",
       impact: [
-        "Reduced large-scale global greenfield deployment time by 50%",
+        "Reduced large-scale global greenfield deployment time by 50% (e.g. data center bringups in a country like Singapore)",
         "Reduced large-scale global brownfield deployment time by 30–50%, depending on deployment complexity and resource count",
         "Reduced required engineering effort by an average of 80% through automated provisioning and deployment",
-        "Enabled a TikTok engineering team to execute 320K deployments, each with thousands of resources, delivering ~$10M in engineering cost savings by reducing 200–300 engineers and deployment time",
+        "Enabled a TikTok engineering team to execute 320K deployments, each with thousands of resources, delivering ~$10M in engineering cost savings by reducing 200–300 engineers and deployment time by ~50% (from 6 months to under 3 months)",
 
       ],
       teamOverview: {
@@ -119,11 +119,11 @@ const featuredWorkData: FeaturedWorkItem[] = [
     category: 'Infrastructure',
     image: `${getBasePath()}/img/bytegate.png`,
     metrics: [
-      { label: "MAU Growth", value: "30 => 500" },
+      { label: "MAU Growth", value: "30 → 500" },
       { label: "# of Feature Gates", value: "+80% (489 → 2392)" },
       { label: "Engineering Team Adoption", value: "+81% (44 → 236)" }
     ],
-    description: "A 0-to-1 feature flagging platform purpose-built for monorepo architectures, enabling controlled feature rollouts. Integrated into an end-to-end DevOps platform from requirements to observability, serving overseas (non-China) ByteDance engineering teams..",
+    description: "A 0-to-1 feature flagging platform purpose-built for monorepo architectures, enabling controlled feature rollouts. Integrated into an end-to-end DevOps platform from requirements to observability, serving overseas (non-China) ByteDance engineering teams.",
     tools: ['Figma', 'React'],
     demo: 'https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/feature-gate-Q3-2024?node-id=1-52481&t=td5ZU4pdPnNBlpLM-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
     diagram: 'https://miro.com/app/board/uXjVIAKWrLw=/?share_link_id=523562170775',
@@ -316,15 +316,18 @@ export default function FeaturedWork() {
                   </p>
 
                   {/* Tools */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {work.tools.map((tool) => (
-                      <span
-                        key={tool}
-                        className="px-2 py-1 bg-muted text-muted-foreground rounded-full text-xs"
-                      >
-                        {tool}
-                      </span>
-                    ))}
+                  <div className="mb-4">
+                    <span className="text-sm font-medium text-foreground mr-2">Tools:</span>
+                    <div className="flex flex-wrap gap-2 mt-1">
+                      {work.tools.map((tool) => (
+                        <span
+                          key={tool}
+                          className="px-2 py-1 bg-muted text-muted-foreground rounded-full text-xs"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
                   {/* Links */}
@@ -394,20 +397,36 @@ export default function FeaturedWork() {
                   {selectedWork.title}
                 </DialogTitle>
               </div>
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-4 flex-wrap">
                 <span className="text-sm text-muted-foreground">
                   {selectedWork.date}
                 </span>
                 <span className={`px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[selectedWork.category]}`}>
                   {selectedWork.category}
                 </span>
+                {selectedWork.demo && (
+                  <Button asChild size="sm" variant="outline" className="h-7">
+                    <a href={selectedWork.demo} target="_blank" rel="noopener noreferrer">
+                      <Globe className="w-3 h-3 mr-1.5" />
+                      Demo
+                    </a>
+                  </Button>
+                )}
+                {selectedWork.diagram && (
+                  <Button asChild size="sm" variant="outline" className="h-7">
+                    <a href={selectedWork.diagram} target="_blank" rel="noopener noreferrer">
+                      <FileText className="w-3 h-3 mr-1.5" />
+                      Diagram
+                    </a>
+                  </Button>
+                )}
               </div>
             </DialogHeader>
 
             <div className="space-y-6">
               {/* Featured Image */}
               <div className="w-full">
-                <div className="relative w-full h-[400px] bg-muted rounded-lg overflow-hidden">
+                <div className="relative w-full h-[600px] bg-muted rounded-lg overflow-hidden">
                   <Image
                     src={selectedWork.image || "/placeholder.svg"}
                     alt={selectedWork.title}
