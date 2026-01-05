@@ -34,7 +34,7 @@ export default function About() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-16 mt-20">
+    <div className="max-w-4xl mx-auto px-4 py-16 mt-20">
       <section>
         <h2 className="text-4xl font-bold mb-8 text-center text-white font-sans tracking-tight hidden sm:block">About</h2>
         <div className="flex flex-col items-center">
@@ -77,30 +77,10 @@ export default function About() {
               ))}
             </div>
           </div>
-          <div className="w-full max-w-3xl text-center mb-10">
+          <div className="w-full max-w-6xl text-center mb-10">
             <p className="text-lg mb-4 text-white font-light leading-relaxed">
-              Hello World! I’m Alex Cho, a <span className="font-semibold text-pink-300">self-taught</span>,{" "}
-              <span className="font-semibold text-blue-300">multidisciplinary product professional</span> spanning{" "}
-              <span className="font-semibold text-green-300">software engineering</span>,{" "}
-              <span className="font-semibold text-purple-300">UX design</span>,{" "}
-              <span className="font-semibold text-orange-300">operations</span>, and{" "}
-              <span className="font-semibold text-yellow-300">full-cycle GTM</span>—from{" "}
-              <span className="font-semibold text-gray-300">lead generation</span> and{" "}
-              <span className="font-semibold text-red-300">sales, </span>
-              <span className="font-semibold text-orange-300">solutions</span>,{" "}
-              <span className="font-semibold text-yellow-300">customer success</span>, and{" "}
-              <span className="font-semibold text-red-300">marketing</span>.
+              Hello World! I'm Alex Cho — a <span className="font-semibold text-pink-300">self-taught</span>, <span className="font-semibold text-blue-300">multidisciplinary product professional</span> with <span className="font-semibold text-green-300">9+ years</span> building and scaling developer tools. I'm a <span className="font-semibold text-purple-300">specialized generalist</span> who thrives where <span className="font-semibold text-yellow-300">product, engineering, design, data, and business</span> intersect. My experience spans <span className="font-semibold text-cyan-300">0→1 and 1→N</span> product development through full-cycle <span className="font-semibold text-pink-300">GTM</span>, including <span className="font-semibold text-blue-300">lead generation, sales, solutions engineering, customer success, and marketing</span>, enabling products that balance user value, customer outcomes, and business impact across <span className="font-semibold text-green-300">API/SDKs</span>, <span className="font-semibold text-purple-300">Business Intelligence</span>, and <span className="font-semibold text-orange-300">Cloud Infrastructure</span>.
             </p>
-
-            <p className="text-lg mb-4 text-white font-light leading-relaxed">
-              Outside of work, I enjoy{" "}
-              <span className="font-semibold text-pink-300">travel (30+ cities in China and 12+ countries worldwide), </span>
-              <span className="font-semibold text-blue-300">music</span> (guitar, piano, vocals),{" "}
-              <span className="font-semibold text-green-300">gaming</span>, and{" "}
-              <span className="font-semibold text-yellow-300">breakdancing (retired)</span>.
-            </p>
-
-
           </div>
         </div>
       </section>

@@ -4,6 +4,7 @@ import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 import FeaturedWork from '@/components/FeaturedWork'
+import Hobbies from '@/components/Hobbies'
 import { WavyBackground } from "@/components/ui/wavy-background"
 
 export default function Home() {
@@ -38,6 +39,13 @@ export default function Home() {
       <section id="skills" className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-4">
           <Skills />
+        </div>
+      </section>
+
+      {/* Hobbies section with light gray background */}
+      <section id="hobbies" className="bg-gray-50 py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <Hobbies />
         </div>
       </section>
 
