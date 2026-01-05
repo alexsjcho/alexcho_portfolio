@@ -239,10 +239,10 @@ export default function FeaturedWork() {
     <div className="max-w-6xl mx-auto px-4 py-16">
       <section className="px-4">
         <div className="mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-foreground font-sans tracking-tight">
+          <h2 className="text-4xl font-bold mb-4 text-center text-foreground font-sans tracking-tight">
             Featured Work
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl">
+          <p className="text-lg text-muted-foreground max-w-6xl">
             A selection of product or GTM initiatives that showcase strategic thinking, user empathy, and measurable results.
           </p>
         </div>

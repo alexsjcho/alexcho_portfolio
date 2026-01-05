@@ -215,7 +215,7 @@ export default function Projects() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
       <section className="px-4">
-        <h2 className="text-4xl font-bold mb-8 text-center text-foreground font-sans tracking-tight">Projects</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center text-foreground font-sans tracking-tight">Projects</h2>
         <p className="text-lg mb-4 text-center text-muted-foreground font-light leading-relaxed"> These are some of the projects I have worked on to learn and apply new skills.</p>
         <div className="mb-8 w-64 mx-auto">
           <Select onValueChange={handleCategoryChange}>

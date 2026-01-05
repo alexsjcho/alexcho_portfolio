@@ -112,7 +112,7 @@ export default function Skills() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <section>
-        <h2 className="text-4xl font-bold mb-8 text-center text-foreground font-sans tracking-tight">Skills</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center text-foreground font-sans tracking-tight">Skills</h2>
         <div className="mb-8 w-64 mx-auto">
           <Select onValueChange={(value: SkillCategory | 'All') => setSelectedCategory(value)}>
             <SelectTrigger>

@@ -125,7 +125,7 @@ export default function Hobbies() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
       <section>
-        <h2 className="text-4xl font-bold mb-4 text-foreground font-sans tracking-tight">
+        <h2 className="text-4xl font-bold mb-4 text-center text-foreground font-sans tracking-tight">
           Hobbies
         </h2>
         <p className="text-lg mb-12 text-muted-foreground max-w-5xl">
