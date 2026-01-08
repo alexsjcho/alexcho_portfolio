@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
-import { Github, Globe, FileText, X, Copy, Check } from 'lucide-react'
+import { Github, Globe, FileText, X, Copy, Check, Wrench } from 'lucide-react'
 import {
   Dialog,
   DialogContent,
@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog"
 import getBasePath from '../utils/path'
 
-type CategoryType = 'AI/ML' | 'Analytics' | 'UX/UI Design' | 'Infrastructure' | 'Product' | 'Operations and GTM';
+type CategoryType = 'AI/ML' | 'Analytics' | 'UX/UI Design' | 'Infrastructure' | 'Product' | 'Operations' | 'GTM' | 'Media Solutions';
 
 interface KeyMetric {
   label: string;
@@ -36,11 +36,12 @@ interface FeaturedWorkItem {
   id: string;
   title: string;
   date: string; // MM/DD/YYYY format
-  category: CategoryType;
+  category: CategoryType[];
   image: string;
   metrics?: KeyMetric[];
   description: string;
-  tools: string[];
+  skills: string[];
+  tool?: string;
   demo?: string;
   repo?: string;
   diagram?: string;
@@ -53,7 +54,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     id: 'aiden-demo-playground',
     title: "Aiden Demo Playground",
     date: "12/19/2025",
-    category: 'Infrastructure',
+    category: ['Infrastructure', 'GTM', 'Product'],
     image: `${getBasePath()}/img/tryaiden-img.png`,
     metrics: [
       { label: "Page Views", value: "Track XXX view count and specific prompt use cases" },
@@ -61,7 +62,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
       { label: "Sign-Ups", value: "Track X% conversion of self-service sign-ups from prompt demo page views" }
     ],
     description: "0-1 GTM playground demo website for Aiden AI Agent to showcase proof-of-concept demos of AI-powered infrastructure capabilities.",
-    tools: ['StackGen', 'AI Agent', 'Terraform', 'Cloud Infrastructure', 'Infrastructure as Code', 'Cursor AI', 'Next.js', 'Vercel', 'Grafana'],
+    skills: ['StackGen', 'AI Agent', 'Terraform', 'Cloud Infrastructure', 'Infrastructure as Code', 'Cursor AI', 'Next.js', 'Vercel', 'Grafana'],
     demo: 'https://drive.google.com/file/d/1IIhCIssA1yvXj2nYfCpEjm-NIbNBU524/view?usp=sharing',
     website: 'https://tryaiden.stackgen.com/',
     caseStudy: {
@@ -86,7 +87,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     id: 'iac-deployment-app',
     title: "IaC Deployment App",
     date: "01/15/2025",
-    category: 'Infrastructure',
+    category: ['Infrastructure', 'Product', 'GTM'],
     image: `${getBasePath()}/img/rolloutsystem.png`,
     metrics: [
       { label: "Scale of Deployments", value: "320K with several thousand resources per deployment" },
@@ -94,7 +95,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
       { label: "Developer Cost Savings", value: "Average of $XX millions per project" }
     ],
     description: "A 0-to-1 intent-based IaC product that simplifies global infrastructure provisioning, management, and deployment orchestration. Integrated into an end-to-end DevOps platform from requirements to observability, serving overseas (non-China) ByteDance engineering teams.",
-    tools: ['Figma', 'React'],
+    skills: ['Figma', 'React'],
     demo: 'https://www.figma.com/proto/NdFRq7UsKkyrfIFddtZitG/RLS-Q32024?node-id=36-27387&t=PDo2dUO7bLGzoPVl-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
     diagram: 'https://miro.com/app/board/uXjVIAVfeT0=/?share_link_id=737365740298',
     caseStudy: {
@@ -118,7 +119,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     id: 'feature-gate',
     title: "Feature Gate",
     date: "12/20/2024",
-    category: 'Infrastructure',
+    category: ['Infrastructure', 'Product', 'GTM'],
     image: `${getBasePath()}/img/bytegate.png`,
     metrics: [
       { label: "MAU Growth", value: "30 → 500" },
@@ -126,7 +127,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
       { label: "Engineering Team Adoption", value: "+81% (44 → 236)" }
     ],
     description: "A 0-to-1 feature flagging platform purpose-built for monorepo architectures, enabling controlled feature rollouts. Integrated into an end-to-end DevOps platform from requirements to observability, serving overseas (non-China) ByteDance engineering teams.",
-    tools: ['Figma', 'React'],
+    skills: ['Figma', 'React'],
     demo: 'https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/feature-gate-Q3-2024?node-id=1-52481&t=td5ZU4pdPnNBlpLM-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
     diagram: 'https://miro.com/app/board/uXjVIAKWrLw=/?share_link_id=523562170775',
     caseStudy: {
@@ -145,10 +146,47 @@ const featuredWorkData: FeaturedWorkItem[] = [
     }
   },
   {
+    id: 'agora_pricing_strategy',
+    title: "Product & Solutions Pricing Strategy and Enablement",
+    date: "03/15/2023",
+    category: ['GTM', 'Media Solutions', 'Product'],
+    image: `${getBasePath()}/img/agora_calculator.png`,
+    metrics: [
+      { label: "revenue estimation", value: "$$K MRR or $$M ARR" },
+      { label: "product usage estimation", value: "X product estimated X minutes per month" },
+
+    ],
+    description: "A revenue forecasting and time-to-value optimization initiative at Agora, focused on enabling accurate usage-based cost estimation and accelerating customer launch for real-time engagement (RTE) use cases.",
+    skills: [
+      'Excel',
+      'React App',
+      'Figma',
+      'Real time usage billing model',
+      'Monetization strategy',
+    ],
+    tool: 'https://docs.google.com/spreadsheets/d/1JDE9hvlx0b_l9mdx4axN5RR4fgqAyHuXOxtDDnwkuvE/edit?usp=sharing',
+    caseStudy: {
+      problem: "Agora’s usage-based pricing model made revenue forecasting highly inaccurate because Sales teams lacked a consistent way to estimate customer use cases. Sales prioritized contract signing over launch readiness, resulting in customers taking 6–12 months on average to deploy Agora-powered solutions, delaying revenue realization and reducing forecast reliability.",
+      solution: "Designed an end-to-end solution framework to connect technical use case design with cost estimation and monetization. Created an RTE Solution Playbook to standardize session-based use case design (audio, video, chat) and map them to the correct Agora products. Built a robust cost estimation calculator that modeled multiple pricing dimensions (minutes, bandwidth, storage, users, add-ons) to accurately project session, monthly, and annual costs. Advised customers on monetization strategies aligned with their use cases (per session, per minute, per user, device-based). Integrated use case schemas with Agora App Builder to enable rapid app deployment, reducing friction from concept to launch.",
+      impact: [
+        "Improved opportunity value estimation accuracy by ~90% through use-case-driven cost modeling",
+        "Reduced proof-of-concept launch time from ~1 month to hours",
+        "Shortened production launch timelines from 6–12 months to under 3 months (50–75% improvement)",
+        "Established a repeatable, scalable framework for Sales, Solutions, and customers to design, price, and launch Agora-powered applications"
+      ],
+
+      teamOverview: {
+        teamSize: "3 (2 engineers, 1 Product Designer. I helped as PM/PMM on Overseas (non-China) side)",
+        scope: "Global (US–RoW) region (excluding China)",
+        keyStakeholders: ["Product Managers", 'Finance Teams']
+      }
+    }
+  },
+  {
     id: 'agora_malicious_usage',
     title: " Malicious Free Usage Abuse Prevention",
     date: "07/15/2022",
-    category: 'Operations and GTM',
+    category: ['Operations', 'Media Solutions', 'Product', 'GTM'],
     image: `${getBasePath()}/img/agora_malicious.png`,
     metrics: [
       { label: "non-malicious sign-ups", value: "Tracked # of normal sign-ups from non-malicious accounts" },
@@ -157,8 +195,8 @@ const featuredWorkData: FeaturedWorkItem[] = [
       { label: "malicioius accounts", value: "Tracked # of malicious accounts" },
 
     ],
-    description: "A cross-functional anti-malicious usage initiative for Agora’s PLG Console in the US–RoW region, designed to curb free-tier abuse while preserving healthy organic sign-ups and seamless onboarding.",
-    tools: ['Console Rules', 'Internal Analytics Dashboards'],
+    description: "A cross-functional anti-malicious usage initiative for Agora's PLG Console in the US–RoW region, designed to curb free-tier abuse while preserving healthy organic sign-ups and seamless onboarding.",
+    skills: ['Console Rules', 'Internal Analytics Dashboards'],
     caseStudy: {
       problem: "Agora’s PLG Console faced escalating free-tier abuse driven by malicious account creation and session manipulation, significantly increasing operational costs. At the same time, the company needed to preserve frictionless onboarding and organic growth for legitimate developers. Goals and requirements were initially undefined due to an abrupt PM transition.",
       solution: "Led a rapid cross-regional initiative with China engineering and analytics teams to design and implement anti-abuse mechanisms. Conducted end-to-end console UX audits, analyzed account and usage data to uncover abuse patterns, and identified India as a major source of systematic free-tier exploitation. Implemented real-time monitoring dashboards, IP-based abuse detection with manual review, tightened free-tier creation limits, and introduced a Trust Level System (New, Trusted, Verified) based on verification signals and behavior to balance abuse prevention with PLG growth.",
@@ -175,11 +213,12 @@ const featuredWorkData: FeaturedWorkItem[] = [
       }
     }
   },
+
   {
     id: 'grampages',
     title: "GramPages",
     date: "12/15/2019",
-    category: 'Analytics',
+    category: ['Analytics', 'Product', 'GTM'],
     image: `${getBasePath()}/img/grampages.png`,
     metrics: [
       { label: "Sign-Up", value: "Tracked # of " },
@@ -187,7 +226,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
 
     ],
     description: "A bootstraped side project, GramPages provides engagement analytics for Instagram to empower influencers to make content creation decisions that will yield the greatest impact (no longer hosted, private GitHub repo).",
-    tools: ['JavaScript', 'CSS', '3rd Party API', 'React', 'Redux', 'React-Router', 'Express', 'Node.js', 'MongoDB', 'Mongoose'],
+    skills: ['JavaScript', 'CSS', '3rd Party API', 'React', 'Redux', 'React-Router', 'Express', 'Node.js', 'MongoDB', 'Mongoose'],
     caseStudy: {
       problem: "Instagram influencers lacked actionable insights into their content performance. Without analytics, creators were making content decisions based on intuition rather than data, limiting their growth potential.",
       solution: "Developed an analytics platform that provides detailed engagement analytics for Instagram accounts. The platform analyzes content performance, identifies trends, and provides recommendations to help influencers optimize their content strategy.",
@@ -212,7 +251,9 @@ const categoryColors: Record<CategoryType, string> = {
   'UX/UI Design': 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
   'Infrastructure': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200',
   'Product': 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200',
-  'Operations and GTM': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200'
+  'Operations': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200',
+  'GTM': 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200',
+  'Media Solutions': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200'
 }
 
 // Helper function to parse MM/DD/YYYY date format to Date object
@@ -307,9 +348,11 @@ export default function FeaturedWork() {
                       <span className="text-sm text-muted-foreground font-medium">
                         {work.date}
                       </span>
-                      <span className={`px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[work.category]}`}>
-                        {work.category}
-                      </span>
+                      {work.category.map((cat) => (
+                        <span key={cat} className={`px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[cat]}`}>
+                          {cat}
+                        </span>
+                      ))}
                     </div>
                     <button
                       onClick={(e) => handleCopyLink(e, work.id)}
@@ -349,16 +392,16 @@ export default function FeaturedWork() {
                     {work.description}
                   </p>
 
-                  {/* Tools */}
+                  {/* Skills */}
                   <div className="mb-4">
-                    <span className="text-sm font-medium text-foreground mr-2">Tools:</span>
+                    <span className="text-sm font-medium text-foreground mr-2">Skills:</span>
                     <div className="flex flex-wrap gap-2 mt-1">
-                      {work.tools.map((tool) => (
+                      {work.skills.map((skill) => (
                         <span
-                          key={tool}
+                          key={skill}
                           className="px-2 py-1 bg-muted text-muted-foreground rounded-full text-xs"
                         >
-                          {tool}
+                          {skill}
                         </span>
                       ))}
                     </div>
@@ -395,6 +438,14 @@ export default function FeaturedWork() {
                         <a href={work.website} target="_blank" rel="noopener noreferrer">
                           <Globe className="w-4 h-4 mr-2" />
                           Website
+                        </a>
+                      </Button>
+                    )}
+                    {work.tool && (
+                      <Button asChild size="sm" variant="outline">
+                        <a href={work.tool} target="_blank" rel="noopener noreferrer">
+                          <Wrench className="w-4 h-4 mr-2" />
+                          Tool
                         </a>
                       </Button>
                     )}
@@ -443,9 +494,11 @@ export default function FeaturedWork() {
                 <span className="text-sm text-muted-foreground">
                   {selectedWork.date}
                 </span>
-                <span className={`px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[selectedWork.category]}`}>
-                  {selectedWork.category}
-                </span>
+                {selectedWork.category.map((cat) => (
+                  <span key={cat} className={`px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[cat]}`}>
+                    {cat}
+                  </span>
+                ))}
                 {selectedWork.demo && (
                   <Button asChild size="sm" variant="outline" className="h-7">
                     <a href={selectedWork.demo} target="_blank" rel="noopener noreferrer">
@@ -467,6 +520,14 @@ export default function FeaturedWork() {
                     <a href={selectedWork.website} target="_blank" rel="noopener noreferrer">
                       <Globe className="w-3 h-3 mr-1.5" />
                       Website
+                    </a>
+                  </Button>
+                )}
+                {selectedWork.tool && (
+                  <Button asChild size="sm" variant="outline" className="h-7">
+                    <a href={selectedWork.tool} target="_blank" rel="noopener noreferrer">
+                      <Wrench className="w-3 h-3 mr-1.5" />
+                      Tool
                     </a>
                   </Button>
                 )}
@@ -509,16 +570,16 @@ export default function FeaturedWork() {
                 </div>
               )}
 
-              {/* Tools */}
+              {/* Skills */}
               <div>
-                <h4 className="font-semibold mb-3 text-foreground">TOOLS</h4>
+                <h4 className="font-semibold mb-3 text-foreground">SKILLS</h4>
                 <div className="flex flex-wrap gap-2">
-                  {selectedWork.tools.map((tool) => (
+                  {selectedWork.skills.map((skill) => (
                     <span
-                      key={tool}
+                      key={skill}
                       className="px-2 py-1 bg-muted text-muted-foreground rounded-full text-xs"
                     >
-                      {tool}
+                      {skill}
                     </span>
                   ))}
                 </div>
