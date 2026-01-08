@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
-import { Github, Globe, FileText, X, Copy, Check, Wrench } from 'lucide-react'
+import { Github, Globe, FileText, X, Copy, Check, Wrench, BookOpen } from 'lucide-react'
 import {
   Dialog,
   DialogContent,
@@ -46,6 +46,7 @@ interface FeaturedWorkItem {
   repo?: string;
   diagram?: string;
   website?: string;
+  document?: string;
   caseStudy: CaseStudy;
 }
 
@@ -85,7 +86,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
 
   {
     id: 'iac-deployment-app',
-    title: "IaC Deployment App",
+    title: "IaC Deployment Platform Product",
     date: "01/15/2025",
     category: ['Infrastructure', 'Product', 'GTM'],
     image: `${getBasePath()}/img/rolloutsystem.png`,
@@ -117,7 +118,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
   },
   {
     id: 'feature-gate',
-    title: "Feature Gate",
+    title: "Feature Gate Platform Product",
     date: "12/20/2024",
     category: ['Infrastructure', 'Product', 'GTM'],
     image: `${getBasePath()}/img/bytegate.png`,
@@ -165,6 +166,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
       'Monetization strategy',
     ],
     tool: 'https://docs.google.com/spreadsheets/d/1JDE9hvlx0b_l9mdx4axN5RR4fgqAyHuXOxtDDnwkuvE/edit?usp=sharing',
+    document: 'https://drive.google.com/file/d/1iai6K2x_Fi9max1P1gyL5f-_qwC3wElm/view?usp=sharing',
     caseStudy: {
       problem: "Agora’s usage-based pricing model made revenue forecasting highly inaccurate because Sales teams lacked a consistent way to estimate customer use cases. Sales prioritized contract signing over launch readiness, resulting in customers taking 6–12 months on average to deploy Agora-powered solutions, delaying revenue realization and reducing forecast reliability.",
       solution: "Designed an end-to-end solution framework to connect technical use case design with cost estimation and monetization. Created an RTE Solution Playbook to standardize session-based use case design (audio, video, chat) and map them to the correct Agora products. Built a robust cost estimation calculator that modeled multiple pricing dimensions (minutes, bandwidth, storage, users, add-ons) to accurately project session, monthly, and annual costs. Advised customers on monetization strategies aligned with their use cases (per session, per minute, per user, device-based). Integrated use case schemas with Agora App Builder to enable rapid app deployment, reducing friction from concept to launch.",
@@ -196,7 +198,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
 
     ],
     description: "A cross-functional anti-malicious usage initiative for Agora's PLG Console in the US–RoW region, designed to curb free-tier abuse while preserving healthy organic sign-ups and seamless onboarding.",
-    skills: ['Console Rules', 'Internal Analytics Dashboards'],
+    skills: ['Root Cause Analysis', 'Internal Analytics Dashboards', 'User Journey Mapping', 'Usage Governance & Policy Enforcement'],
     caseStudy: {
       problem: "Agora’s PLG Console faced escalating free-tier abuse driven by malicious account creation and session manipulation, significantly increasing operational costs. At the same time, the company needed to preserve frictionless onboarding and organic growth for legitimate developers. Goals and requirements were initially undefined due to an abrupt PM transition.",
       solution: "Led a rapid cross-regional initiative with China engineering and analytics teams to design and implement anti-abuse mechanisms. Conducted end-to-end console UX audits, analyzed account and usage data to uncover abuse patterns, and identified India as a major source of systematic free-tier exploitation. Implemented real-time monitoring dashboards, IP-based abuse detection with manual review, tightened free-tier creation limits, and introduced a Trust Level System (New, Trusted, Verified) based on verification signals and behavior to balance abuse prevention with PLG growth.",
@@ -449,6 +451,14 @@ export default function FeaturedWork() {
                         </a>
                       </Button>
                     )}
+                    {work.document && (
+                      <Button asChild size="sm" variant="outline">
+                        <a href={work.document} target="_blank" rel="noopener noreferrer">
+                          <BookOpen className="w-4 h-4 mr-2" />
+                          Document
+                        </a>
+                      </Button>
+                    )}
                   </div>
 
                   {/* Expand Case Study Button */}
@@ -486,52 +496,74 @@ export default function FeaturedWork() {
                     <Copy className="w-4 h-4 text-muted-foreground" />
                   )}
                 </button>
-                <DialogTitle className="text-3xl font-bold">
+                <DialogTitle className="text-3xl font-bold flex-2">
                   {selectedWork.title}
+
                 </DialogTitle>
-              </div>
-              <div className="flex items-center gap-3 mb-4 flex-wrap">
-                <span className="text-sm text-muted-foreground">
+                <span className="text-sm text-muted-foreground whitespace-nowrap">
                   {selectedWork.date}
                 </span>
+              </div>
+              <div className="flex items-center gap-3 mb-4 flex-wrap">
                 {selectedWork.category.map((cat) => (
                   <span key={cat} className={`px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[cat]}`}>
                     {cat}
                   </span>
                 ))}
-                {selectedWork.demo && (
-                  <Button asChild size="sm" variant="outline" className="h-7">
-                    <a href={selectedWork.demo} target="_blank" rel="noopener noreferrer">
-                      <Globe className="w-3 h-3 mr-1.5" />
-                      Demo
-                    </a>
-                  </Button>
-                )}
-                {selectedWork.diagram && (
-                  <Button asChild size="sm" variant="outline" className="h-7">
-                    <a href={selectedWork.diagram} target="_blank" rel="noopener noreferrer">
-                      <FileText className="w-3 h-3 mr-1.5" />
-                      Diagram
-                    </a>
-                  </Button>
-                )}
-                {selectedWork.website && (
-                  <Button asChild size="sm" variant="outline" className="h-7">
-                    <a href={selectedWork.website} target="_blank" rel="noopener noreferrer">
-                      <Globe className="w-3 h-3 mr-1.5" />
-                      Website
-                    </a>
-                  </Button>
-                )}
-                {selectedWork.tool && (
-                  <Button asChild size="sm" variant="outline" className="h-7">
-                    <a href={selectedWork.tool} target="_blank" rel="noopener noreferrer">
-                      <Wrench className="w-3 h-3 mr-1.5" />
-                      Tool
-                    </a>
-                  </Button>
-                )}
               </div>
+              {(selectedWork.demo || selectedWork.repo || selectedWork.diagram || selectedWork.website || selectedWork.tool || selectedWork.document) && (
+                <div className="flex items-center gap-3 mb-4 flex-wrap">
+                  <span className="text-sm font-semibold text-red-600">Examples:</span>
+                  {selectedWork.demo && (
+                    <Button asChild size="sm" variant="outline" className="h-7">
+                      <a href={selectedWork.demo} target="_blank" rel="noopener noreferrer">
+                        <Globe className="w-3 h-3 mr-1.5" />
+                        Demo
+                      </a>
+                    </Button>
+                  )}
+                  {selectedWork.repo && (
+                    <Button asChild size="sm" variant="outline" className="h-7">
+                      <a href={selectedWork.repo} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-3 h-3 mr-1.5" />
+                        Repo
+                      </a>
+                    </Button>
+                  )}
+                  {selectedWork.diagram && (
+                    <Button asChild size="sm" variant="outline" className="h-7">
+                      <a href={selectedWork.diagram} target="_blank" rel="noopener noreferrer">
+                        <FileText className="w-3 h-3 mr-1.5" />
+                        Diagram
+                      </a>
+                    </Button>
+                  )}
+                  {selectedWork.website && (
+                    <Button asChild size="sm" variant="outline" className="h-7">
+                      <a href={selectedWork.website} target="_blank" rel="noopener noreferrer">
+                        <Globe className="w-3 h-3 mr-1.5" />
+                        Website
+                      </a>
+                    </Button>
+                  )}
+                  {selectedWork.tool && (
+                    <Button asChild size="sm" variant="outline" className="h-7">
+                      <a href={selectedWork.tool} target="_blank" rel="noopener noreferrer">
+                        <Wrench className="w-3 h-3 mr-1.5" />
+                        Tool
+                      </a>
+                    </Button>
+                  )}
+                  {selectedWork.document && (
+                    <Button asChild size="sm" variant="outline" className="h-7">
+                      <a href={selectedWork.document} target="_blank" rel="noopener noreferrer">
+                        <BookOpen className="w-3 h-3 mr-1.5" />
+                        Document
+                      </a>
+                    </Button>
+                  )}
+                </div>
+              )}
             </DialogHeader>
 
             <div className="space-y-6">
