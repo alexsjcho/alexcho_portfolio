@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog"
 import getBasePath from '../utils/path'
 
-type CategoryType = 'AI/ML' | 'Analytics' | 'UX/UI Design' | 'Infrastructure' | 'Product';
+type CategoryType = 'AI/ML' | 'Analytics' | 'UX/UI Design' | 'Infrastructure' | 'Product' | 'Operations and GTM';
 
 interface KeyMetric {
   label: string;
@@ -145,6 +145,37 @@ const featuredWorkData: FeaturedWorkItem[] = [
     }
   },
   {
+    id: 'agora_malicious_usage',
+    title: " Malicious Free Usage Abuse Prevention",
+    date: "07/15/2022",
+    category: 'Operations and GTM',
+    image: `${getBasePath()}/img/agora_malicious.png`,
+    metrics: [
+      { label: "non-malicious sign-ups", value: "Tracked # of normal sign-ups from non-malicious accounts" },
+      { label: "region", value: "% of requests from a given country" },
+      { label: "free-usage cost", value: "Tracked $ of free-usage cost per month" },
+      { label: "malicioius accounts", value: "Tracked # of malicious accounts" },
+
+    ],
+    description: "A cross-functional anti-malicious usage initiative for Agora’s PLG Console in the US–RoW region, designed to curb free-tier abuse while preserving healthy organic sign-ups and seamless onboarding.",
+    tools: ['Console Rules', 'Internal Analytics Dashboards'],
+    caseStudy: {
+      problem: "Agora’s PLG Console faced escalating free-tier abuse driven by malicious account creation and session manipulation, significantly increasing operational costs. At the same time, the company needed to preserve frictionless onboarding and organic growth for legitimate developers. Goals and requirements were initially undefined due to an abrupt PM transition.",
+      solution: "Led a rapid cross-regional initiative with China engineering and analytics teams to design and implement anti-abuse mechanisms. Conducted end-to-end console UX audits, analyzed account and usage data to uncover abuse patterns, and identified India as a major source of systematic free-tier exploitation. Implemented real-time monitoring dashboards, IP-based abuse detection with manual review, tightened free-tier creation limits, and introduced a Trust Level System (New, Trusted, Verified) based on verification signals and behavior to balance abuse prevention with PLG growth.",
+      impact: [
+        "Reduced malicious accounts by 28% within one quarter",
+        "Saved approximately $1M per month in operational costs",
+        "Preserved seamless onboarding and healthy new sign-up volume for legitimate users",
+        "Enabled scalable, data-driven abuse prevention without compromising product-led growth"
+      ],
+      teamOverview: {
+        teamSize: "3 (2 engineers, 1 Product Operations Manager. I helped as PM/PMM on Overseas (non-China) side)",
+        scope: "Global (US–RoW) region (excluding China)",
+        keyStakeholders: ["Developers", "Operations", 'Console Platform RD Team']
+      }
+    }
+  },
+  {
     id: 'grampages',
     title: "GramPages",
     date: "12/15/2019",
@@ -180,7 +211,8 @@ const categoryColors: Record<CategoryType, string> = {
   'Analytics': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
   'UX/UI Design': 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
   'Infrastructure': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200',
-  'Product': 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200'
+  'Product': 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200',
+  'Operations and GTM': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200'
 }
 
 // Helper function to parse MM/DD/YYYY date format to Date object
@@ -493,8 +525,8 @@ export default function FeaturedWork() {
               </div>
 
               {/* Team & Scope */}
-              <div className="bg-muted/50 p-4 rounded-lg">
-                <h4 className="font-semibold mb-3 text-foreground">TEAM OVERVIEW</h4>
+              <div>
+                <h4 className="font-bold text-lg mb-3 text-foreground">TEAM OVERVIEW</h4>
                 <div className="space-y-2 text-sm">
                   <div>
                     <span className="font-medium">TEAM SIZE:</span> {selectedWork.caseStudy.teamOverview.teamSize}
