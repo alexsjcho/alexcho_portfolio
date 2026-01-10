@@ -87,7 +87,52 @@ const featuredWorkData: FeaturedWorkItem[] = [
       }
     }
   },
+  {
+    id: 'devinfra-product-operations',
+    title: "DevInfra Platform Developer Experience",
+    date: "03/15/2025",
+    category: ['Infrastructure', 'Product', 'Operations'],
+    company: 'ByteDance',
+    image: `${getBasePath()}/featuredwork_img/bits-workbench.png`,
+    metrics: [
+      { label: "platform scope", value: "17+ DevInfra tools and tenants supporting overseas developers (excluding China)" },
+      { label: "resolution rate", value: "+19.7% (45.79% → 65.49%, goal: 70%)" },
+      { label: "satisfaction score", value: "+0.85 (7.5 → 8.35, goal: 8)" },
+      { label: "user feedback resolution", value: "+25% (50% → 75%, goal: 60%)" },
+      { label: "on-call low score reduction", value: "-28.53% (3.89% → 2.78%, goal: <5%)" },
+    ],
 
+    description: "A product operations and developer experience (DX) transformation initiative for ByteDance’s Overseas DevInfra Platform, focused on improving reliability, feedback resolution, and satisfaction across 17+ DevOps and infrastructure tools used by global engineering teams outside China.",
+
+    skills: [
+      'Product operations',
+      'Developer experience (DX)',
+      'Cross-region stakeholder management',
+      'Metrics & dashboarding',
+      'Feedback systems & survey design',
+      'Incident & on-call analysis',
+      'Process design & continuous improvement',
+    ],
+
+    caseStudy: {
+      problem: "ByteDance’s DevInfra Platform supported overseas engineering teams across 17+ DevOps and infrastructure tools, but developer experience was poor due to lack of localization of product for overseas developer teams. Most operational processes and success metrics were designed for China-based teams, resulting in limited visibility into overseas developer pain points, slower feedback resolution, inconsistent support quality, and declining satisfaction. Leadership needed a scalable operating model to improve DX and reliability for global developers.",
+
+      solution: "Owned Product Operations for the Overseas DevInfra Platform end-to-end (from feature requirement to monitoring developer tools). Established a structured operating model to measure, analyze, and improve developer experience across regions. Built dashboards and reporting mechanisms to track key DX metrics on a weekly, monthly, and quarterly basis, including resolution rate, satisfaction score, feedback closure, and on-call quality. Designed and deployed developer surveys and feedback pipelines tailored to overseas teams, then conducted qualitative interviews with developers who reported low satisfaction or repeated issues. Partnered with Product, R&D, and Support teams across time zones to identify chronic issues, prioritize fixes, and drive accountability. Created improvement proposal documents that translated DX insights into concrete product and operational changes, and continuously monitored outcomes to ensure sustained improvement.",
+
+      impact: [
+        "Improved overall issue resolution rate by +19.7%, approaching the target benchmark despite regional constraints",
+        "Increased developer satisfaction score from 7.5 to 8.35, exceeding the target goal of 8",
+        "Raised user feedback resolution rate by +25%, significantly surpassing the original goal",
+        "Reduced on-call low-score incidents by 28.53%, bringing reliability well within acceptable thresholds",
+        "Established a repeatable product operations framework for overseas DevInfra teams, improving long-term scalability and transparency"
+      ],
+      teamOverview: {
+        teamSize: "Varies (Depending on the platform team, it can range from  5-50 Product & RD teammates. I acted as the Overseas Product Operations Manager)",
+        scope: "All subsidiary business unit and platform engineering teams under the ByteDance (e.g. TikTok, Douyin, Lark, CapCut, etc), but primarily targeting overseas (non-China) teams",
+        keyStakeholders: ["DevOps Engineers", "Platform Engineers", "Tech Leads", "App Developers"]
+      }
+    }
+  },
   {
     id: 'iac-deployment-app',
     title: "IaC Deployment Platform Product",

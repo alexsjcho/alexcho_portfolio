@@ -34,18 +34,18 @@ export default function About() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16 mt-20">
-      <section>
+    <div className="max-w-6xl mx-auto px-4 py-16">
+      <section className="px-4">
         <h2 className="text-4xl font-bold mb-4 text-center text-white font-sans tracking-tight hidden sm:block">About</h2>
         <div className="flex flex-col items-center">
-          <div className="w-full relative h-[400px] md:h-[400px] mb-8">
+          <div className="w-full relative h-[300px] sm:h-[350px] md:h-[400px] mb-8 overflow-hidden rounded-lg">
             {images.map((image, index) => (
               <Image
                 key={image.id}
                 src={image.src || "/placeholder.svg"}
                 alt={image.alt}
                 fill
-                className={`object-cover rounded-lg transition-opacity duration-1000 ${index === currentImage ? 'opacity-100' : 'opacity-0'
+                className={`object-cover transition-opacity duration-1000 ${index === currentImage ? 'opacity-100' : 'opacity-0'
                   }`}
               />
             ))}
@@ -77,8 +77,8 @@ export default function About() {
               ))}
             </div>
           </div>
-          <div className="w-full max-w-6xl text-center mb-10">
-            <p className="text-lg mb-4 text-white font-light leading-relaxed">
+          <div className="w-full text-center mb-10">
+            <p className="text-lg mb-4 text-white font-light leading-relaxed px-4 sm:px-0">
               Hello World! I'm Alex Cho — a <span className="font-semibold text-pink-300">self-taught</span>, <span className="font-semibold text-blue-300">multidisciplinary product professional</span> with <span className="font-semibold text-green-300">9+ years</span> building and scaling developer tools. I'm a <span className="font-semibold text-purple-300">specialized generalist</span> who thrives where <span className="font-semibold text-yellow-300">product, engineering, design, data, and business</span> intersect. My experience spans <span className="font-semibold text-cyan-300">0→1 and 1→N</span> product development through full-cycle <span className="font-semibold text-pink-300">GTM</span>, including <span className="font-semibold text-blue-300">lead generation, sales, solutions engineering, customer success, and marketing</span>, enabling products that balance user value, customer outcomes, and business impact across developer tools from <span className="font-semibold text-green-300">Interactive Multi-Media</span>, <span className="font-semibold text-purple-300">Business Intelligence</span>, <span className="font-semibold text-yellow-300">DevOps Platforms</span>, and <span className="font-semibold text-orange-300">Cloud Infrastructure</span>.
             </p>
           </div>

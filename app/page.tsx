@@ -15,9 +15,7 @@ export default function Home() {
       {/* About section with wavy background */}
       <section id="about" className="relative">
         <WavyBackground>
-          <div className="max-w-6xl mx-auto px-4">
-            <About />
-          </div>
+          <About />
         </WavyBackground>
       </section>
 
