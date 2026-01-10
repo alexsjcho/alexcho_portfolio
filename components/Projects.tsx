@@ -26,7 +26,7 @@ const projectsData: Project[] = [
   {
     title: 'MentorNear',
     description: 'jQuery app: Find and meet with a mentor near you',
-    image: `${getBasePath()}/img/mentornear.png`,
+    image: `${getBasePath()}/projects_img/mentornear.png`,
     repo: 'https://github.com/alexsjcho/mentor-near-api-capstone',
     category: ['Web'],
     tools: ['jQuery', 'HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Normalize.css', '3rd Party API'],
@@ -35,7 +35,7 @@ const projectsData: Project[] = [
   {
     title: 'Qualified',
     description: 'Allows users to score their sales conversations',
-    image: `${getBasePath()}/img/qualified.png`,
+    image: `${getBasePath()}/projects_img/qualified.png`,
     repo: 'https://github.com/alexsjcho/qualified-react-redux-immutable-app',
     category: ['Web'],
     tools: ['React', 'Redux', 'React-Router', 'Immutable', 'Bootstrap', 'Jest', 'Enzyme', 'JavaScript', 'CSS', '3rd Party API'],
@@ -44,7 +44,7 @@ const projectsData: Project[] = [
   {
     title: 'SmartOKR',
     description: 'Automate your goals via everday software tools',
-    image: `${getBasePath()}/img/sokrapp.png`,
+    image: `${getBasePath()}/projects_img/sokrapp.png`,
     repo: 'https://github.com/alexsjcho/smart-okr-react-redux-app',
     category: ['Web'],
     tools: ['React', 'Redux', 'JavaScript', '3rd Party API'],
@@ -53,7 +53,7 @@ const projectsData: Project[] = [
   {
     title: 'Apple Sales Forecasting 2024',
     description: 'Beginner project on Apple sales forecasting for 2024',
-    image: `${getBasePath()}/img/correlation_heatmap.png`,
+    image: `${getBasePath()}/projects_img/correlation_heatmap.png`,
     category: ['AI/ML'],
     repo: 'https://github.com/alexsjcho/apple-2024-sales-dataset',
     tools: ['Python', 'Machine Learning', 'Data Analysis', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Jupyter Notebook'],
@@ -62,7 +62,7 @@ const projectsData: Project[] = [
   {
     title: 'AI-Powered Customer Service Chatbot',
     description: 'This was a practice project to learn more about AI Agents workflows. Used Langflow as the backend to power my Next.js frontend.',
-    image: `${getBasePath()}/img/ai_agent_chatbot.png`,
+    image: `${getBasePath()}/projects_img/ai_agent_chatbot.png`,
     category: ['AI/ML'],
     repo: 'https://github.com/alexsjcho/customer_support_ai_agent',
     tools: ['Python', 'Langflow', 'OpenAI', 'Astra-DB', 'Next.js'],
@@ -71,7 +71,7 @@ const projectsData: Project[] = [
   {
     title: 'Simple Terminal AI Agent',
     description: 'Created a simple AI Agent from scratch using Anthropic\'s Claude API and tools',
-    image: `${getBasePath()}/img/ai_agent_terminal.png`,
+    image: `${getBasePath()}/projects_img/ai_agent_terminal.png`,
     category: ['AI/ML'],
     repo: 'https://github.com/alexsjcho/aiagent_from_scratch',
     tools: ['Anthropic', 'Claude API', 'Python', 'Wikipedia Search API'],
@@ -81,7 +81,7 @@ const projectsData: Project[] = [
   {
     title: 'Terraform Multi-Cloud Provisioning',
     description: 'proof-of-concept multi-cloud provisioning of compute engine resource for AWS and GCP',
-    image: `${getBasePath()}/img/terraform_cloud.png`,
+    image: `${getBasePath()}/projects_img/terraform_cloud.png`,
     category: ['Infrastructure'],
     repo: 'https://github.com/alexsjcho/terraform_demo_2',
     tools: ['Terraform', 'AWS', 'GCP', 'Sentinel', 'Terraform Cloud', 'Vault', 'Virtual Machine', 'Compute Engine', 'IAM'],
@@ -90,7 +90,7 @@ const projectsData: Project[] = [
   {
     title: 'IaC Provisioning with StackGen and Aiden AI Agent',
     description: 'Very simple proof of concept for IaC provisioning with StackGen and Aiden AI Agent',
-    image: `${getBasePath()}/img/stackgen-topology.png`,
+    image: `${getBasePath()}/projects_img/stackgen-topology.png`,
     category: ['Infrastructure'],
     repo: 'https://github.com/alexsjcho/stackgen_demo',
     tools: ['StackGen', 'Aiden AI Agent', 'Terraform', 'AWS', 'Infrastructure as Code'],
@@ -99,7 +99,7 @@ const projectsData: Project[] = [
   {
     title: 'Ansible + Terraform Deployment Orchastration',
     description: 'Practice project to learn how to use Ansible for deployment orchestration',
-    image: `${getBasePath()}/img/ansible-workflow-diagram.png`,
+    image: `${getBasePath()}/projects_img/ansible-workflow-diagram.png`,
     category: ['Infrastructure'],
     repo: 'https://github.com/alexsjcho/ansible-terraform-demo',
     tools: ['Ansible', 'Terraform', 'AWS', 'Infrastructure as Code'],
@@ -108,7 +108,7 @@ const projectsData: Project[] = [
   {
     title: 'Docker Compose Project',
     description: 'Practice project to learn how to use Docker Compose to deploy a multi-container application',
-    image: `${getBasePath()}/img/docker-img.png`,
+    image: `${getBasePath()}/projects_img/docker-img.png`,
     category: ['Infrastructure'],
     repo: 'https://github.com/alexsjcho/docker-demo',
     tools: ['Docker Compose', 'Node.js', 'Redis', 'Next.js'],
@@ -117,7 +117,7 @@ const projectsData: Project[] = [
   {
     title: 'Kubernetes + Docker Project',
     description: 'Practice project to learn how to use Kubernetes and Docker to deploy multiple services',
-    image: `${getBasePath()}/img/k8s+docker-img.png`,
+    image: `${getBasePath()}/projects_img/k8s+docker-img.png`,
     category: ['Infrastructure'],
     repo: 'https://github.com/alexsjcho/k8s-docker-project',
     tools: ['Kubernetes', 'Docker', 'Node.js', 'Redis', 'Next.js'],
@@ -126,7 +126,7 @@ const projectsData: Project[] = [
   {
     title: 'LGTM Observability Stack',
     description: 'Practice project to learn how to learn the LGTM Observability Stack',
-    image: `${getBasePath()}/img/lgtm_dashboards.png`,
+    image: `${getBasePath()}/projects_img/lgtm_dashboards.png`,
     category: ['Infrastructure'],
     repo: 'https://github.com/alexsjcho/lgtm-observability-stack-demo',
     tools: ['Docker', 'Prometheus', 'Grafana', 'Loki', 'Tempo', 'OpenTelemetry', 'OpenMetrics'],
@@ -231,6 +231,34 @@ export default function Projects() {
             </SelectContent>
           </Select>
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-4 mt-6 mb-8">
+            <Button
+              onClick={handlePreviousPage}
+              disabled={currentPage === 1}
+              variant="outline"
+              size="sm"
+              aria-label="Previous page"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+            <span className="text-sm text-muted-foreground">
+              Page {currentPage} of {totalPages}
+            </span>
+            <Button
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages}
+              variant="outline"
+              size="sm"
+              aria-label="Next page"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {paginatedProjects.map((project) => (
             <div key={project.title} className="bg-card text-card-foreground p-6 rounded-lg shadow-md relative border border-border">
@@ -294,31 +322,6 @@ export default function Projects() {
             </div>
           ))}
         </div>
-        {totalPages > 1 && (
-          <div className="mt-8 flex justify-center items-center space-x-4">
-            <Button
-              onClick={handlePreviousPage}
-              disabled={currentPage === 1}
-              variant="outline"
-              size="sm"
-              aria-label="Previous page"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </Button>
-            <span className="text-sm font-medium text-foreground">
-              Page {currentPage} of {totalPages}
-            </span>
-            <Button
-              onClick={handleNextPage}
-              disabled={currentPage === totalPages}
-              variant="outline"
-              size="sm"
-              aria-label="Next page"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </Button>
-          </div>
-        )}
       </section>
       {selectedProject && (
         <div

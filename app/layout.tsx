@@ -10,7 +10,7 @@ const basePath = isProduction ? `/${repository}` : ''
 const siteUrl = isProduction
   ? `https://alexsjcho.github.io${basePath}`
   : 'http://localhost:3000'
-const imageUrl = `${siteUrl}${basePath}/img/muirwood.jpg`
+const imageUrl = `${siteUrl}${basePath}/about_img/muirwood.jpg`
 
 export const metadata: Metadata = {
   title: 'Alex Cho Portfolio',

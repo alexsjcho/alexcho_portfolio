@@ -5,7 +5,7 @@ import type { ReactNode } from 'react'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Github, Globe, FileText, X, Copy, Check, Wrench, BookOpen } from 'lucide-react'
+import { Github, Globe, FileText, X, Copy, Check, Wrench, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react'
 import {
   Dialog,
   DialogContent,
@@ -60,7 +60,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     date: "12/19/2025",
     category: ['Infrastructure', 'GTM', 'Product'],
     company: 'StackGen',
-    image: `${getBasePath()}/img/tryaiden-img.png`,
+    image: `${getBasePath()}/featuredwork_img/tryaiden-img.png`,
     metrics: [
       { label: "Page Views", value: "Track XXX view count and specific prompt use cases" },
       { label: "Time-to-PoC", value: "80% faster PoC creation for new  use cases based on recent feature or product releases" },
@@ -94,7 +94,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     date: "01/15/2025",
     category: ['Infrastructure', 'Product', 'GTM'],
     company: 'ByteDance',
-    image: `${getBasePath()}/img/rolloutsystem.png`,
+    image: `${getBasePath()}/featuredwork_img/rolloutsystem.png`,
     metrics: [
       { label: "Scale of Deployments", value: "320K with several thousand resources per deployment" },
       { label: "Adoption", value: "25+ platform and app engineering teams across ByteDance" },
@@ -127,7 +127,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     date: "12/20/2024",
     category: ['Infrastructure', 'Product', 'GTM'],
     company: 'ByteDance',
-    image: `${getBasePath()}/img/bytegate.png`,
+    image: `${getBasePath()}/featuredwork_img/bytegate.png`,
     metrics: [
       { label: "MAU Growth", value: "30 → 500" },
       { label: "# of Feature Gates", value: "+80% (489 → 2392)" },
@@ -158,7 +158,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     date: "03/15/2023",
     category: ['GTM', 'Media Solutions', 'Product'],
     company: 'Agora',
-    image: `${getBasePath()}/img/agora_calculator.png`,
+    image: `${getBasePath()}/featuredwork_img/agora_calculator.png`,
     metrics: [
       { label: "revenue estimation", value: "$$K MRR or $$M ARR" },
       { label: "product usage estimation", value: "X product estimated X minutes per month" },
@@ -197,7 +197,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     date: "05/15/2023",
     category: ['GTM', 'Media Solutions', 'Product'],
     company: 'Agora',
-    image: `${getBasePath()}/img/agora_calculator.png`,
+    image: `${getBasePath()}/featuredwork_img/agora_calculator.png`,
     metrics: [
       { label: "revenue estimation", value: "$$K MRR or $$M ARR" },
       { label: "product usage estimation", value: "X product estimated X minutes per month" },
@@ -237,7 +237,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     date: "04/15/2023",
     category: ['GTM', 'Media Solutions', 'Product'],
     company: 'Agora',
-    image: `${getBasePath()}/img/agora_mci.png`,
+    image: `${getBasePath()}/featuredwork_img/agora_mci.png`,
     metrics: [
       { label: "battlecards created", value: "10+ competitor battlecards covering key market competitors" },
       { label: "benchmarks executed", value: "6+ technical benchmark tests across audio & video solutions" },
@@ -283,7 +283,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     date: "11/15/2022",
     category: ['GTM', 'Media Solutions', 'Product'],
     company: 'Agora',
-    image: `${getBasePath()}/img/agora_fpa.png`,
+    image: `${getBasePath()}/featuredwork_img/agora_fpa.png`,
     metrics: [
       { label: "revenue estimation", value: "$$K MRR or $$M ARR" },
       { label: "product usage estimation", value: "X product estimated X minutes per month for the media type (audio, video, chat, etc) that was being accelerated" },
@@ -329,7 +329,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     date: "10/15/2022",
     category: ['Operations', 'Media Solutions', 'Product', 'GTM'],
     company: 'Agora',
-    image: `${getBasePath()}/img/agora_malicious.png`,
+    image: `${getBasePath()}/featuredwork_img/agora_malicious.png`,
     metrics: [
       { label: "non-malicious sign-ups", value: "Tracked # of normal sign-ups from non-malicious accounts" },
       { label: "region", value: "% of requests from a given country" },
@@ -361,7 +361,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     date: "09/15/2022",
     category: ['GTM', 'Media Solutions', 'Product'],
     company: 'Agora',
-    image: `${getBasePath()}/img/agora_cloudproxy.png`,
+    image: `${getBasePath()}/featuredwork_img/agora_cloudproxy.png`,
     metrics: [
       { label: "revenue estimation", value: "$$K MRR or $$M ARR at GA readiness" },
       { label: "product usage estimation", value: "X customers estimated X million accelerated minutes/month across audio, video, and data channels" },
@@ -403,7 +403,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     date: "09/15/2022",
     category: ['GTM', 'Media Solutions', 'Product'],
     company: 'Agora',
-    image: `${getBasePath()}/img/agora_ncs.png`,
+    image: `${getBasePath()}/featuredwork_img/agora_ncs.png`,
     metrics: [
       { label: "adoption at GA", value: "XX+ customers enabled via self-service in Agora Console" },
       { label: "operational efficiency", value: "Reduced manual enablement & support dependency by ~X%" },
@@ -446,7 +446,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     date: "08/15/2022",
     category: ['GTM', 'Media Solutions', 'Product'],
     company: 'Agora',
-    image: `${getBasePath()}/img/agora_signaling.png`,
+    image: `${getBasePath()}/featuredwork_img/agora_signaling.png`,
     metrics: [
       { label: "revenue impact", value: "$$$K ARR preserved and redirected through clear Signaling vs Chat positioning in RoW" },
       { label: "product usage", value: "X+ million signaling calls / messages processed monthly across RoW customers post-repositioning" },
@@ -489,7 +489,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     date: "12/15/2019",
     category: ['Analytics', 'Product', 'GTM'],
     company: 'Side Project',
-    image: `${getBasePath()}/img/grampages.png`,
+    image: `${getBasePath()}/featuredwork_img/grampages.png`,
     metrics: [
       { label: "Sign-Up", value: "Tracked # of " },
       { label: "Impressions", value: "Tracked # of" },
@@ -578,14 +578,18 @@ const parseMarkdownLinks = (text: string): ReactNode[] => {
   return parts.length > 0 ? parts : [text]
 }
 
+const ITEMS_PER_PAGE = 3
+
 export default function FeaturedWork() {
   const [selectedWork, setSelectedWork] = useState<FeaturedWorkItem | null>(null)
   const [copiedId, setCopiedId] = useState<string | null>(null)
   const [selectedCompany, setSelectedCompany] = useState<string>('All')
+  const [currentPage, setCurrentPage] = useState(1)
 
   // Handle company filter change
   const handleCompanyChange = (value: string) => {
     setSelectedCompany(value)
+    setCurrentPage(1) // Reset to first page when filtering
     // Close any open case study when filtering
     setSelectedWork(null)
   }
@@ -619,6 +623,26 @@ export default function FeaturedWork() {
       }
     })
   }, [selectedCompany])
+
+  // Calculate pagination - memoize to ensure it updates when currentPage or sortedFeaturedWork changes
+  const totalPages = useMemo(() => {
+    return Math.ceil(sortedFeaturedWork.length / ITEMS_PER_PAGE)
+  }, [sortedFeaturedWork.length])
+
+  const paginatedFeaturedWork = useMemo(() => {
+    return sortedFeaturedWork.slice(
+      (currentPage - 1) * ITEMS_PER_PAGE,
+      currentPage * ITEMS_PER_PAGE
+    )
+  }, [sortedFeaturedWork, currentPage])
+
+  const handlePreviousPage = () => {
+    setCurrentPage(prev => Math.max(prev - 1, 1))
+  }
+
+  const handleNextPage = () => {
+    setCurrentPage(prev => Math.min(prev + 1, totalPages))
+  }
 
   useEffect(() => {
     // Check if there's a hash in the URL and open the corresponding case study
@@ -678,12 +702,41 @@ export default function FeaturedWork() {
               </SelectContent>
             </Select>
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-4 mt-6 mb-8">
+              <Button
+                onClick={handlePreviousPage}
+                disabled={currentPage === 1}
+                variant="outline"
+                size="sm"
+                aria-label="Previous page"
+              >
+                <ChevronLeft className="h-4 w-4 mr-1" />
+                Previous
+              </Button>
+              <span className="text-sm text-muted-foreground">
+                Page {currentPage} of {totalPages}
+              </span>
+              <Button
+                onClick={handleNextPage}
+                disabled={currentPage === totalPages}
+                variant="outline"
+                size="sm"
+                aria-label="Next page"
+              >
+                Next
+                <ChevronRight className="h-4 w-4 ml-1" />
+              </Button>
+            </div>
+          )}
         </div>
 
-        <div className="space-y-8" key={selectedCompany}>
-          {sortedFeaturedWork.map((work) => (
+        <div className="space-y-8" key={`${selectedCompany}-${currentPage}`}>
+          {paginatedFeaturedWork.map((work) => (
             <div
-              key={`${selectedCompany}-${work.id}`}
+              key={`${selectedCompany}-${currentPage}-${work.id}`}
               id={`featured-work-${work.id}`}
               className="bg-card text-card-foreground p-6 rounded-lg shadow-md border border-border"
             >
