@@ -38,14 +38,14 @@ export default function About() {
       <section className="px-4">
         <h2 className="text-4xl font-bold mb-4 text-center text-white font-sans tracking-tight hidden sm:block">About</h2>
         <div className="flex flex-col items-center">
-          <div className="w-full relative h-[300px] sm:h-[350px] md:h-[400px] mb-8 overflow-hidden rounded-lg">
+          <div className="w-full relative h-[400px] sm:h-[500px] md:h-[600px] mb-8 overflow-hidden rounded-lg">
             {images.map((image, index) => (
               <Image
                 key={image.id}
                 src={image.src || "/placeholder.svg"}
                 alt={image.alt}
                 fill
-                className={`object-cover transition-opacity duration-1000 ${index === currentImage ? 'opacity-100' : 'opacity-0'
+                className={`object-contain transition-opacity duration-1000 ${index === currentImage ? 'opacity-100' : 'opacity-0'
                   }`}
               />
             ))}
