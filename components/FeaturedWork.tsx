@@ -230,9 +230,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
       impact: [
         "Achieved 7,204 Beta sign-ups across SEA & CN, validating early demand for an AI IDE product",
         "Drove 63% of sign-ups organically, demonstrating strong message-market resonance beyond paid acquisition",
-        "Maintained a low acquisition cost of $0.53 per user, enabling scalable early-stage growth",
-        "Established a repeatable GTM motion for future regional launches and post-Beta expansion",
-        "Provided early user signal and channel insights to inform post-Beta positioning and roadmap decisions"
+        "Achieved a low acquisition cost of $0.53 per user, enabling scalable early-stage growth",
       ],
       teamOverview: {
         teamSize: "10+ (I was acting as Product Marketing Manager. Worked with Product Mangers, Product Operations Managers, Developers, and Technical Program Managers.)",
