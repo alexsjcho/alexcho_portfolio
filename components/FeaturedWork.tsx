@@ -320,7 +320,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
 
   {
     id: 'agora_MCI',
-    title: "Agora Market Competitive Intelligence",
+    title: "Market Competitive Intelligence",
     date: "04/15/2023",
     category: ['GTM', 'Media Solutions', 'Product'],
     company: 'Agora',
