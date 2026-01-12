@@ -5,18 +5,15 @@ import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 import FeaturedWork from '@/components/FeaturedWork'
 import Hobbies from '@/components/Hobbies'
-import { WavyBackground } from "@/components/ui/wavy-background"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
       
-      {/* About section with wavy background */}
-      <section id="about" className="relative">
-        <WavyBackground>
-          <About />
-        </WavyBackground>
+      {/* About section with black background */}
+      <section id="about" className="bg-black py-20">
+        <About />
       </section>
 
       {/* Featured Work section with white background */}

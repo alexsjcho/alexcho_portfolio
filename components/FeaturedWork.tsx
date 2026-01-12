@@ -198,6 +198,50 @@ const featuredWorkData: FeaturedWorkItem[] = [
     }
   },
   {
+    id: 'ai-ide',
+    title: "AI IDE Launch",
+    date: "11/20/2024",
+    category: ['Infrastructure', 'Product', 'GTM'],
+    company: 'ByteDance',
+    image: `${getBasePath()}/featuredwork_img/marscode_ide.png`,
+    metrics: [
+      { label: "beta sign-ups", value: "7,204 total seed users acquired" },
+      { label: "traffic attribution", value: "37% paid (2,815 users), 63% organic (4,389 users)" },
+      { label: "user acquisition cost", value: "$0.53 per user across SEA & CN" },
+    ],
+
+    description: "A 0→1 GTM and demand-generation initiative for the MarsCode (now Trae.ai) AI IDE Beta launch in the SEA region, focused on messaging & positioning, email campaign , and early user signal validation.",
+    website: 'https://trae.ai/',
+    skills: [
+      'Product marketing (PMM)',
+      '0→1 GTM strategy',
+      'Email marketing & lifecycle campaigns',
+      'AI developer tooling positioning',
+      'Growth experimentation',
+      'Website messaging & copywriting',
+      'Cross-regional GTM execution',
+    ],
+
+    caseStudy: {
+      problem: "MarsCode was launching a new AI-powered IDE and SRE assistant as a Beta product in a competitive developer tooling market. As a 0→1 product, it lacked brand awareness, proven positioning, and an established acquisition engine—particularly in the SEA region. The team needed to validate early demand, communicate the value of an AI-native IDE clearly, and acquire Beta users efficiently without overspending on paid channels.",
+
+      solution: "Supported the Beta GTM as Product Marketing Manager by owning messaging, positioning, and early acquisition strategy. Defined the core value proposition for MarsCode as an AI-native IDE designed to augment developer productivity and SRE workflows. Built and executed a targeted email marketing campaign using Instantly.ai, sourcing and activating ~10K seed developer leads in SEA (southeast asia) region. Optimized email copy, sequencing, and targeting to balance paid and organic growth. In parallel, partnered with Product and Web teams to refine website messaging and onboarding flows so that landing pages reinforced the Beta narrative and reduced drop-off from email to sign-up. Continuously monitored channel performance and acquisition efficiency to iterate on campaign structure and messaging.",
+
+      impact: [
+        "Achieved 7,204 Beta sign-ups across SEA & CN, validating early demand for an AI IDE product",
+        "Drove 63% of sign-ups organically, demonstrating strong message-market resonance beyond paid acquisition",
+        "Maintained a low acquisition cost of $0.53 per user, enabling scalable early-stage growth",
+        "Established a repeatable GTM motion for future regional launches and post-Beta expansion",
+        "Provided early user signal and channel insights to inform post-Beta positioning and roadmap decisions"
+      ],
+      teamOverview: {
+        teamSize: "10+ (I was acting as Product Marketing Manager. Worked with Product Mangers, Product Operations Managers, Developers, and Technical Program Managers.)",
+        scope: "SEA region (excluding China)",
+        keyStakeholders: ["App Developers "]
+      }
+    }
+  },
+  {
     id: 'agora_pricing_strategy',
     title: "Product & Solutions Pricing Strategy and Enablement",
     date: "03/15/2023",
