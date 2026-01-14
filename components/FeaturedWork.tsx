@@ -261,6 +261,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     ],
     tool: 'https://docs.google.com/spreadsheets/d/1JDE9hvlx0b_l9mdx4axN5RR4fgqAyHuXOxtDDnwkuvE/edit?usp=sharing',
     document: 'https://drive.google.com/file/d/1iai6K2x_Fi9max1P1gyL5f-_qwC3wElm/view?usp=sharing',
+    diagram: 'https://miro.com/app/board/uXjVMbeB11Q=/?share_link_id=448224782377',
     caseStudy: {
       problem: "Agora’s usage-based pricing model made revenue forecasting highly inaccurate because Sales teams lacked a consistent way to estimate customer use cases. Sales prioritized contract signing over launch readiness, resulting in customers taking 6–12 months on average to deploy Agora-powered solutions, delaying revenue realization and reducing forecast reliability.",
       solution: "Designed an end-to-end solution framework to connect technical use case design with cost estimation and monetization. Created an RTE Solution Playbook to standardize session-based use case design (audio, video, chat) and map them to the correct Agora products. Built a robust cost estimation calculator that modeled multiple pricing dimensions (minutes, bandwidth, storage, users, add-ons) to accurately project session, monthly, and annual costs. Advised customers on monetization strategies aligned with their use cases (per session, per minute, per user, device-based). Integrated use case schemas with Agora App Builder to enable rapid app deployment, reducing friction from concept to launch.",
