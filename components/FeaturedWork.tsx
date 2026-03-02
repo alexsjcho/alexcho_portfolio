@@ -218,7 +218,12 @@ const featuredWorkData: FeaturedWorkItem[] = [
     website: 'https://tryaiden.stackgen.com/',
     caseStudy: {
       problem: "Demonstrating Aiden’s AI infrastructure use cases required heavy setup across integrations, skills, tasks, and prompt engineering, making demos fragile and time-consuming. This slowed sales cycles and limited marketing’s ability to consistently showcase real-world use cases.",
-      solution: "Built an interactive demo playground for GTM enablement, featuring guided setup of Aiden’s integrations, skills, tasks, and knowledge base, plus 13+ persona-based prompt flows—enabling repeatable demos, faster sales cycles, and clearer value storytelling. Here's what [V1 launch looks like](https://drive.google.com/file/d/1IIhCIssA1yvXj2nYfCpEjm-NIbNBU524/view?usp=sharing)",
+      solution: "Built an interactive demo playground for GTM enablement, featuring guided setup of Aiden’s integrations, skills, tasks, and knowledge base, plus 13+ persona-based prompt flows—enabling repeatable demos, faster sales cycles, and clearer value storytelling.",
+      contentList: [
+        "[Aiden for DevOps v1](https://drive.google.com/file/d/1IIhCIssA1yvXj2nYfCpEjm-NIbNBU524/view?usp=sharing)",
+        "[Aiden for DevOps v1 MRD Doc](https://docs.google.com/document/d/1JLwxnHLWAvPKlHWokH4QNcPw1Og-GFsO/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
+
+      ],
       impact: [
         "Drove a 70% increase in demo bookings at in-person events including KubeCon and AWS re:Invent 2025",
 
