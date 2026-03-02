@@ -66,7 +66,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     image: `${getBasePath()}/featuredwork_img/stackgen-pricing.png`,
     metrics: [
       { label: "New Customer Conversion", value: "Test new public pricing model net new customer conversion rate" },
-      { label: "ACV (average contract value)", value: "Pricing adoption, deal velocity, and revenue clarity for Sales and leadership" }
+      { label: "ACV (average contract value)", value: "Test new customer acquistion and deal velocity " }
     ],
     description: "Led pricing strategy and packaging for StackGen's Autonomous Operations Platform, defining value metrics, tier structure, and sales enablement to support PLG and enterprise go-to-market.",
     skills: ['Pricing Strategy', 'Packaging', 'GTM Strategy', 'Product Marketing', 'Sales Enablement', 'Value Metrics', 'PLG', 'Enterprise Sales'],
@@ -79,8 +79,10 @@ const featuredWorkData: FeaturedWorkItem[] = [
         "Enabled Sales with pricing frameworks and enablement to improve deal velocity and win rates",
         "Improved revenue and adoption visibility for leadership through clearer pricing and packaging",
         "Created product bundling pricing calculator for sales enablement"
+
       ],
       contentList: [
+        "[Before & After Pricing Page](https://drive.google.com/file/d/15YACiAY20xrvGMjEJ6IMACSh_E-VXSay/view?usp=sharing)",
         "[Pricing Research Van Westendorp Price Sensitivity Framework](https://drive.google.com/file/d/1bo3vgGOsgvHBOtfarDFFyrnYxWCItJVs/view?usp=sharing)",
         "[Competitor Pricing Research for Infrastructure Product](https://docs.google.com/spreadsheets/d/1hpB87gzJXsRrlW53qfCbszS4PKPX2Nxf/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
         "[IaC and Aiden AI Agent pricing model comparisons](https://docs.google.com/spreadsheets/d/16cpDYHQjm-0qqdhGfF1jABGVz8MmspmN/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
@@ -107,20 +109,26 @@ const featuredWorkData: FeaturedWorkItem[] = [
     metrics: [
       { label: "Website Traffic", value: "Track Total Clicks, Total Impressions, Average CTR, Average Position, and more" }
     ],
-    description: "Drove content marketing by producing 100+ multi-modal content assets for StackGen aligned to the Autonomous Operations Platform narrative and to Platform Engineering, DevOps, and SRE audiences.",
+    description: "Drove content marketing by producing 150+ multi-modal content assets (website, blog, social, video, PLG playgrounds) aligned to the Autonomous Operations Platform positioning narrative and to Platform Enginer, DevOps, App Developers,and SRE personas.",
     skills: ['Content Marketing', 'Content Strategy', 'SEO', 'Thought Leadership', 'Copywriting', 'Demand Generation', 'Blog & Web Content', 'GTM Strategy', 'Sales Enablement'],
     video: 'https://drive.google.com/file/d/1SGpBRVPqUgGikjYeUEbuo3pv0K5B-YJw/view?usp=sharing',
     caseStudy: {
-      problem: "StackGen needed a scalable content engine to build awareness, capture search demand, and support pipeline — but lacked consistent product-led content, clear ownership of messaging across blogs and web, and content aligned to segment-specific keywords and buyer journeys. Without structured content marketing, organic reach and conversion from content remained limited and hard to measure.",
-      solution: "As Product Marketing Manager, owned and drove content marketing by defining the content strategy and producing audience-specific assets. Created and published blog posts, thought leadership pieces, and SEO-oriented web content tied to StackGen's Autonomous Operations Platform narrative and to Infrastructure, DevOps, and SRE use cases. Developed landing pages, solution-focused copy, and sales enablement content so marketing and sales could use consistent messaging across channels. Partnered with Demand Gen, RevOps, and Product to align content to campaigns, track performance (clicks, impressions, CTR, position), and iterate on what drives traffic and conversions.",
+      problem: "StackGen needed a scalable content engine to build awareness, capture search demand, and support pipeline — but lacked consistent product-led content, clear ownership of messaging across blogs and web, and content aligned to segment-specific keywords and buyer journeys. Without structured content marketing, organic reach and conversion from content remained limited and hard to measure. Moreover, the marketing team was small (under 4 people) and I had to support content creation over 4 product lines (Aiden for DevOps, Aiden for SRE, Aiden for Infrastructure, and ObserveNow)",
+      solution: "As Product Marketing Manager, owned and drove content creation by automating most content creation tasks using Claude Skills and Claude Cowork to defer 80% of content ideation and iteration with AI. Created and published blog posts, thought leadership pieces, and SEO-oriented web content tied to StackGen's Autonomous Operations Platform narrative and to Infrastructure, DevOps, and SRE use cases. Developed landing pages, solution-focused copy, and sales enablement content so marketing and sales could use consistent messaging across channels. Partnered with Demand Gen, RevOps, and Product to align content to campaigns, track performance (clicks, impressions, CTR, position), and iterate on what drives traffic and conversions.",
       impact: [
-        "Since 07/29/2025 to 02/28/2026 metric comparisons, improved Total Clicks by 171%, Total Impressions by 1219%, Average Position improvement of 53%"
+        "Since 07/29/2025 to 02/28/2026 metric comparisons, improved Total Clicks by 171%, Total Impressions by 1219%, Average Position improvement of 53%",
+        "Automated 80% of content creation tasks using Claude Skills and Claude Cowork with AI driven content evaluation guardrails to defer 80% of content ideation and iteration with AI",
+        "Created and published 150+ multi-modal content assets (website, blog, social, video, PLG playgrounds) aligned to the Autonomous Operations Platform positioning narrative and to Platform Enginer, DevOps, App Developers,and SRE personas",
+        "Increased content publish speeds by 50% or more by using Claude Organization Skills to enforce content output, content evaluation scores, and content quality scores to help with final human review and approval from various stakeholders",
       ],
       contentList: [
         "[MCP Server for Platform Engineers Video](https://drive.google.com/file/d/15QQHSLpDe6WzsAAdCCwJFYobaW2Zv4Kk/view?usp=sharing)",
         "[MCP Server for Developers Video](https://drive.google.com/file/d/17F8DXNzky_3-9agt_Mz5GIHAa0BHyFq4/view?usp=sharing)",
         "[Innovacer Customer Case Study](https://drive.google.com/file/d/1-2naKq5S_b0rVu16rogJksFlm3w8x1o4/view?usp=sharing)",
         "[GreytHR Customer Case Study](https://drive.google.com/file/d/1CnET6qiw2hyfwvu6yqX9qjSlG0PJF6eJ/view?usp=sharing)",
+        "[StackGen x Grafana - Social LinkedIn Post Video](https://drive.google.com/file/d/1UPyhrNESZyDQxoK4vcKqtfwpom2UI-0K/view?usp=sharing)",
+        "[StackGen x Wiz Integration - Social LinkedIn Post Video](https://drive.google.com/file/d/1nXsdeyCNBr-GzhODEZfc7MQw6KaxjKrO/view?usp=sharing)",
+        "[Claude Content Creation Org Skills](https://drive.google.com/file/d/1WIIRyHt0EiYym5IgdO1lo6iwR4nLmPi5/view?usp=sharing)", "[StackHealer (now Aiden for SRE) On AWS Partners Video](https://drive.google.com/file/d/1SpAVvX-IuajoFFwoPLUF1kHSeY4jQQE5/view?usp=sharing)",
 
       ],
       teamOverview: {
@@ -149,17 +157,19 @@ const featuredWorkData: FeaturedWorkItem[] = [
       contentList: [
         "[DevOps 2.0 Mumbai Event Banners](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-9961&t=pCCSVoznJJcbjop5-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
         "[KubeCon 2025 One Pagers](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=47-11212&t=cy8iDcvCngYzeHc7-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
+        "[KubeCon 2025 Landing Page](https://drive.google.com/file/d/1UG3nFPEdWi62Na_5hB81oGDeiTEi1xjs/view?usp=sharing)",
         "[KubeCon 2025 Banner](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-10324&t=f75dGRiYkTIVqmR0-1&scaling=scale-down&content-scaling=fixed&page-id=39%3A10983)",
         "[AWS Re:Invent 2025 One Pagers](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=46-6433&t=8AXEHTvuv4Sia8oO-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
-        "AWS Re:Invent 2025 Booth Design](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=66-5627&t=ytTzZUhCKdxUdLFB-1&scaling=scale-down&content-scaling=fixed&page-id=39%3A10983)",
+        "[AWS Re:Invent 2025 Booth Design](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=66-5627&t=ytTzZUhCKdxUdLFB-1&scaling=scale-down&content-scaling=fixed&page-id=39%3A10983)",
         "[DevOps 2.0 Mumbai 2026 One Pagers](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-8509&t=mK0B7HcTzptBTM8x-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
         "[DevOps 2.0 Mumbai 2026 Banners](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-9961&t=pml3wsmoOpgS76Oa-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
-        "[DevOps 2.0 Mumbai 2026 Banners](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-9961&t=pml3wsmoOpgS76Oa-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
+
       ],
       impact: [
         "KubeCon 2025 - Booked 50 demos",
         "AWS re:Invent 2025 - Booked 91 Demos",
-        "DevOps 2.0 Mumbai 2026 - Booked 31 Demos"
+        "DevOps 2.0 Mumbai 2026 - Booked 31 Demos",
+        "Drove $2.73M in pipeline generated mainly from in-person events in 2H 2025 and early 2026"
       ],
       teamOverview: {
         teamSize: "5+ (I lead as Product Marketing Manager and worked with Product, Solutions, Sales, and external Design & Web Development Agency)",
@@ -179,19 +189,22 @@ const featuredWorkData: FeaturedWorkItem[] = [
       { label: "Page Views", value: "Track XXX view count and specific prompt use cases" },
       { label: "Demo Requests", value: "Track X% web conversion of new demo sign-ups" }
     ],
-    description: "Led 4 full website repositioning initiatives between 07/29/2025 and 02/25/2026, evolving StackGen's narrative from product-centric IaC messaging to the Autonomous Operations Platform",
+    description: "Led 3 full website repositioning initiatives between 07/29/2025 and 02/25/2026, evolving StackGen's narrative from product-centric IaC messaging to the Autonomous Operations Platform",
     skills: ['StackGen', 'Product Marketing', 'Messaging Strategy', 'Positioning', 'Copywriting', 'GTM Strategy', 'HubSpot Webpages', 'Brand Strategy'],
     video: 'https://drive.google.com/file/d/1mPjbfSQmkTzJsV9aEQe6nj8Kyj9bQrTf/view?usp=sharing',
     caseStudy: {
       problem: "StackGen's homepage and website messaging failed to reflect the company's expanding platform vision. As the product evolved beyond IaC tooling into AI-powered autonomous operations, the website remained anchored to outdated, tool-centric language — creating friction in sales cycles, misaligning with enterprise buyer expectations, and underselling the platform's full capability surface.",
-      solution: "Drove 4 end-to-end website repositioning initiatives across a 7-month window, each aligned to major GTM milestones and audience shifts. Repositioning 1 (07/29/2025) established the foundational platform narrative. Subsequent iterations refined segment-specific messaging for Platform Engineering, DevOps, and SRE buyers. The fourth and most recent repositioning (02/25/2026) introduced the DevOps 2.0 narrative, debuted at the Mumbai event, repositioning StackGen as the Autonomous Operations Platform — where AI agents like Aiden replace manual runbooks, toil, and reactive firefighting with autonomous, policy-driven infrastructure operations in 3 different products: Aiden for DevOps, Aiden for SRE, and Aiden for Infrastructure.",
+      solution: "Drove 3 end-to-end website repositioning initiatives across a 7-month window, each aligned to major GTM milestones and audience shifts. Repositioning 1 (07/29/2025) repositioned into AI company, Autonomous Infrastructure Platform. For KubeCon 11/10/2025 event, repositioned to Agentic Infrastructure Platform. Subsequent iterations refined segment-specific messaging for Platform Engineering, DevOps, and SRE buyers. The 3rd and most recent repositioning (02/25/2026) debuted at the Mumbai event, repositioning StackGen as the Autonomous Operations Platform — where AI agents like Aiden replace manual runbooks, toil, and reactive firefighting with autonomous, policy-driven infrastructure operations in 3 different products: Aiden for DevOps, Aiden for SRE, and Aiden for Infrastructure.",
       contentList: [
-        "[07/29/2025 One Pagers](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=42-12053&t=2dtpPoZrR7pA3cMd-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)"
+        "[Website Positioning Before 07/29/2025](https://drive.google.com/file/d/1d1dAmDcn3HCBRfHzYl0IRXwMruyLejz8/view?usp=sharing)",
+        "[Website Repositioning On 07/29/2025](https://drive.google.com/file/d/1C4tIjZVbrvcgdMwbsboHtpU_p62PSDqv/view?usp=sharing)",
+        "[07/29/2025 One Pagers](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=42-12053&t=2dtpPoZrR7pA3cMd-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
+        "[KubeCon 11/10/2025 Website Repositioning ](https://drive.google.com/file/d/13TJjZN6wSXHkb67PXquhEQJJi1EBOPUd/view?usp=sharing)",
+        "[DevOps 2.0 Mumbai 2026 Website Repositioning](https://drive.google.com/file/d/1hLo6zPDFrNGWMFnB5RwtNkFKA-jn-ftm/view?usp=sharing)",
       ],
       impact: [
-        "Delivered 4 full repositioning cycles in 7 months, each tied to a GTM milestone — product launches andd events like KubeCon, AWS re:Invent, and DevOps 2.0 Mumbai",
-        "Evolved StackGen's core narrative from Infrastructure as Code tooling to the Autonomous Operations Platform, sharpening enterprise positioning across all 3 market segments (Infrastructure, DevOps, SRE)",
-        "DevOps 2.0 repositioning introduced for Mumbai event (02/25/2026) reflects StackGen's most differentiated market stance to date — framing AI agents as the operational layer that replaces manual DevOps workflows at scale"
+        "Delivered 3 full repositioning cycles in 7 months, each tied to a GTM milestone — product launches and events like KubeCon, AWS re:Invent, and DevOps 2.0 Mumbai",
+        "Evolved StackGen's core narrative from Infrastructure as Code (prior to 07/29/2025) tooling to the Autonomous Operations Platform debut at DevOps 2.0 Mumbai (02/25/2026) to position StackGen's Aiden AI Agent as the operational force that replaces manual DevOps workflows at scale ascross all 3 market segments (Infrastructure, DevOps, SRE)",
       ],
       teamOverview: {
         teamSize: "5+ (I lead as Product Marketing Manager and worked with Product, Solutions, Sales, and external Design & Web Development Agency)",
