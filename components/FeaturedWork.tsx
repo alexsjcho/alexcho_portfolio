@@ -5,7 +5,7 @@ import type { ReactNode } from 'react'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Github, Globe, FileText, X, Copy, Check, Wrench, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Github, Globe, FileText, X, Copy, Check, Wrench, BookOpen, ChevronLeft, ChevronRight, Video } from 'lucide-react'
 import {
   Dialog,
   DialogContent,
@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/dialog"
 import getBasePath from '../utils/path'
 
-type CategoryType = 'AI/ML' | 'Analytics' | 'UX/UI Design' | 'Infrastructure' | 'Product' | 'Operations' | 'GTM' | 'Media Solutions';
+type CategoryType = 'AI/ML' | 'Analytics' | 'UX/UI Design' | 'Infrastructure' | 'Product' | 'Operations' | 'GTM' | 'Media Solutions' | 'DevOps' | 'Observability' | 'Pricing';
 
 interface KeyMetric {
   label: string;
@@ -31,6 +31,8 @@ interface CaseStudy {
   problem: string;
   solution: string;
   impact: string[];
+  /** Optional list of content items; each string may include markdown links [text](url) */
+  contentList?: string[];
   teamOverview: TeamOverview;
 }
 
@@ -50,35 +52,181 @@ interface FeaturedWorkItem {
   diagram?: string;
   website?: string;
   document?: string;
+  video?: string;
   caseStudy: CaseStudy;
 }
 
 const featuredWorkData: FeaturedWorkItem[] = [
+  {
+    id: 'stackgen-pricing-strategy',
+    title: "StackGen Pricing Strategy",
+    date: "01/25/2026",
+    category: ['GTM', 'Product', 'DevOps', 'Pricing'],
+    company: 'StackGen',
+    image: `${getBasePath()}/featuredwork_img/stackgen-pricing.png`,
+    metrics: [
+      { label: "New Customer Conversion", value: "Test new public pricing model net new customer conversion rate" },
+      { label: "ACV (average contract value)", value: "Pricing adoption, deal velocity, and revenue clarity for Sales and leadership" }
+    ],
+    description: "Led pricing strategy and packaging for StackGen's Autonomous Operations Platform, defining value metrics, tier structure, and sales enablement to support PLG and enterprise go-to-market.",
+    skills: ['Pricing Strategy', 'Packaging', 'GTM Strategy', 'Product Marketing', 'Sales Enablement', 'Value Metrics', 'PLG', 'Enterprise Sales'],
+    video: 'https://drive.google.com/file/d/1oRQ7Atbwfu19k8LqHMylPrNOrfp9jiXA/view?usp=sharing',
+    caseStudy: {
+      problem: "StackGen needed a clear pricing and packaging strategy to scale PLG and enterprise motions — but lacked defined value metrics, consistent tier structure, and sales enablement so Sales and prospects could understand pricing and ROI. Without structured pricing, deal velocity and conversion suffered and leadership had limited visibility into revenue and adoption.",
+      solution: "As Product Marketing Manager, owned and drove pricing strategy by defining value-based packaging and tier structure aligned to the Autonomous Operations Platform narrative and to Infrastructure, DevOps, and SRE use cases. Developed pricing frameworks, discount guidance, and sales enablement materials so Sales could articulate value and close deals consistently. Partnered with Product, Sales, and leadership to align pricing to packaging, track adoption and deal metrics, and iterate on packaging and positioning.",
+      impact: [
+        "Established value-based packaging and tier structure that aligned pricing to platform value and buyer segments",
+        "Enabled Sales with pricing frameworks and enablement to improve deal velocity and win rates",
+        "Improved revenue and adoption visibility for leadership through clearer pricing and packaging",
+        "Created product bundling pricing calculator for sales enablement"
+      ],
+      contentList: [
+        "[Pricing Research Van Westendorp Price Sensitivity Framework](https://drive.google.com/file/d/1bo3vgGOsgvHBOtfarDFFyrnYxWCItJVs/view?usp=sharing)",
+        "[Competitor Pricing Research for Infrastructure Product](https://docs.google.com/spreadsheets/d/1hpB87gzJXsRrlW53qfCbszS4PKPX2Nxf/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
+        "[IaC and Aiden AI Agent pricing model comparisons](https://docs.google.com/spreadsheets/d/16cpDYHQjm-0qqdhGfF1jABGVz8MmspmN/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
+        "[Early Figma Make Prototypes](https://drive.google.com/file/d/1vmtDNsqnc7BWaJUoXCMSNQuXHSxxKqPp/view?usp=sharing)",
+        "[Product Bundling Pricing Calculator](https://docs.google.com/spreadsheets/d/1ORNb2pmk0pfTPh8rqop_T-OYvMhtVrp0/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
+        "[Aiden for SRE Pricing Model Comparison](https://docs.google.com/spreadsheets/d/1XF39YVcJpgeG1IFhcqqrDqNowBmZdG4x/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
+        "[Aiden for SRE RUM, User, Incident, AI SRE Instance Pricing Model](https://docs.google.com/spreadsheets/d/1YfExHh0Ij-iO8-1HWV89BpnMt_PBtToM/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
+
+      ],
+      teamOverview: {
+        teamSize: "5+ (I lead as Product Marketing Manager and worked with Product, Solutions, Sales, and leadership)",
+        scope: "Pricing strategy, packaging, tier structure, sales enablement, and revenue/adoption tracking",
+        keyStakeholders: ["Product Manager", "Sales", "Solution Engineers", "Customer Success", "Partnership", "Leadership", "RevOps"]
+      }
+    }
+  },
+  {
+    id: 'content-marketing',
+    title: "StackGen Content Marketing",
+    date: "02/25/2026",
+    category: ['GTM', 'Product', 'DevOps',],
+    company: 'StackGen',
+    image: `${getBasePath()}/featuredwork_img/stackgen-content.png`,
+    metrics: [
+      { label: "Website Traffic", value: "Track Total Clicks, Total Impressions, Average CTR, Average Position, and more" }
+    ],
+    description: "Drove content marketing by producing 100+ multi-modal content assets for StackGen aligned to the Autonomous Operations Platform narrative and to Platform Engineering, DevOps, and SRE audiences.",
+    skills: ['Content Marketing', 'Content Strategy', 'SEO', 'Thought Leadership', 'Copywriting', 'Demand Generation', 'Blog & Web Content', 'GTM Strategy', 'Sales Enablement'],
+    video: 'https://drive.google.com/file/d/1SGpBRVPqUgGikjYeUEbuo3pv0K5B-YJw/view?usp=sharing',
+    caseStudy: {
+      problem: "StackGen needed a scalable content engine to build awareness, capture search demand, and support pipeline — but lacked consistent product-led content, clear ownership of messaging across blogs and web, and content aligned to segment-specific keywords and buyer journeys. Without structured content marketing, organic reach and conversion from content remained limited and hard to measure.",
+      solution: "As Product Marketing Manager, owned and drove content marketing by defining the content strategy and producing audience-specific assets. Created and published blog posts, thought leadership pieces, and SEO-oriented web content tied to StackGen's Autonomous Operations Platform narrative and to Infrastructure, DevOps, and SRE use cases. Developed landing pages, solution-focused copy, and sales enablement content so marketing and sales could use consistent messaging across channels. Partnered with Demand Gen, RevOps, and Product to align content to campaigns, track performance (clicks, impressions, CTR, position), and iterate on what drives traffic and conversions.",
+      impact: [
+        "Since 07/29/2025 to 02/28/2026 metric comparisons, improved Total Clicks by 171%, Total Impressions by 1219%, Average Position improvement of 53%"
+      ],
+      contentList: [
+        "[MCP Server for Platform Engineers Video](https://drive.google.com/file/d/15QQHSLpDe6WzsAAdCCwJFYobaW2Zv4Kk/view?usp=sharing)",
+        "[MCP Server for Developers Video](https://drive.google.com/file/d/17F8DXNzky_3-9agt_Mz5GIHAa0BHyFq4/view?usp=sharing)",
+        "[Innovacer Customer Case Study](https://drive.google.com/file/d/1-2naKq5S_b0rVu16rogJksFlm3w8x1o4/view?usp=sharing)",
+        "[GreytHR Customer Case Study](https://drive.google.com/file/d/1CnET6qiw2hyfwvu6yqX9qjSlG0PJF6eJ/view?usp=sharing)",
+
+      ],
+      teamOverview: {
+        teamSize: "5+ (I lead as Product Marketing Manager and worked with Product, Solutions, Sales, and external Design & Web Development Agency)",
+        scope: "Content marketing across blog, website, demand gen, social, PLG, events, and more)",
+        keyStakeholders: ["Product Manager", "Demand Generation Manager", "RevOps Engineer", "Platform Engineers", "DevOps Engineers", "SRE"]
+      }
+    }
+  },
+  {
+    id: 'event-marketing',
+    title: "StackGen Event Marketing",
+    date: "02/25/2026",
+    category: ['GTM', 'Product', 'DevOps',],
+    company: 'StackGen',
+    image: `${getBasePath()}/featuredwork_img/stackgen-events.png`,
+    metrics: [
+      { label: "Demos Booked", value: "Track conversion of demos booked from event, website, and PLG channels for this event" }
+    ],
+    description: "Supported various in-person and virtual events for StackGen, including Hashiconf, KubeCon, AWS re:Invent, and DevOps 2.0 Mumbai by creating supporting content and outreach campaign messaging",
+    skills: ['Event Marketing', 'Conference Strategy', 'Campaign Messaging', 'Demand Generation', 'Content Creation', 'Outreach & Lead Nurturing', 'Virtual & In-Person Events', 'GTM Strategy', 'Partner & Community Marketing'],
+    video: 'https://drive.google.com/file/d/1feeyMXqvZ7-t3OwobnhXNRv5-O00lJjA/view?usp=sharing',
+    caseStudy: {
+      problem: "StackGen's key events — including HashiConf, KubeCon, AWS re:Invent, and DevOps 2.0 Mumbai — required consistent, audience-specific messaging and collateral to drive pipeline and demo bookings. Without dedicated product marketing support, event teams lacked standardized content, clear value propositions for each segment (Platform Engineering, DevOps, SRE), and coordinated outreach campaigns, limiting conversion and making it harder to measure event ROI.",
+      solution: "As Product Marketing Manager, supported event marketing by creating and owning messaging collateral and content for in-person and virtual events. Developed event-specific value propositions and talking points aligned to each audience (Infrastructure, DevOps, SRE) and to StackGen's Autonomous Operations Platform narrative. Produced supporting content including landing pages, email and outreach campaign copy, booth and demo scripts, and sales enablement materials so field and marketing teams could speak consistently before, during, and after each event. Coordinated with Sales, Solutions, and event owners to align messaging to conference themes and track demo bookings from event, website, and PLG channels.",
+      contentList: [
+        "[DevOps 2.0 Mumbai Event Banners](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-9961&t=pCCSVoznJJcbjop5-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
+        "[KubeCon 2025 One Pagers](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=47-11212&t=cy8iDcvCngYzeHc7-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
+        "[KubeCon 2025 Banner](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-10324&t=f75dGRiYkTIVqmR0-1&scaling=scale-down&content-scaling=fixed&page-id=39%3A10983)",
+        "[AWS Re:Invent 2025 One Pagers](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=46-6433&t=8AXEHTvuv4Sia8oO-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
+        "AWS Re:Invent 2025 Booth Design](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=66-5627&t=ytTzZUhCKdxUdLFB-1&scaling=scale-down&content-scaling=fixed&page-id=39%3A10983)",
+        "[DevOps 2.0 Mumbai 2026 One Pagers](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-8509&t=mK0B7HcTzptBTM8x-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
+        "[DevOps 2.0 Mumbai 2026 Banners](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-9961&t=pml3wsmoOpgS76Oa-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
+        "[DevOps 2.0 Mumbai 2026 Banners](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-9961&t=pml3wsmoOpgS76Oa-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
+      ],
+      impact: [
+        "KubeCon 2025 - Booked 50 demos",
+        "AWS re:Invent 2025 - Booked 91 Demos",
+        "DevOps 2.0 Mumbai 2026 - Booked 31 Demos"
+      ],
+      teamOverview: {
+        teamSize: "5+ (I lead as Product Marketing Manager and worked with Product, Solutions, Sales, and external Design & Web Development Agency)",
+        scope: "Event marketing support for HashiConf, KubeCon, AWS re:Invent, and DevOps 2.0 Mumbai — messaging, content, outreach campaigns, and sales enablement for in-person and virtual events",
+        keyStakeholders: ["Product Manager", 'Event Marketing Manager', 'Demand Generation Manager', "Solution Engineers", "Sales", "RevOps Engineer"]
+      }
+    }
+  },
+  {
+    id: 'stackgen-repositioning',
+    title: "StackGen Repositioning",
+    date: "02/25/2026",
+    category: ['Infrastructure', 'GTM', 'Product', 'DevOps', 'Observability'],
+    company: 'StackGen',
+    image: `${getBasePath()}/featuredwork_img/stackgen-homepage.png`,
+    metrics: [
+      { label: "Page Views", value: "Track XXX view count and specific prompt use cases" },
+      { label: "Demo Requests", value: "Track X% web conversion of new demo sign-ups" }
+    ],
+    description: "Led 4 full website repositioning initiatives between 07/29/2025 and 02/25/2026, evolving StackGen's narrative from product-centric IaC messaging to the Autonomous Operations Platform",
+    skills: ['StackGen', 'Product Marketing', 'Messaging Strategy', 'Positioning', 'Copywriting', 'GTM Strategy', 'HubSpot Webpages', 'Brand Strategy'],
+    video: 'https://drive.google.com/file/d/1mPjbfSQmkTzJsV9aEQe6nj8Kyj9bQrTf/view?usp=sharing',
+    caseStudy: {
+      problem: "StackGen's homepage and website messaging failed to reflect the company's expanding platform vision. As the product evolved beyond IaC tooling into AI-powered autonomous operations, the website remained anchored to outdated, tool-centric language — creating friction in sales cycles, misaligning with enterprise buyer expectations, and underselling the platform's full capability surface.",
+      solution: "Drove 4 end-to-end website repositioning initiatives across a 7-month window, each aligned to major GTM milestones and audience shifts. Repositioning 1 (07/29/2025) established the foundational platform narrative. Subsequent iterations refined segment-specific messaging for Platform Engineering, DevOps, and SRE buyers. The fourth and most recent repositioning (02/25/2026) introduced the DevOps 2.0 narrative, debuted at the Mumbai event, repositioning StackGen as the Autonomous Operations Platform — where AI agents like Aiden replace manual runbooks, toil, and reactive firefighting with autonomous, policy-driven infrastructure operations in 3 different products: Aiden for DevOps, Aiden for SRE, and Aiden for Infrastructure.",
+      contentList: [
+        "[07/29/2025 One Pagers](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=42-12053&t=2dtpPoZrR7pA3cMd-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)"
+      ],
+      impact: [
+        "Delivered 4 full repositioning cycles in 7 months, each tied to a GTM milestone — product launches andd events like KubeCon, AWS re:Invent, and DevOps 2.0 Mumbai",
+        "Evolved StackGen's core narrative from Infrastructure as Code tooling to the Autonomous Operations Platform, sharpening enterprise positioning across all 3 market segments (Infrastructure, DevOps, SRE)",
+        "DevOps 2.0 repositioning introduced for Mumbai event (02/25/2026) reflects StackGen's most differentiated market stance to date — framing AI agents as the operational layer that replaces manual DevOps workflows at scale"
+      ],
+      teamOverview: {
+        teamSize: "5+ (I lead as Product Marketing Manager and worked with Product, Solutions, Sales, and external Design & Web Development Agency)",
+        scope: "Homepage, product pages, persona landing pages, navigation taxonomy, hero messaging, and supporting sales enablement materials across all 4 repositioning cycles",
+        keyStakeholders: ["Product Manager", "Solution Engineers", "Sales", "UX Designers", "Web Full Stack Engineers", 'RevOps Engineer']
+      }
+    }
+  },
   {
     id: 'aiden-demo-playground',
     title: "Aiden Demo Playground",
     date: "12/19/2025",
     category: ['Infrastructure', 'GTM', 'Product'],
     company: 'StackGen',
-    image: `${getBasePath()}/featuredwork_img/tryaiden-img.png`,
+    image: `${getBasePath()}/featuredwork_img/tryaiden-new-ui.png`,
     metrics: [
       { label: "Page Views", value: "Track XXX view count and specific prompt use cases" },
       { label: "Time-to-PoC", value: "80% faster PoC creation for new  use cases based on recent feature or product releases" },
-      { label: "Sign-Ups", value: "Track X% conversion of self-service sign-ups from prompt demo page views" }
+      { label: "Sign-Ups", value: "82% conversion of target attainment of Aiden for DevOps sign-ups from prompt demos" }
     ],
     description: "0-1 GTM playground demo website for Aiden AI Agent to showcase proof-of-concept demos of AI-powered infrastructure capabilities.",
     skills: ['StackGen', 'AI Agent', 'Terraform', 'Cloud Infrastructure', 'Infrastructure as Code', 'Cursor AI', 'Next.js', 'Vercel', 'Grafana'],
-    demo: 'https://drive.google.com/file/d/1IIhCIssA1yvXj2nYfCpEjm-NIbNBU524/view?usp=sharing',
+    demo: 'https://drive.google.com/file/d/1dGiActgHMxEW5VcLOfxDzoRRfMWoOYPx/view?usp=sharing',
     website: 'https://tryaiden.stackgen.com/',
     caseStudy: {
       problem: "Demonstrating Aiden’s AI infrastructure use cases required heavy setup across integrations, skills, tasks, and prompt engineering, making demos fragile and time-consuming. This slowed sales cycles and limited marketing’s ability to consistently showcase real-world use cases.",
-      solution: "Built an interactive demo playground for GTM enablement, featuring guided setup of Aiden’s integrations, skills, tasks, and knowledge base, plus 13+ persona-based prompt flows—enabling repeatable demos, faster sales cycles, and clearer value storytelling.",
+      solution: "Built an interactive demo playground for GTM enablement, featuring guided setup of Aiden’s integrations, skills, tasks, and knowledge base, plus 13+ persona-based prompt flows—enabling repeatable demos, faster sales cycles, and clearer value storytelling. Here's what [V1 launch looks like](https://drive.google.com/file/d/1IIhCIssA1yvXj2nYfCpEjm-NIbNBU524/view?usp=sharing)",
       impact: [
         "Drove a 70% increase in demo bookings at in-person events including KubeCon and AWS re:Invent 2025",
 
         "Achieved 2.6K page views in the first 60 days post-launch, signaling strong GTM traction",
 
-        "Enabled Sales and Marketing to run PoC demos on demand, eliminating repeated setup and reducing dependency on Solutions and Product Engineering resources"
+        "Enabled Sales and Marketing to run PoC demos on demand, eliminating repeated setup and reducing dependency on Solutions and Product Engineering resources",
+
+        "From initial launch to end of Feb 2026, 41 product sign-up conversions out of 50 target (82% attainment)"
       ],
       teamOverview: {
         teamSize: "2 (1 engineers, I functioned as the PM, UX Designer, and Frontend Engineer)",
@@ -280,7 +428,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     }
   },
   {
-    id: 'agora_pricing_strategy',
+    id: 'agora_pricing_strategy_enablement',
     title: "Product & Solutions Pricing Strategy",
     date: "05/15/2023",
     category: ['GTM', 'Media Solutions', 'Product'],
@@ -348,7 +496,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     caseStudy: {
       problem: "Agora operated in a crowded real-time engagement (RTE) market where Sales, Marketing, and Product teams needed reliable, up-to-date competitive intelligence to position Agora against entrenched incumbents and emerging rivals. Without a centralized CI program, teams were creating ad-hoc competitor content, leading to inconsistency, outdated claims, and positioning gaps during customer engagements and product planning.",
 
-      solution: "Designed and led a recurring Competitive Intelligence & Technical Benchmark program that synthesized quantitative performance data, market pricing, feature differentiation, and use case comparisons. Built a structured framework for intelligence gathering across primary competitors (Zoom, Twilio, Vonage, and others). Produced a suite of competitive assets including battlecards, competitor comparison matrices, objection-handling playbooks, and detailed technical benchmark reports for both audio and video solutions. Benchmarks included head-to-head performance tests documented in resources such as [Zoom evaluation guidance](https://www.agora.io/en/blog/zoom-out-and-look-at-the-big-picture-when-evaluating-real-time-engagement-solutions/), [Agora vs Zoom comparison](https://www.agora.io/en/blog/agora-vs-zoom-look-at-the-big-picture/), [multi-party mobile video testing](https://www.agora.io/en/blog/agora-vs-zoom-multi-party-mobile-video-testing/), [Agora vs Twilio web video benchmark](https://www.agora.io/en/blog/testing-agora-vs-twilio-for-multi-party-web-video-calls/), and [Agora vs Vonage mobile video testing](https://www.agora.io/en/blog/testing-agora-vs-vonage-for-1-to-1-mobile-video-calls/). Collaborated with Product, Solutions, and GTM teams to keep benchmarks updated on quarterly cadence and aligned with evolving product capabilities and market trends.",
+      solution: "Designed and led a recurring Competitive Intelligence & Technical Benchmark program that synthesized quantitative performance data, market pricing, feature differentiation, and use case comparisons. Built a structured framework for intelligence gathering across primary competitors (Zoom, Twilio, Vonage, and others). Produced a suite of competitive assets including battlecards, competitor comparison matrices, objection-handling playbooks, and detailed technical benchmark reports for both audio and video solutions. Benchmarks included head-to-head performance tests. Collaborated with Product, Solutions, and GTM teams to keep benchmarks updated on quarterly cadence and aligned with evolving product capabilities and market trends.",
 
       impact: [
         "Equipped Sales with 10+ battlecards and comparison matrices that increased competitive win rates in target enterprise segments",
@@ -356,6 +504,14 @@ const featuredWorkData: FeaturedWorkItem[] = [
         "Enabled Product and Marketing to align release messaging with real differentiation backed by empirical performance data",
         "Standardized competitive knowledge across teams, reducing ad-hoc research time and improving response speed to competitive threats",
         "Instituted a repeatable quarterly cadence for CI updates tied to product releases, market shifts, and emerging competitor moves"
+      ],
+
+      contentList: [
+        "[Zoom evaluation guidance](https://www.agora.io/en/blog/zoom-out-and-look-at-the-big-picture-when-evaluating-real-time-engagement-solutions/)",
+        "[Agora vs Zoom comparison](https://www.agora.io/en/blog/agora-vs-zoom-look-at-the-big-picture/)",
+        "[Multi-party mobile video testing](https://www.agora.io/en/blog/agora-vs-zoom-multi-party-mobile-video-testing/)",
+        "[Agora vs Twilio web video benchmark](https://www.agora.io/en/blog/testing-agora-vs-twilio-for-multi-party-web-video-calls/)",
+        "[Agora vs Vonage mobile video testing](https://www.agora.io/en/blog/testing-agora-vs-vonage-for-1-to-1-mobile-video-calls/)"
       ],
 
       teamOverview: {
@@ -611,7 +767,10 @@ const categoryColors: Record<CategoryType, string> = {
   'Product': 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200',
   'Operations': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200',
   'GTM': 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200',
-  'Media Solutions': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200'
+  'Media Solutions': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200',
+  'DevOps': 'bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-200',
+  'Observability': 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200',
+  'Pricing': 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200'
 }
 
 // Helper function to parse MM/DD/YYYY date format to Date object
@@ -667,6 +826,16 @@ const parseMarkdownLinks = (text: string): ReactNode[] => {
 }
 
 const ITEMS_PER_PAGE = 3
+
+// Build image URL at render time so basePath is correct in all environments
+function getWorkImageSrc(img: string | undefined): string {
+  if (!img) return '/placeholder.svg'
+  if (img.startsWith('http')) return img
+  const base = getBasePath()
+  if (!base) return img.startsWith('/') ? img : `/${img}`
+  if (img.startsWith(base)) return img
+  return base + (img.startsWith('/') ? img : `/${img}`)
+}
 
 export default function FeaturedWork() {
   const [selectedWork, setSelectedWork] = useState<FeaturedWorkItem | null>(null)
@@ -833,10 +1002,12 @@ export default function FeaturedWork() {
                 <div className="flex-shrink-0">
                   <div className="relative w-full md:w-64 h-64 bg-muted rounded-lg overflow-hidden">
                     <Image
-                      src={work.image || "/placeholder.svg"}
+                      src={getWorkImageSrc(work.image)}
                       alt={work.title}
                       fill
                       className="object-contain"
+                      unoptimized
+                      sizes="(max-width: 768px) 100vw, 256px"
                     />
                   </div>
                 </div>
@@ -850,7 +1021,7 @@ export default function FeaturedWork() {
                         {work.date}
                       </span>
                       {work.category.map((cat) => (
-                        <span key={cat} className={`px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[cat]}`}>
+                        <span key={cat} className={`px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[cat] ?? 'bg-muted text-muted-foreground'}`}>
                           {cat}
                         </span>
                       ))}
@@ -958,6 +1129,14 @@ export default function FeaturedWork() {
                         </a>
                       </Button>
                     )}
+                    {work.video && (
+                      <Button asChild size="sm" variant="outline">
+                        <a href={work.video} target="_blank" rel="noopener noreferrer">
+                          <Video className="w-4 h-4 mr-2" />
+                          Video
+                        </a>
+                      </Button>
+                    )}
                   </div>
 
                   {/* Expand Case Study Button */}
@@ -978,7 +1157,7 @@ export default function FeaturedWork() {
       {/* Case Study Dialog */}
       {selectedWork && (
         <Dialog open={!!selectedWork} onOpenChange={handleCloseCaseStudy}>
-          <DialogContent className="max-w-7xl max-h-[90vh] overflow-y-auto">
+          <DialogContent key={selectedWork.id} className="max-w-7xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <div className="flex items-center gap-3 mb-2">
                 <button
@@ -1005,12 +1184,12 @@ export default function FeaturedWork() {
               </div>
               <div className="flex items-center gap-3 mb-4 flex-wrap">
                 {selectedWork.category.map((cat) => (
-                  <span key={cat} className={`px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[cat]}`}>
+                  <span key={cat} className={`px-2 py-1 rounded-full text-xs font-semibold ${categoryColors[cat] ?? 'bg-muted text-muted-foreground'}`}>
                     {cat}
                   </span>
                 ))}
               </div>
-              {(selectedWork.demo || selectedWork.repo || selectedWork.diagram || selectedWork.website || selectedWork.tool || selectedWork.document) && (
+              {(selectedWork.demo || selectedWork.repo || selectedWork.diagram || selectedWork.website || selectedWork.tool || selectedWork.document || selectedWork.video) && (
                 <div className="flex items-center gap-3 mb-4 flex-wrap">
                   <span className="text-sm font-semibold text-red-600">Examples:</span>
                   {selectedWork.demo && (
@@ -1061,6 +1240,14 @@ export default function FeaturedWork() {
                       </a>
                     </Button>
                   )}
+                  {selectedWork.video && (
+                    <Button asChild size="sm" variant="outline" className="h-7">
+                      <a href={selectedWork.video} target="_blank" rel="noopener noreferrer">
+                        <Video className="w-3 h-3 mr-1.5" />
+                        Video
+                      </a>
+                    </Button>
+                  )}
                 </div>
               )}
             </DialogHeader>
@@ -1070,7 +1257,7 @@ export default function FeaturedWork() {
               <div className="w-full">
                 <div className="relative w-full h-[600px] bg-muted rounded-lg overflow-hidden">
                   <Image
-                    src={selectedWork.image || "/placeholder.svg"}
+                    src={getWorkImageSrc(selectedWork.image)}
                     alt={selectedWork.title}
                     fill
                     className="object-contain"
@@ -1079,8 +1266,9 @@ export default function FeaturedWork() {
                 </div>
               </div>
 
-              {/* Description */}
+              {/* Overview */}
               <div>
+                <h4 className="font-bold text-lg mb-3 text-foreground">OVERVIEW</h4>
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   {selectedWork.description}
                 </p>
@@ -1088,22 +1276,38 @@ export default function FeaturedWork() {
 
               {/* Metrics */}
               {selectedWork.metrics && selectedWork.metrics.length > 0 && (
-                <div className="flex flex-wrap gap-3">
-                  {selectedWork.metrics.map((metric, index) => (
-                    <div
-                      key={index}
-                      className="px-4 py-2 bg-amber-100 text-amber-900 dark:bg-amber-900/30 dark:text-amber-200 rounded-lg text-sm"
-                    >
-                      <span className="font-bold text-amber-800 dark:text-amber-300">{metric.label}:</span>{' '}
-                      <span className="font-medium text-amber-950 dark:text-amber-100">{metric.value}</span>
-                    </div>
-                  ))}
+                <div>
+                  <h4 className="font-bold text-lg mb-3 text-foreground">METRICS</h4>
+                  <div className="flex flex-wrap gap-3">
+                    {selectedWork.metrics.map((metric, index) => (
+                      <div
+                        key={index}
+                        className="px-4 py-2 bg-amber-100 text-amber-900 dark:bg-amber-900/30 dark:text-amber-200 rounded-lg text-sm"
+                      >
+                        <span className="font-bold text-amber-800 dark:text-amber-300">{metric.label}:</span>{' '}
+                        <span className="font-medium text-amber-950 dark:text-amber-100">{metric.value}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
 
+              {/* Impact */}
+              <div>
+                <h4 className="font-bold text-lg mb-3 text-foreground">IMPACT</h4>
+                <ul className="space-y-2">
+                  {selectedWork.caseStudy.impact.map((impactItem, index) => (
+                    <li key={index} className="text-muted-foreground leading-relaxed flex items-start">
+                      <span className="mr-2">•</span>
+                      <span>{parseMarkdownLinks(impactItem)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               {/* Skills */}
               <div>
-                <h4 className="font-semibold mb-3 text-foreground">SKILLS</h4>
+                <h4 className="font-bold text-lg mb-3 text-foreground">SKILLS</h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedWork.skills.map((skill) => (
                     <span
@@ -1116,7 +1320,37 @@ export default function FeaturedWork() {
                 </div>
               </div>
 
-              {/* Team & Scope */}
+              {/* Problem */}
+              <div>
+                <h4 className="font-bold text-lg mb-3 text-foreground">PROBLEM</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  {parseMarkdownLinks(selectedWork.caseStudy.problem)}
+                </p>
+              </div>
+
+              {/* Solution */}
+              <div>
+                <h4 className="font-bold text-lg mb-3 text-foreground">SOLUTION</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  {parseMarkdownLinks(selectedWork.caseStudy.solution)}
+                </p>
+              </div>
+
+              {/* Content Examples */}
+              {selectedWork.caseStudy.contentList && selectedWork.caseStudy.contentList.length > 0 && (
+                <div>
+                  <h4 className="font-bold text-lg mb-3 text-foreground">CONTENT EXAMPLES</h4>
+                  <ul className="space-y-2 list-disc list-inside text-muted-foreground leading-relaxed">
+                    {selectedWork.caseStudy.contentList.map((item, index) => (
+                      <li key={index}>
+                        {parseMarkdownLinks(item)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Team Overview */}
               <div>
                 <h4 className="font-bold text-lg mb-3 text-foreground">TEAM OVERVIEW</h4>
                 <div className="space-y-2 text-sm">
@@ -1130,35 +1364,6 @@ export default function FeaturedWork() {
                     <span className="font-medium">TARGET PERSONAS:</span> {selectedWork.caseStudy.teamOverview.keyStakeholders.join(', ')}
                   </div>
                 </div>
-              </div>
-
-              {/* Problem */}
-              <div>
-                <h4 className="font-bold text-lg mb-2 text-foreground">PROBLEM</h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  {parseMarkdownLinks(selectedWork.caseStudy.problem)}
-                </p>
-              </div>
-
-              {/* Solution */}
-              <div>
-                <h4 className="font-bold text-lg mb-2 text-foreground">SOLUTION</h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  {parseMarkdownLinks(selectedWork.caseStudy.solution)}
-                </p>
-              </div>
-
-              {/* Impact */}
-              <div>
-                <h4 className="font-bold text-lg mb-3 text-foreground">IMPACT</h4>
-                <ul className="space-y-2">
-                  {selectedWork.caseStudy.impact.map((impactItem, index) => (
-                    <li key={index} className="text-muted-foreground leading-relaxed flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>{parseMarkdownLinks(impactItem)}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           </DialogContent>
