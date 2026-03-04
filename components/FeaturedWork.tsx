@@ -113,7 +113,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     skills: ['Content Marketing', 'Content Strategy', 'SEO', 'Thought Leadership', 'Copywriting', 'Demand Generation', 'Blog & Web Content', 'GTM Strategy', 'Sales Enablement'],
     video: 'https://drive.google.com/file/d/1SGpBRVPqUgGikjYeUEbuo3pv0K5B-YJw/view?usp=sharing',
     caseStudy: {
-      problem: "StackGen needed a scalable content engine to build awareness, capture search demand, and support pipeline — but lacked consistent product-led content, clear ownership of messaging across blogs and web, and content aligned to segment-specific keywords and buyer journeys. Without structured content marketing, organic reach and conversion from content remained limited and hard to measure. Moreover, the marketing team was small (under 4 people) and I had to support content creation over 4 product lines (Aiden for DevOps, Aiden for SRE, Aiden for Infrastructure, and ObserveNow)",
+      problem: "StackGen needed a scalable content engine to build awareness, capture search demand, and support pipeline — but lacked consistent product-led content, clear ownership of messaging across blogs and web, and content aligned to segment-specific keywords and buyer journeys. Without structured content marketing, organic reach and conversion from content remained limited and hard to measure. The marketing team was small (under 4 people), and I had to support content creation across 4 product lines: Aiden for DevOps, Aiden for SRE, Aiden for Infrastructure, and ObserveNow.",
       solution: "As Product Marketing Manager, owned and drove content creation by automating most content creation tasks using Claude Skills and Claude Cowork to defer 80% of content ideation and iteration with AI. Created and published blog posts, thought leadership pieces, and SEO-oriented web content tied to StackGen's Autonomous Operations Platform narrative and to Infrastructure, DevOps, and SRE use cases. Developed landing pages, solution-focused copy, and sales enablement content so marketing and sales could use consistent messaging across channels. Partnered with Demand Gen, RevOps, and Product to align content to campaigns, track performance (clicks, impressions, CTR, position), and iterate on what drives traffic and conversions.",
       impact: [
         "Since 07/29/2025 to 02/28/2026 metric comparisons, improved Total Clicks by 171%, Total Impressions by 1219%, Average Position improvement of 53%",
@@ -152,7 +152,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     skills: ['Event Marketing', 'Conference Strategy', 'Campaign Messaging', 'Demand Generation', 'Content Creation', 'Outreach & Lead Nurturing', 'Virtual & In-Person Events', 'GTM Strategy', 'Partner & Community Marketing'],
     video: 'https://drive.google.com/file/d/1feeyMXqvZ7-t3OwobnhXNRv5-O00lJjA/view?usp=sharing',
     caseStudy: {
-      problem: "StackGen's key events — including HashiConf, KubeCon, AWS re:Invent, and DevOps 2.0 Mumbai — required consistent, audience-specific messaging and collateral to drive pipeline and demo bookings. Without dedicated product marketing support, event teams lacked standardized content, clear value propositions for each segment (Platform Engineering, DevOps, SRE), and coordinated outreach campaigns, limiting conversion and making it harder to measure event ROI.",
+      problem: "StackGen's key events — including HashiConf, KubeCon, AWS re:Invent, and DevOps 2.0 Mumbai — required consistent, audience-specific messaging and collateral to drive pipeline and demo bookings. Without dedicated product marketing support, event teams lacked standardized content, clear value propositions for each segment (Platform Engineering, DevOps, SRE), and coordinated outreach campaigns. That limited conversion and made it harder to measure event ROI.",
       solution: "As Product Marketing Manager, supported event marketing by creating and owning messaging collateral and content for in-person and virtual events. Developed event-specific value propositions and talking points aligned to each audience (Infrastructure, DevOps, SRE) and to StackGen's Autonomous Operations Platform narrative. Produced supporting content including landing pages, email and outreach campaign copy, booth and demo scripts, and sales enablement materials so field and marketing teams could speak consistently before, during, and after each event. Coordinated with Sales, Solutions, and event owners to align messaging to conference themes and track demo bookings from event, website, and PLG channels.",
       contentList: [
         "[DevOps 2.0 Mumbai Event Banners](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-9961&t=pCCSVoznJJcbjop5-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
@@ -180,7 +180,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
   },
   {
     id: 'stackgen-repositioning',
-    title: "StackGen Repositioning",
+    title: "StackGen Positioning & GTM Strategy",
     date: "02/25/2026",
     category: ['Infrastructure', 'GTM', 'Product', 'DevOps', 'Observability'],
     company: 'StackGen',
@@ -192,9 +192,10 @@ const featuredWorkData: FeaturedWorkItem[] = [
     description: "Led 3 full website repositioning initiatives between 07/29/2025 and 02/25/2026, evolving StackGen's narrative from product-centric IaC messaging to the Autonomous Operations Platform",
     skills: ['StackGen', 'Product Marketing', 'Messaging Strategy', 'Positioning', 'Copywriting', 'GTM Strategy', 'HubSpot Webpages', 'Brand Strategy'],
     video: 'https://drive.google.com/file/d/1mPjbfSQmkTzJsV9aEQe6nj8Kyj9bQrTf/view?usp=sharing',
+    document: 'https://docs.google.com/document/d/1sSn3TX9ZyPySz2XxdCb1Y1lvXjGNRSfhxikgr3TF7dw/edit?usp=sharing',
     caseStudy: {
-      problem: "StackGen's homepage and website messaging failed to reflect the company's expanding platform vision. As the product evolved beyond IaC tooling into AI-powered autonomous operations, the website remained anchored to outdated, tool-centric language — creating friction in sales cycles, misaligning with enterprise buyer expectations, and underselling the platform's full capability surface.",
-      solution: "Drove 3 end-to-end website repositioning initiatives across a 7-month window, each aligned to major GTM milestones and audience shifts. Repositioning 1 (07/29/2025) repositioned into AI company, Autonomous Infrastructure Platform. For KubeCon 11/10/2025 event, repositioned to Agentic Infrastructure Platform. Subsequent iterations refined segment-specific messaging for Platform Engineering, DevOps, and SRE buyers. The 3rd and most recent repositioning (02/25/2026) debuted at the Mumbai event, repositioning StackGen as the Autonomous Operations Platform — where AI agents like Aiden replace manual runbooks, toil, and reactive firefighting with autonomous, policy-driven infrastructure operations in 3 different products: Aiden for DevOps, Aiden for SRE, and Aiden for Infrastructure.",
+      problem: "StackGen's homepage and website messaging failed to reflect the company's expanding platform vision. As the product evolved beyond IaC tooling into AI-powered autonomous operations, the website remained anchored to outdated, tool-centric language — creating friction in sales cycles, misaligning with enterprise buyer expectations, and underselling the platform's full capability surface. StackGen also lacked a formal strategy or framework to qualify potential opportunities.",
+      solution: "Drove 3 end-to-end website repositioning initiatives across a 7-month window, each aligned to major GTM milestones and audience shifts. Repositioning 1 (07/29/2025) repositioned StackGen into an AI company and Autonomous Infrastructure Platform. For the KubeCon 11/10/2025 event, repositioned to Agentic Infrastructure Platform. Subsequent iterations refined segment-specific messaging for Platform Engineering, DevOps, and SRE buyers. The 3rd and most recent repositioning (02/25/2026) debuted at the Mumbai event, repositioning StackGen as the Autonomous Operations Platform — where AI agents like Aiden replace manual runbooks, toil, and reactive firefighting with autonomous, policy-driven infrastructure operations across 3 products: Aiden for DevOps, Aiden for SRE, and Aiden for Infrastructure. Created 4 qualification frameworks for each product line (Aiden for DevOps, Aiden for SRE, Aiden for Infrastructure, and ObserveNow) to give Sales, Product, Customer Success, and Solutions a common language and framework to qualify potential opportunities.",
       contentList: [
         "[Website Positioning Before 07/29/2025](https://drive.google.com/file/d/1d1dAmDcn3HCBRfHzYl0IRXwMruyLejz8/view?usp=sharing)",
         "[Website Repositioning On 07/29/2025](https://drive.google.com/file/d/1C4tIjZVbrvcgdMwbsboHtpU_p62PSDqv/view?usp=sharing)",
@@ -231,7 +232,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     website: 'https://tryaiden.stackgen.com/',
     caseStudy: {
       problem: "Demonstrating Aiden’s AI infrastructure use cases required heavy setup across integrations, skills, tasks, and prompt engineering, making demos fragile and time-consuming. This slowed sales cycles and limited marketing’s ability to consistently showcase real-world use cases.",
-      solution: "Built an interactive demo playground for GTM enablement, featuring guided setup of Aiden’s integrations, skills, tasks, and knowledge base, plus 13+ persona-based prompt flows—enabling repeatable demos, faster sales cycles, and clearer value storytelling.",
+      solution: "Built an interactive demo playground for GTM enablement, featuring guided setup of Aiden’s integrations, skills, tasks, and knowledge base, plus 13+ persona-based prompt flows. The playground enabled repeatable demos, faster sales cycles, and clearer value storytelling.",
       contentList: [
         "[Aiden for DevOps v1](https://drive.google.com/file/d/1IIhCIssA1yvXj2nYfCpEjm-NIbNBU524/view?usp=sharing)",
         "[Aiden for DevOps v1 MRD Doc](https://docs.google.com/document/d/1JLwxnHLWAvPKlHWokH4QNcPw1Og-GFsO/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
@@ -281,10 +282,9 @@ const featuredWorkData: FeaturedWorkItem[] = [
     ],
 
     caseStudy: {
-      problem: "ByteDance’s DevInfra Platform supported overseas engineering teams across 17+ DevOps and infrastructure tools, but developer experience was poor due to lack of localization of product for overseas developer teams. Most operational processes and success metrics were designed for China-based teams, resulting in limited visibility into overseas developer pain points, slower feedback resolution, inconsistent support quality, and declining satisfaction. Leadership needed a scalable operating model to improve DX and reliability for global developers.",
+      problem: "ByteDance’s DevInfra Platform supported overseas engineering teams across 17+ DevOps and infrastructure tools, but developer experience was poor due to lack of product localization for overseas teams. Most operational processes and success metrics were designed for China-based teams, resulting in limited visibility into overseas developer pain points, slower feedback resolution, inconsistent support quality, and declining satisfaction. Leadership needed a scalable operating model to improve DX and reliability for global developers.",
 
-      solution: "Owned Product Operations for the Overseas DevInfra Platform end-to-end (from feature requirement to monitoring developer tools). Established a structured operating model to measure, analyze, and improve developer experience across regions. Built dashboards and reporting mechanisms to track key DX metrics on a weekly, monthly, and quarterly basis, including resolution rate, satisfaction score, feedback closure, and on-call quality. Designed and deployed developer surveys and feedback pipelines tailored to overseas teams, then conducted qualitative interviews with developers who reported low satisfaction or repeated issues. Partnered with Product, R&D, and Support teams across time zones to identify chronic issues, prioritize fixes, and drive accountability. Created improvement proposal documents that translated DX insights into concrete product and operational changes, and continuously monitored outcomes to ensure sustained improvement.",
-
+      solution: "Owned Product Operations for the Overseas DevInfra Platform end-to-end (from feature requirement to monitoring developer tools). Established a structured operating model to measure, analyze, and improve developer experience across regions. Built dashboards and reporting mechanisms to track key DX metrics on a weekly, monthly, and quarterly basis, including resolution rate, satisfaction score, feedback closure, and on-call quality. Designed and deployed developer surveys and feedback pipelines tailored to overseas teams, then conducted qualitative interviews with developers who reported low satisfaction or repeated issues. Partnered with Product, R&D, and Support teams across time zones to identify chronic issues, prioritize fixes, and drive accountability. Created improvement proposal documents that translated DX insights into concrete product and operational changes and continuously monitored outcomes to ensure sustained improvement.",
       impact: [
         "Improved overall issue resolution rate by +19.7%, approaching the target benchmark despite regional constraints",
         "Increased developer satisfaction score from 7.5 to 8.35, exceeding the target goal of 8",
@@ -316,7 +316,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
     demo: 'https://www.figma.com/proto/NdFRq7UsKkyrfIFddtZitG/RLS-Q32024?node-id=36-27387&t=PDo2dUO7bLGzoPVl-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
     diagram: 'https://miro.com/app/board/uXjVIAVfeT0=/?share_link_id=737365740298',
     caseStudy: {
-      problem: "Many internal engineering teams (e.g., TikTok, Lark, CapCut) relied on DIY, manual infrastructure provisioning because existing platform tools could not support global, large-scale deployments across both greenfield and brownfield environments.",
+      problem: "Many internal engineering teams (for example, TikTok, Lark, and CapCut) relied on DIY, manual infrastructure provisioning. Existing platform tools could not support global, large-scale deployments across both greenfield and brownfield environments.",
       solution: "Built an intent-based IaC deployment platform that abstracts global infrastructure complexity. By defining desired outcomes instead of manual configs, it enabled consistent greenfield and brownfield deployments across regions through a unified global IaC layer on top of existing platform tools.",
       impact: [
         "Reduced large-scale global greenfield deployment time by 50% (e.g. data center bringups in a country like Singapore)",
@@ -795,6 +795,16 @@ const categoryColors: Record<CategoryType, string> = {
 const parseDate = (dateString: string): Date => {
   const [month, day, year] = dateString.split('/').map(Number)
   return new Date(year, month - 1, day) // month is 0-indexed
+}
+
+// Split problem/solution text into bullet points (one per sentence, split on period)
+const getProblemOrSolutionBullets = (text: string): string[] => {
+  if (!text || !text.trim()) return []
+  return text
+    .split(/\.\s+/)
+    .map(s => s.trim())
+    .filter(Boolean)
+    .map(s => s.endsWith('.') ? s : s + '.')
 }
 
 // Helper function to parse markdown links and convert them to clickable links
@@ -1341,17 +1351,27 @@ export default function FeaturedWork() {
               {/* Problem */}
               <div>
                 <h4 className="font-bold text-lg mb-3 text-foreground">PROBLEM</h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  {parseMarkdownLinks(selectedWork.caseStudy.problem)}
-                </p>
+                <ul className="space-y-2">
+                  {getProblemOrSolutionBullets(selectedWork.caseStudy.problem).map((bullet, index) => (
+                    <li key={index} className="text-muted-foreground leading-relaxed flex items-start">
+                      <span className="mr-2">•</span>
+                      <span>{parseMarkdownLinks(bullet)}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               {/* Solution */}
               <div>
                 <h4 className="font-bold text-lg mb-3 text-foreground">SOLUTION</h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  {parseMarkdownLinks(selectedWork.caseStudy.solution)}
-                </p>
+                <ul className="space-y-2">
+                  {getProblemOrSolutionBullets(selectedWork.caseStudy.solution).map((bullet, index) => (
+                    <li key={index} className="text-muted-foreground leading-relaxed flex items-start">
+                      <span className="mr-2">•</span>
+                      <span>{parseMarkdownLinks(bullet)}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               {/* Content Examples */}

@@ -158,7 +158,7 @@ const categoryColors: CategoryColors = {
   'Infrastructure': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200'
 }
 
-const PROJECTS_PER_PAGE = 9
+const PROJECTS_PER_PAGE = 6
 
 // Helper function to format date without timezone conversion
 const formatDate = (dateString: string): string => {

@@ -1,18 +1,40 @@
 'use client'
 
-import { useState } from 'react'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { 
+import { useState, useEffect, useCallback } from 'react'
+import {
   Code, Brain, LineChart, Palette, GitBranch, Database, Layout, Terminal,
   Globe, Cpu, BarChart, Users, MessageSquare, Search, Target, Briefcase,
-  PenTool, Figma, Trello, FileSearch, Rocket, Share2, Megaphone, 
+  PenTool, Figma, Trello, FileSearch, Rocket, Share2, Megaphone,
   BarChart2, PieChart, Presentation, BookOpen, TrendingUp, Award,
-  UserPlus, GitPullRequest, RefreshCw, Network, Layers
+  UserPlus, GitPullRequest, RefreshCw, Network, Layers, Activity
 } from 'lucide-react'
-import { SiReact, SiJavascript, SiPython, SiPytorch, SiTensorflow, SiScikitlearn } from 'react-icons/si'
+import {
+  SiReact,
+  SiJavascript,
+  SiPython,
+  SiPytorch,
+  SiTensorflow,
+  SiScikitlearn,
+  SiGithub,
+  SiGithubactions,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiVercel,
+  SiNetlify,
+  SiTerraform,
+  SiAmazonwebservices,
+  SiGooglecloud,
+  SiGrafana,
+  SiPrometheus,
+  SiFigma,
+  SiTrello,
+} from 'react-icons/si'
 
 // First, define the category type
-type SkillCategory = 'Web Development' | 'AI/ML' | 'Solutions' | 'UX/UI Design' | 'Product Management' | 'Product Marketing'
+type SkillCategory = 'Engineering' | 'AI' | 'Infrastructure' | 'Analytics' | 'Solutions' | 'UX/UI Design' | 'Product Management' | 'Product Marketing'
+
+const CAROUSEL_INTERVAL_MS = 4000
+const categoriesOrder: SkillCategory[] = ['Engineering', 'AI', 'Infrastructure', 'Analytics', 'Solutions', 'UX/UI Design', 'Product Management', 'Product Marketing']
 
 // Define the structure of skill data
 interface SkillData {
@@ -27,16 +49,24 @@ type SkillsDataType = {
 
 // Define your skillsData with the correct type
 const skillsData: SkillsDataType = {
-  'Web Development': {
-    skills: ['React', 'Next.js', 'JavaScript', 'HTML', 'CSS', 'RESTful API', 'SQL', 'NoSQL', 'CI/CD', 'Software System Design' /* ... */],
+  'Engineering': {
+    skills: ['React', 'Next.js', 'JavaScript', 'Python', 'HTML', 'CSS', 'RESTful API', 'GitHub', 'Vercel', 'Node.js', 'Netlify', 'Cursor', 'Claude Code', 'Software System Design' /* ... */],
     color: 'bg-blue-500'
   },
-  'AI/ML': {
-    skills: ['Python', 'Prompt Engineering', 'LLM', 'NLP','Data-Analysis', 'Data-Visualization' /* ... */],
+  'AI': {
+    skills: ['Prompt Engineering', 'LLM', 'MCP Server', 'Claude Skills', 'Context Engineering', 'RAG', 'Knowledge Graph' /* ... */],
     color: 'bg-green-500'
   },
+  'Infrastructure': {
+    skills: ['Terraform', 'Github Actions', 'AWS', 'GCP', 'Grafana', 'Prometheus', 'APM', 'CI/CD'],
+    color: 'bg-slate-600'
+  },
+  'Analytics': {
+    skills: ['OLAP', 'ELT', 'Data Warehouse', 'Metrics', 'Data-Analysis', 'Data-Visualization', 'SQL', 'NoSQL'],
+    color: 'bg-amber-600'
+  },
   'Solutions': {
-    skills: ['Qualification Frameworks', 'Prospecting & Lead Generation', 'Sales Process', 'Retention & Renewal', 'Account Management' , 'Solution Proof-of-Concept', 'Technical Discovery', ' Technical Customer Support' /* ... */],
+    skills: ['Qualification Frameworks', 'Prospecting & Lead Generation', 'Sales Process', 'Retention & Renewal', 'Account Management', 'Solution Proof-of-Concept', 'Technical Discovery', ' Technical Customer Support' /* ... */],
     color: 'bg-yellow-500'
   },
   'UX/UI Design': {
@@ -44,7 +74,7 @@ const skillsData: SkillsDataType = {
     color: 'bg-purple-500'
   },
   'Product Management': {
-    skills: ['Agile/Scrum', 'Requirement Docs', 'Decision Making & Prioritization', 'Product Roadmap & Strategy' /* ... */],
+    skills: ['Agile/Scrum', 'Requirement Docs', 'Decision Making & Prioritization', 'Product Roadmap & Strategy', 'Product Led Growth' /* ... */],
     color: 'bg-red-500'
   },
   'Product Marketing': {
@@ -54,37 +84,64 @@ const skillsData: SkillsDataType = {
 
 };
 
-// Define icon mapping
+// Define icon mapping – use brand/SaaS logos (Simple Icons) where available
 const skillIcons: { [key: string]: React.ReactNode } = {
-  // Development
+  // Engineering – brand icons
   'React': <SiReact className="w-4 h-4 mr-2" />,
+  'Next.js': <SiNextdotjs className="w-4 h-4 mr-2" />,
   'JavaScript': <SiJavascript className="w-4 h-4 mr-2" />,
-  'Next.js': <Globe className="w-4 h-4 mr-2" />,
+  'Python': <SiPython className="w-4 h-4 mr-2" />,
   'HTML': <Layout className="w-4 h-4 mr-2" />,
   'CSS': <Palette className="w-4 h-4 mr-2" />,
   'RESTful API': <Share2 className="w-4 h-4 mr-2" />,
+  'GitHub': <SiGithub className="w-4 h-4 mr-2" />,
+  'Vercel': <SiVercel className="w-4 h-4 mr-2" />,
+  'Node.js': <SiNodedotjs className="w-4 h-4 mr-2" />,
+  'Netlify': <SiNetlify className="w-4 h-4 mr-2" />,
+  'Cursor': <Code className="w-4 h-4 mr-2" />,
+  'Claude Code': <Terminal className="w-4 h-4 mr-2" />,
+  'Software System Design': <Layers className="w-4 h-4 mr-2" />,
+
+  // Analytics
+  'OLAP': <Database className="w-4 h-4 mr-2" />,
+  'ELT': <RefreshCw className="w-4 h-4 mr-2" />,
+  'Data Warehouse': <Database className="w-4 h-4 mr-2" />,
+  'Metrics': <BarChart2 className="w-4 h-4 mr-2" />,
   'SQL': <Database className="w-4 h-4 mr-2" />,
   'NoSQL': <Database className="w-4 h-4 mr-2" />,
+  'Data-Analysis': <BarChart className="w-4 h-4 mr-2" />,
+  'Data-Visualization': <LineChart className="w-4 h-4 mr-2" />,
+
+  // Infrastructure – brand icons
+  'Terraform': <SiTerraform className="w-4 h-4 mr-2" />,
+  'Github Actions': <SiGithubactions className="w-4 h-4 mr-2" />,
+  'AWS': <SiAmazonwebservices className="w-4 h-4 mr-2" />,
+  'GCP': <SiGooglecloud className="w-4 h-4 mr-2" />,
+  'Grafana': <SiGrafana className="w-4 h-4 mr-2" />,
+  'Prometheus': <SiPrometheus className="w-4 h-4 mr-2" />,
+  'APM': <Activity className="w-4 h-4 mr-2" />,
   'CI/CD': <Rocket className="w-4 h-4 mr-2" />,
-  'Software System Design': <Layers className="w-4 h-4 mr-2" />,
-  
-  // AI/ML
-  'Python': <SiPython className="w-4 h-4 mr-2" />,
+
+  // AI
+  'MCP Server': <Cpu className="w-4 h-4 mr-2" />,
+  'Claude Skills': <Brain className="w-4 h-4 mr-2" />,
+  'Context Engineering': <Layers className="w-4 h-4 mr-2" />,
+  'RAG': <Database className="w-4 h-4 mr-2" />,
+  'Knowledge Graph': <Network className="w-4 h-4 mr-2" />,
   'PyTorch': <SiPytorch className="w-4 h-4 mr-2" />,
   'TensorFlow': <SiTensorflow className="w-4 h-4 mr-2" />,
   'Scikit-learn': <SiScikitlearn className="w-4 h-4 mr-2" />,
-  'Data-Analysis': <BarChart className="w-4 h-4 mr-2" />,
-  'Data-Visualization': <LineChart className="w-4 h-4 mr-2" />,
-  
-  // Design
-  'Figma UI Design': <Figma className="w-4 h-4 mr-2" />,
+
+  // UX/UI Design – brand icon for Figma
+  'Figma UI Design': <SiFigma className="w-4 h-4 mr-2" />,
   'Wireframe & Prototype': <PenTool className="w-4 h-4 mr-2" />,
   'User Research & Analysis': <Users className="w-4 h-4 mr-2" />,
   'Information Architecture': <Network className="w-4 h-4 mr-2" />,
-  
-  // Product
-  'Agile/Scrum': <Trello className="w-4 h-4 mr-2" />,
+
+  // Product Management – brand icon for Trello
+  'Agile/Scrum': <SiTrello className="w-4 h-4 mr-2" />,
   'Product Roadmap & Strategy': <Target className="w-4 h-4 mr-2" />,
+  'Product Led Growth': <TrendingUp className="w-4 h-4 mr-2" />,
   'Market Competitive Analysis': <Search className="w-4 h-4 mr-2" />,
   'Technical Discovery': <FileSearch className="w-4 h-4 mr-2" />,
   'Solution Proof-of-Concept': <Cpu className="w-4 h-4 mr-2" />,
@@ -107,60 +164,76 @@ const skillIcons: { [key: string]: React.ReactNode } = {
 }
 
 export default function Skills() {
-  const [selectedCategory, setSelectedCategory] = useState<SkillCategory | 'All'>('All');
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const activeCategory = categoriesOrder[activeIndex];
+  const { skills, color } = skillsData[activeCategory];
+
+  // Auto-rotate carousel (paused when user hovers nav or skills list)
+  const goNext = useCallback(() => {
+    setActiveIndex((i) => (i + 1) % categoriesOrder.length);
+  }, []);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(goNext, CAROUSEL_INTERVAL_MS);
+    return () => clearInterval(timer);
+  }, [goNext, isPaused]);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <section>
-        <h2 className="text-4xl font-bold mb-4 text-center text-foreground font-sans tracking-tight">Skills</h2>
-        <div className="mb-8 w-64 mx-auto">
-          <Select onValueChange={(value: SkillCategory | 'All') => setSelectedCategory(value)}>
-            <SelectTrigger>
-              <SelectValue placeholder="Select a category" />
-            </SelectTrigger>
-            <SelectContent className="bg-white dark:bg-gray-800">
-              <SelectItem value="All" className="cursor-pointer">All Skills</SelectItem>
-              {Object.keys(skillsData).map((category) => (
-                <SelectItem key={category} value={category} className="cursor-pointer">
-                  {category}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-        
-        {selectedCategory === 'All' ? (
-          // Group by category when "All" is selected
-          <div className="space-y-8">
-            {Object.entries(skillsData).map(([category, { skills, color }]) => (
-              <div key={category} className="flex flex-col md:flex-row gap-4">
-                <div className="md:w-1/4 flex items-center justify-center">
-                  <span className={`px-4 py-2 rounded-lg ${color} text-white font-semibold`}>
+        <h2 className="text-4xl font-bold mb-6 text-center text-foreground font-sans tracking-tight">Skills</h2>
+
+        {/* Category nav - horizontal list, current category highlighted; hover pauses rotation */}
+        <nav
+          className="mb-8 overflow-x-auto pb-2 scrollbar-thin"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <ul className="flex flex-wrap justify-center gap-2 min-w-max px-2">
+            {categoriesOrder.map((category, index) => {
+              const isActive = index === activeIndex;
+              const catColor = skillsData[category].color;
+              return (
+                <li key={category}>
+                  <button
+                    type="button"
+                    onClick={() => setActiveIndex(index)}
+                    className={`
+                      px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap
+                      transition-all duration-200 ease-out
+                      ${isActive
+                        ? `${catColor} text-white shadow-md scale-105`
+                        : 'bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground'
+                      }
+                    `}
+                  >
                     {category}
-                  </span>
-                </div>
-                <div className="md:w-3/4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {skills.map((skill) => (
-                    <div key={skill} className={`p-4 rounded-lg shadow-md text-center ${color} text-white flex items-center justify-center border border-border/20`}>
-                      {skillIcons[skill] || <Code className="w-4 h-4 mr-2" />}
-                      {skill}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          // Regular grid for specific category
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {skillsData[selectedCategory]?.skills.map((skill) => (
-              <div key={skill} className={`p-4 rounded-lg shadow-md text-center ${skillsData[selectedCategory].color} text-white flex items-center justify-center border border-border/20`}>
-                {skillIcons[skill] || <Code className="w-4 h-4 mr-2" />}
-                {skill}
-              </div>
-            ))}
-          </div>
-        )}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        {/* Carousel slide - current category skills; hover pauses rotation */}
+        <div
+          key={activeCategory}
+          className="animate-in fade-in duration-300 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-4"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {skills.map((skill) => (
+            <div
+              key={skill}
+              className={`p-4 rounded-lg shadow-md text-center ${color} text-white flex items-center justify-center gap-2 border border-white/10 transition-transform hover:scale-[1.02]`}
+            >
+              {skillIcons[skill] || <Code className="w-4 h-4 shrink-0" />}
+              <span className="text-sm font-medium">{skill}</span>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );
