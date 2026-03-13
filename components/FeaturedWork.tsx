@@ -36,7 +36,7 @@ interface CaseStudy {
   teamOverview: TeamOverview;
 }
 
-interface FeaturedWorkItem {
+export interface FeaturedWorkItem {
   id: string;
   title: string;
   date: string; // MM/DD/YYYY format
@@ -56,7 +56,7 @@ interface FeaturedWorkItem {
   caseStudy: CaseStudy;
 }
 
-const featuredWorkData: FeaturedWorkItem[] = [
+export const featuredWorkData: FeaturedWorkItem[] = [
   {
     id: 'stackgen-pricing-strategy',
     title: "StackGen Pricing Strategy",
@@ -129,6 +129,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
         "[StackGen x Grafana - Social LinkedIn Post Video](https://drive.google.com/file/d/1UPyhrNESZyDQxoK4vcKqtfwpom2UI-0K/view?usp=sharing)",
         "[StackGen x Wiz Integration - Social LinkedIn Post Video](https://drive.google.com/file/d/1nXsdeyCNBr-GzhODEZfc7MQw6KaxjKrO/view?usp=sharing)",
         "[Claude Content Creation Org Skills](https://drive.google.com/file/d/1WIIRyHt0EiYym5IgdO1lo6iwR4nLmPi5/view?usp=sharing)", "[StackHealer (now Aiden for SRE) On AWS Partners Video](https://drive.google.com/file/d/1SpAVvX-IuajoFFwoPLUF1kHSeY4jQQE5/view?usp=sharing)",
+        "[StackGen One Pager ](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=79-5054&t=iVHjaMqKRtJnJOnU-0&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)"
 
       ],
       teamOverview: {
@@ -163,6 +164,7 @@ const featuredWorkData: FeaturedWorkItem[] = [
         "[AWS Re:Invent 2025 Booth Design](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=66-5627&t=ytTzZUhCKdxUdLFB-1&scaling=scale-down&content-scaling=fixed&page-id=39%3A10983)",
         "[DevOps 2.0 Mumbai 2026 One Pagers](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-8509&t=mK0B7HcTzptBTM8x-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
         "[DevOps 2.0 Mumbai 2026 Banners](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-9961&t=pml3wsmoOpgS76Oa-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
+
 
       ],
       impact: [
@@ -930,15 +932,27 @@ export default function FeaturedWork() {
   }
 
   useEffect(() => {
-    // Check if there's a hash in the URL and open the corresponding case study
-    const hash = window.location.hash.replace('#featured-work-', '').replace('#', '')
-    if (hash) {
-      const work = sortedFeaturedWork.find(item => item.id === hash)
+    const openFromHash = () => {
+      const rawHash = window.location.hash || ''
+      const id = rawHash.replace('#featured-work-', '').replace('#', '')
+
+      if (!id) {
+        return
+      }
+
+      const work = sortedFeaturedWork.find(item => item.id === id)
       if (work) {
         setSelectedWork(work)
       }
     }
-  }, [])
+
+    // Run once on mount (for direct URL loads)
+    openFromHash()
+
+    // Also respond to in-page hash changes (e.g. clicks from Skills chart)
+    window.addEventListener('hashchange', openFromHash)
+    return () => window.removeEventListener('hashchange', openFromHash)
+  }, [sortedFeaturedWork])
 
   const handleCopyLink = (e: React.MouseEvent, workId: string) => {
     e.stopPropagation()
