@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight, Github, Globe, FileText, X } from 'lucide-re
 import getBasePath from '../utils/path'
 
 // First, define the valid categories
-type CategoryType = 'AI/ML' | 'Web' | 'UX/UI Design' | 'Infrastructure';
+type CategoryType = 'AI/ML' | 'Web' | 'UX/UI Design' | 'Infrastructure' | 'Product Marketing';
 
 interface Project {
   title: string;
@@ -132,16 +132,17 @@ const projectsData: Project[] = [
     tools: ['Docker', 'Prometheus', 'Grafana', 'Loki', 'Tempo', 'OpenTelemetry', 'OpenMetrics'],
     dateAdded: '2025-12-29',
   },
-  /*
+
   {
-    title: 'Another AI project TBD',
-    description: 'On roadmap. TBD',
-    image: `${getBasePath()}/placeholder.svg?height=200&width=300`,
-    category: ['AI/ML'],
-    tools: ['TBD'],
-    dateAdded: '2024-12-01',
+    title: 'Product Marketing Competitive Comparison App',
+    description: 'Created DIY, internal competitive comparison app for Sales and Product enablement',
+    image: `${getBasePath()}/projects_img/mcp-app.png`,
+    category: ['Product Marketing'],
+    repo: 'https://github.com/alexsjcho/MCI_App',
+    tools: ['Cursor', 'Claude Code', 'Next.js'],
+    dateAdded: '2026-03-18',
   },
-  */
+
 
 ]
 
@@ -155,7 +156,8 @@ const categoryColors: CategoryColors = {
   'AI/ML': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
   'Web': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
   'UX/UI Design': 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
-  'Infrastructure': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200'
+  'Infrastructure': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200',
+  'Product Marketing': 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200',
 }
 
 const PROJECTS_PER_PAGE = 6
