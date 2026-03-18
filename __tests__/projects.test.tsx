@@ -6,7 +6,7 @@ import Projects from '../components/Projects'
 
 vi.mock('next/image', () => {
   return {
-    default: (props: any) => {
+    default: (props) => {
       const { src, alt, ...rest } = props
       return React.createElement('img', {
         src: typeof src === 'string' ? src : '',

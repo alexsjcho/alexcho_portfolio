@@ -5,7 +5,7 @@ import '@testing-library/jest-dom/vitest'
 if (!globalThis.matchMedia) {
   Object.defineProperty(globalThis, 'matchMedia', {
     writable: true,
-    value: (query: string) => ({
+    value: (query) => ({
       matches: false,
       media: query,
       onchange: null,
@@ -37,7 +37,7 @@ if (!globalThis.IntersectionObserver) {
       unobserve() {}
       disconnect() {}
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      constructor(_callback: IntersectionObserverCallback, _options?: IntersectionObserverInit) {}
+      constructor(_callback, _options) {}
     },
   })
 }
@@ -45,14 +45,14 @@ if (!globalThis.IntersectionObserver) {
 if (!globalThis.requestAnimationFrame) {
   Object.defineProperty(globalThis, 'requestAnimationFrame', {
     writable: true,
-    value: (cb: FrameRequestCallback) => setTimeout(cb, 0),
+    value: (cb) => setTimeout(cb, 0),
   })
 }
 
 if (!globalThis.cancelAnimationFrame) {
   Object.defineProperty(globalThis, 'cancelAnimationFrame', {
     writable: true,
-    value: (id: number) => clearTimeout(id),
+    value: (id) => clearTimeout(id),
   })
 }
 
