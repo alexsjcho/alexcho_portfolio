@@ -447,45 +447,7 @@ export const featuredWorkData: FeaturedWorkItem[] = [
       }
     }
   },
-  {
-    id: 'agora_pricing_strategy_enablement',
-    title: "Product & Solutions Pricing Strategy",
-    date: "05/15/2023",
-    category: ['GTM', 'Media Solutions', 'Product'],
-    company: 'Agora',
-    image: `${getBasePath()}/featuredwork_img/agora_calculator.png`,
-    metrics: [
-      { label: "revenue estimation", value: "$$K MRR or $$M ARR" },
-      { label: "product usage estimation", value: "X product estimated X minutes per month" },
-
-    ],
-    description: "A revenue forecasting and time-to-value optimization initiative at Agora, focused on enabling accurate usage-based cost estimation and accelerating customer launch for real-time engagement (RTE) use cases.",
-    skills: [
-      'Excel',
-      'React App',
-      'Figma',
-      'Real time usage billing model',
-      'Monetization strategy',
-    ],
-    tool: 'https://docs.google.com/spreadsheets/d/1JDE9hvlx0b_l9mdx4axN5RR4fgqAyHuXOxtDDnwkuvE/edit?usp=sharing',
-    document: 'https://drive.google.com/file/d/1iai6K2x_Fi9max1P1gyL5f-_qwC3wElm/view?usp=sharing',
-    caseStudy: {
-      problem: "Agora’s usage-based pricing model made revenue forecasting highly inaccurate because Sales teams lacked a consistent way to estimate customer use cases. Sales prioritized contract signing over launch readiness, resulting in customers taking 6–12 months on average to deploy Agora-powered solutions, delaying revenue realization and reducing forecast reliability.",
-      solution: "Designed an end-to-end solution framework to connect technical use case design with cost estimation and monetization. Created an RTE Solution Playbook to standardize session-based use case design (audio, video, chat) and map them to the correct Agora products. Built a robust cost estimation calculator that modeled multiple pricing dimensions (minutes, bandwidth, storage, users, add-ons) to accurately project session, monthly, and annual costs. Advised customers on monetization strategies aligned with their use cases (per session, per minute, per user, device-based). Integrated use case schemas with Agora App Builder to enable rapid app deployment, reducing friction from concept to launch.",
-      impact: [
-        "Improved opportunity value estimation accuracy by ~90% through use-case-driven cost modeling",
-        "Reduced proof-of-concept launch time from ~1 month to hours for most base to emerging intermediate use cases by removing commercial friction",
-        "Shortened production launch timelines from 6–12 months to under 3 months for most use cases by removing commercial friction (50–75% improvement)",
-        "Established a repeatable, scalable framework for Sales, Solutions, and customers to design, price, and launch Agora-powered applications"
-      ],
-
-      teamOverview: {
-        teamSize: "3 (2 engineers, 1 Product Designer. I helped as PM/PMM on Overseas (non-China) side)",
-        scope: "Global (US–RoW) region (excluding China)",
-        keyStakeholders: ["Product Managers", 'Finance Teams']
-      }
-    }
-  },
+ 
 
   {
     id: 'agora_MCI',
