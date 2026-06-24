@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import Image from 'next/image'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
@@ -14,7 +14,7 @@ import {
 import getBasePath from '../../utils/path'
 
 import type { Recommendation, RelationshipType } from './types'
-import { recommendationsData, ITEMS_PER_PAGE, MAX_PREVIEW_LENGTH } from './data'
+import { recommendationsData, ITEMS_PER_PAGE, MAX_PREVIEW_LENGTH, CAROUSEL_INTERVAL_MS } from './data'
 
 // Company logos mapping
 const companyLogos: Record<string, string> = {
@@ -28,6 +28,7 @@ export default function Recommendations() {
   const [selectedCompany, setSelectedCompany] = useState<string>('All')
   const [currentPage, setCurrentPage] = useState(1)
   const [selectedRecommendation, setSelectedRecommendation] = useState<Recommendation | null>(null)
+  const [isCarouselPaused, setIsCarouselPaused] = useState(false)
 
   // Get unique companies
   const companies = useMemo(() => {
@@ -88,6 +89,25 @@ export default function Recommendations() {
     if (text.length <= maxLength) return text
     return text.substring(0, maxLength) + '...'
   }
+
+  // Auto-rotation carousel effect
+  useEffect(() => {
+    if (isCarouselPaused || totalPages <= 1) return
+
+    const intervalId = setInterval(() => {
+      setCurrentPage(prev => {
+        // Loop back to page 1 after reaching the last page
+        return prev >= totalPages ? 1 : prev + 1
+      })
+    }, CAROUSEL_INTERVAL_MS)
+
+    return () => clearInterval(intervalId)
+  }, [isCarouselPaused, totalPages, CAROUSEL_INTERVAL_MS])
+
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [selectedRelationship, selectedCompany])
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
@@ -193,7 +213,12 @@ export default function Recommendations() {
         </div>
 
         {/* Recommendations Grid - Max 3 per row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" key={`${selectedRelationship}-${selectedCompany}-${currentPage}`}>
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          key={`${selectedRelationship}-${selectedCompany}-${currentPage}`}
+          onMouseEnter={() => setIsCarouselPaused(true)}
+          onMouseLeave={() => setIsCarouselPaused(false)}
+        >
           {paginatedRecommendations.map((rec) => (
             <div
               key={rec.id}
