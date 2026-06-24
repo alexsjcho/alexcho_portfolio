@@ -76,7 +76,7 @@ export const outcomesData: OutcomeItem[] = [
     company: 'ByteDance',
     companyTagline: 'Developer Infrastructure',
     category: 'Cost Efficiency',
-    description: 'Accomplished an estimated **$10,000,000/month** in developer cost savings by architecting the 0-to-1 **"Rollout System"** for intent-based IaC deployment, executing **320k+ deployments annually**.'
+    description: 'Accomplished an estimated **$10,000,000** in developer cost savings by architecting the 0-to-1 **"Rollout System"** for intent-based IaC deployment, executing **320k+ deployments for TikTok Server Architecture team on new data center deployments**.'
   },
   {
     id: 'bytedance-scaling',
@@ -97,14 +97,14 @@ export const outcomesData: OutcomeItem[] = [
     company: 'ByteDance',
     companyTagline: 'Developer Infrastructure',
     category: 'Incident Resolution',
-    description: 'Accomplished a **24.16% absolute improvement** in ticket resolution rates (**45.3% to 69.5%**) and an **8.35/10 CSAT** by bridging Bits AI troubleshooting context directly into the central Oncall platform.'
+    description: 'Accomplished a **24.16% improvement** in ticket resolution rates (**45.3% to 69.5%**) and an **8.35/10 CSAT** by bridging Bits AI troubleshooting context directly into the central Oncall platform.'
   },
   {
     id: 'bytedance-velocity',
     company: 'ByteDance',
     companyTagline: 'Developer Infrastructure',
     category: 'Operational Velocity',
-    description: 'Accomplished a **50% reduction** in datacenter bringup timelines (**6 months to 3 months**) and saved **312+ Person-Days** for business teams by automating the deployment of **4,000+ TCE clusters**.'
+    description: 'Accomplished a **50% reduction** in datacenter bringup timelines (**6 months to 3 months**) and saved **312+ Person-Days** for business teams by automating the deployment of **4,000+ TCE clusters** for TikTok PIPO engineering team greenfield deployment.'
   },
 
   // Agora
