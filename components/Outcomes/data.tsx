@@ -25,7 +25,7 @@ export const categoryIcons: Record<OutcomeCategory, React.ReactNode> = {
   'Event-Led Demand Generation': <TrendingUp className="w-4 h-4" />,
   'Brand Authority & Positioning': <Award className="w-4 h-4" />,
   'Organic Traffic Growth': <BarChart3 className="w-4 h-4" />,
-  'Pricing Conversion': <DollarSign className="w-4 h-4" />,
+  'Pricing Strategy': <DollarSign className="w-4 h-4" />,
   'Market Penetration': <Target className="w-4 h-4" />,
   'Cost Efficiency': <Zap className="w-4 h-4" />,
   'Infrastructure Scaling': <Network className="w-4 h-4" />,
@@ -66,15 +66,8 @@ export const outcomesData: OutcomeItem[] = [
     id: 'stackgen-pricing',
     company: 'StackGen',
     companyTagline: 'Agentic Infrastructure Platform',
-    category: 'Pricing Conversion',
+    category: 'Pricing Strategy',
     description: 'Accomplished a **2,500% increase** in pricing page views by launching a new interactive pricing page with a built-in **ROI calculator** that provided immediate value quantification for prospects.'
-  },
-  {
-    id: 'stackgen-market',
-    company: 'StackGen',
-    companyTagline: 'Agentic Infrastructure Platform',
-    category: 'Market Penetration',
-    description: 'Accomplished a **33% increase** in demo-to-SQL conversion by implementing a standardized **"Producer" workflow** (Standards → Modules → Templates) that enabled technical champions to visualize ROI instantly.'
   },
 
   // ByteDance

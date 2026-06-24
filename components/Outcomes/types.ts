@@ -2,7 +2,7 @@ export type OutcomeCategory =
   | 'Event-Led Demand Generation'
   | 'Brand Authority & Positioning'
   | 'Organic Traffic Growth'
-  | 'Pricing Conversion'
+  | 'Pricing Strategy'
   | 'Market Penetration'
   | 'Cost Efficiency'
   | 'Infrastructure Scaling'
