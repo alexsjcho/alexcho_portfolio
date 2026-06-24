@@ -1,0 +1,128 @@
+import getBasePath from '../../utils/path'
+import type { Project } from './types'
+
+export const projectsData: Project[] = [
+  {
+    title: 'MentorNear',
+    description: 'jQuery app: Find and meet with a mentor near you',
+    image: `${getBasePath()}/projects_img/mentornear.png`,
+    repo: 'https://github.com/alexsjcho/mentor-near-api-capstone',
+    category: ['Web'],
+    tools: ['jQuery', 'HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Normalize.css', '3rd Party API'],
+    dateAdded: '2019-01-15',
+  },
+  {
+    title: 'Qualified',
+    description: 'Allows users to score their sales conversations',
+    image: `${getBasePath()}/projects_img/qualified.png`,
+    repo: 'https://github.com/alexsjcho/qualified-react-redux-immutable-app',
+    category: ['Web'],
+    tools: ['React', 'Redux', 'React-Router', 'Immutable', 'Bootstrap', 'Jest', 'Enzyme', 'JavaScript', 'CSS', '3rd Party API'],
+    dateAdded: '2019-06-20',
+  },
+  {
+    title: 'SmartOKR',
+    description: 'Automate your goals via everday software tools',
+    image: `${getBasePath()}/projects_img/sokrapp.png`,
+    repo: 'https://github.com/alexsjcho/smart-okr-react-redux-app',
+    category: ['Web'],
+    tools: ['React', 'Redux', 'JavaScript', '3rd Party API'],
+    dateAdded: '2019-09-10',
+  },
+  {
+    title: 'Apple Sales Forecasting 2024',
+    description: 'Beginner project on Apple sales forecasting for 2024',
+    image: `${getBasePath()}/projects_img/correlation_heatmap.png`,
+    category: ['AI/ML'],
+    repo: 'https://github.com/alexsjcho/apple-2024-sales-dataset',
+    tools: ['Python', 'Machine Learning', 'Data Analysis', 'Pandas', 'Numpy', 'Matplotlib', 'Scikit-learn', 'Jupyter Notebook'],
+    dateAdded: '2025-02-03',
+  },
+  {
+    title: 'AI-Powered Customer Service Chatbot',
+    description: 'This was a practice project to learn more about AI Agents workflows. Used Langflow as the backend to power my Next.js frontend.',
+    image: `${getBasePath()}/projects_img/ai_agent_chatbot.png`,
+    category: ['AI/ML'],
+    repo: 'https://github.com/alexsjcho/customer_support_ai_agent',
+    tools: ['Python', 'Langflow', 'OpenAI', 'Astra-DB', 'Next.js'],
+    dateAdded: '2025-03-15',
+  },
+  {
+    title: 'Simple Terminal AI Agent',
+    description: 'Created a simple AI Agent from scratch using Anthropic\'s Claude API and tools',
+    image: `${getBasePath()}/projects_img/ai_agent_terminal.png`,
+    category: ['AI/ML'],
+    repo: 'https://github.com/alexsjcho/aiagent_from_scratch',
+    tools: ['Anthropic', 'Claude API', 'Python', 'Wikipedia Search API'],
+    dateAdded: '2025-02-01',
+  },
+
+  {
+    title: 'Terraform Multi-Cloud Provisioning',
+    description: 'proof-of-concept multi-cloud provisioning of compute engine resource for AWS and GCP',
+    image: `${getBasePath()}/projects_img/terraform_cloud.png`,
+    category: ['Infrastructure'],
+    repo: 'https://github.com/alexsjcho/terraform_demo_2',
+    tools: ['Terraform', 'AWS', 'GCP', 'Sentinel', 'Terraform Cloud', 'Vault', 'Virtual Machine', 'Compute Engine', 'IAM'],
+    dateAdded: '2025-05-10',
+  },
+  {
+    title: 'IaC Provisioning with StackGen and Aiden AI Agent',
+    description: 'Very simple proof of concept for IaC provisioning with StackGen and Aiden AI Agent',
+    image: `${getBasePath()}/projects_img/stackgen-topology.png`,
+    category: ['Infrastructure'],
+    repo: 'https://github.com/alexsjcho/stackgen_demo',
+    tools: ['StackGen', 'Aiden AI Agent', 'Terraform', 'AWS', 'Infrastructure as Code'],
+    dateAdded: '2025-12-22',
+  },
+  {
+    title: 'Ansible + Terraform Deployment Orchastration',
+    description: 'Practice project to learn how to use Ansible for deployment orchestration',
+    image: `${getBasePath()}/projects_img/ansible-workflow-diagram.png`,
+    category: ['Infrastructure'],
+    repo: 'https://github.com/alexsjcho/ansible-terraform-demo',
+    tools: ['Ansible', 'Terraform', 'AWS', 'Infrastructure as Code'],
+    dateAdded: '2025-12-23',
+  },
+  {
+    title: 'Docker Compose Project',
+    description: 'Practice project to learn how to use Docker Compose to deploy a multi-container application',
+    image: `${getBasePath()}/projects_img/docker-img.png`,
+    category: ['Infrastructure'],
+    repo: 'https://github.com/alexsjcho/docker-demo',
+    tools: ['Docker Compose', 'Node.js', 'Redis', 'Next.js'],
+    dateAdded: '2025-12-26',
+  },
+  {
+    title: 'Kubernetes + Docker Project',
+    description: 'Practice project to learn how to use Kubernetes and Docker to deploy multiple services',
+    image: `${getBasePath()}/projects_img/k8s+docker-img.png`,
+    category: ['Infrastructure'],
+    repo: 'https://github.com/alexsjcho/k8s-docker-project',
+    tools: ['Kubernetes', 'Docker', 'Node.js', 'Redis', 'Next.js'],
+    dateAdded: '2025-12-27',
+  },
+  {
+    title: 'LGTM Observability Stack',
+    description: 'Practice project to learn how to learn the LGTM Observability Stack',
+    image: `${getBasePath()}/projects_img/lgtm_dashboards.png`,
+    category: ['Infrastructure'],
+    repo: 'https://github.com/alexsjcho/lgtm-observability-stack-demo',
+    tools: ['Docker', 'Prometheus', 'Grafana', 'Loki', 'Tempo', 'OpenTelemetry', 'OpenMetrics'],
+    dateAdded: '2025-12-29',
+  },
+
+  {
+    title: 'Product Marketing Competitive Comparison App',
+    description: 'Created DIY, internal competitive comparison app for Sales and Product enablement',
+    image: `${getBasePath()}/projects_img/mcp-app.png`,
+    category: ['Product Marketing'],
+    repo: 'https://github.com/alexsjcho/MCI_App',
+    tools: ['Cursor', 'Claude Code', 'Next.js'],
+    dateAdded: '2026-03-18',
+  },
+
+
+]
+
+export const PROJECTS_PER_PAGE = 6

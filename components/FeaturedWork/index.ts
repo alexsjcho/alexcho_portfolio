@@ -1,0 +1,5 @@
+export { default } from './FeaturedWork'
+export { default as FeaturedWork } from './FeaturedWork'
+export * from './types'
+export * from './data'
+export * from './utils'

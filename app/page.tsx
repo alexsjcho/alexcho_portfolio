@@ -1,10 +1,12 @@
 import About from '@/components/About'
 import Header from '@/components/Header'
-import Skills from '@/components/Skills'
+// import Skills from '@/components/Skills' // Unmounted - keeping code
+import Recommendations from '@/components/Recommendations'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 import FeaturedWork from '@/components/FeaturedWork'
 import Hobbies from '@/components/Hobbies'
+import Outcomes from '@/components/Outcomes'
 
 export default function Home() {
   return (
@@ -16,8 +18,15 @@ export default function Home() {
         <About />
       </section>
 
-      {/* Featured Work section with white background */}
-      <section id="featured-work" className="bg-white py-20">
+      {/* Outcomes section with white background */}
+      <section id="outcomes" className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <Outcomes />
+        </div>
+      </section>
+
+      {/* Featured Work section with light gray background */}
+      <section id="featured-work" className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-4">
           <FeaturedWork />
         </div>
@@ -30,15 +39,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills section with light gray background */}
-      <section id="skills" className="bg-gray-50 py-20">
+      {/* Recommendations section with light gray background */}
+      <section id="recommendations" className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-4">
-          <Skills />
+          <Recommendations />
         </div>
       </section>
 
-      {/* Hobbies section with light gray background */}
-      <section id="hobbies" className="bg-gray-50 py-20">
+      {/* Hobbies section with white background */}
+      <section id="hobbies" className="bg-white py-20">
         <div className="max-w-6xl mx-auto px-4">
           <Hobbies />
         </div>
