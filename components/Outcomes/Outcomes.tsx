@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import Image from 'next/image'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import getBasePath from '../../utils/path'
 
 import type { OutcomeItem } from './types'
-import { outcomesData, categoryIcons, ITEMS_PER_PAGE } from './data'
+import { outcomesData, categoryIcons, ITEMS_PER_PAGE, CAROUSEL_INTERVAL_MS } from './data'
 import { parseHighlightedText } from './utils'
 
 // Company logos mapping
@@ -21,6 +21,7 @@ const companyLogos: Record<string, string> = {
 export default function Outcomes() {
   const [selectedCompany, setSelectedCompany] = useState<string>('All')
   const [currentPage, setCurrentPage] = useState(1)
+  const [isCarouselPaused, setIsCarouselPaused] = useState(false)
 
   // Get unique companies
   const companies = useMemo(() => {
@@ -58,6 +59,25 @@ export default function Outcomes() {
   const handleNextPage = () => {
     setCurrentPage(prev => Math.min(prev + 1, totalPages))
   }
+
+  // Auto-rotation carousel effect
+  useEffect(() => {
+    if (isCarouselPaused || totalPages <= 1) return
+
+    const intervalId = setInterval(() => {
+      setCurrentPage(prev => {
+        // Loop back to page 1 after reaching the last page
+        return prev >= totalPages ? 1 : prev + 1
+      })
+    }, CAROUSEL_INTERVAL_MS)
+
+    return () => clearInterval(intervalId)
+  }, [isCarouselPaused, totalPages, CAROUSEL_INTERVAL_MS])
+
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [selectedCompany])
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
@@ -118,7 +138,12 @@ export default function Outcomes() {
         </div>
 
         {/* Outcomes Grid - Max 3 per row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" key={`${selectedCompany}-${currentPage}`}>
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          key={`${selectedCompany}-${currentPage}`}
+          onMouseEnter={() => setIsCarouselPaused(true)}
+          onMouseLeave={() => setIsCarouselPaused(false)}
+        >
           {paginatedOutcomes.map((outcome) => (
             <div
               key={outcome.id}

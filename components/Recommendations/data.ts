@@ -186,7 +186,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/kanhaiya-maheshwary/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/kanhaiya-meheshwary-img.jpeg`,
     text: "Alex was one of the first few people I spoke to when I joined Agora, while I was still getting acquainted with different teams and collaborators. Early on, Alex took me through the Product Marketing roadmap and plans to see where I could add value as a Growth Marketer, and one of the earliest things that struck me about him was his attention to detail, and deep technical capabilities. He had built a custom model of qualifying sales prospects based on product-fit which was widely used by the team. Secondly, he understood customers' needs deeply, and was instrumental in helping build pricing models. Last but not the least, he was always helpful, looking for ways to collaborate and welcome ideas. I would recommend Alex for any Product based or Technical positions. He's extremely smart and will be an asset to any team!",
     date: 'June 2023'
   },
@@ -197,7 +197,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/kimemily/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/emily-kim-img.jpeg`,
     text: "Alex came to my attention at Agora when he was a Sales Engineer. He had developed some impressive tools to help our customers navigate our pricing structure. His strong customer advocacy made him the perfect choice for leading the Technical Customer Success team. Because of his impactful work, when he expressed an interest in moving to the Product side of the house, the organization made room for him there, ensuring that he remained happy at Agora. In my role managing developer marketing, Docs, and Console design/development, I worked closely with Alex on many initiatives, from pricing calculators to product launches. He was always a smart, reliable partner and collaborator, who never lost his focus on customer advocacy and showed a passion for innovation. Alex was a pleasure to work with and I'd be happy to speak with you about a role for him in your organization.",
     date: 'May 2023'
   },
@@ -208,7 +208,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/sidsharma27/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/sid-sharma-img.jpeg`,
     text: "I had the pleasure of working closely with Alex. Throughout our collaboration, I consistently observed Alex's exceptional dedication to delivering a superior customer experience. One of Alex's standout qualities is his thoughtfulness. He possesses a unique ability to deeply understand the needs and expectations of our customers. By actively listening to their feedback and taking their perspectives into account, Alex consistently provided solutions that exceeded expectations. His attention to detail ensured that every aspect of a project was meticulously planned and executed, resulting in highly satisfied customers. Passion is another defining characteristic of Alex's work ethic. He approaches each project with enthusiasm and a genuine desire to make a positive impact. Alex's passion for the customer experience is evident in the innovative ideas he brings to the table. He consistently challenges the status quo and seeks out opportunities to enhance the overall quality of our products and services.",
     date: 'May 2023'
   },
@@ -219,7 +219,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/awoodhouse-14b2268/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/andres-woodhouse-img.jpeg`,
     text: "I highly recommend Alex Cho for any Product Manager or Sr Sales Engineer position. As a skilled product manager and technical customer success manager at Agora, Alex's expertise and willingness to help were invaluable. I learned a great deal from him during our two years of collaboration. His ability to understand customer needs greatly assisted the sales team in closing deals, ensuring customer satisfaction. Alex is a consummate professional who consistently delivers what customers require. His exceptional skills and dedication make him an asset to any team.",
     date: 'May 2023'
   },
@@ -230,7 +230,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/shaun-hubbard/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/shaun-hubbard-img.jpeg`,
     text: "I have had nearly the past two years to enjoy collaborating with Alex on multiple projects. Alex is an excellent communicator, well organized, and conscientious about focusing on what matter to achieve positive outcomes. Alex's relentless work in gluing the pieces together between engineering, sales, and finance to develop new pricing models for prototypes was essential in moving customer engagements forward. If I were to identify critical traits about Alex that convinced me to pick him over others when working on crucial projects, it would be his tenacity and growth potential. I would gladly work with Alex again and will one day look to solicit his services again.",
     date: 'May 2023'
   },
@@ -241,7 +241,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/malavika-oak/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/malavika-oak-img.jpeg`,
     text: "I worked with Alex in the product team at Agora—one of the most organized and results driven person I've met in the organization. We worked on several projects together such as the pricing calculator, NCS, Cloud Proxy, and more. Being a designer, I remember having a lot of technical product questions which Alex patiently answered and clarified that made him the most easy to work with and very approachable. He's an excellent project manager and most of all a very enthusiastic, positive team member who can naturally gel with teammates irrespective of the hierarchy!",
     date: 'May 2023'
   },
@@ -252,7 +252,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/marina-gerzon-b8b1012/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/marina-gerzon-img.jpeg`,
     text: "Alex was a multi-talent individual who briefly was in the Solutions & Technical team, where he led weekly technical and business training sessions on how to tackle customer's technical and business problems using relevant business (MEDDIC) or technical (software system design) methodologies for the Sales, Customer Success, and Solutions team. After he moved to the Product team, he helped a lot with custom pricing strategies for customers. He helped design solutions to meet customers' needs. Also, he worked closely with the Solutions team on the launches of Event Notifications and Cloud Proxy products from both product management and marketing perspectives. Alex always tried to keep everyone on the same page when doing project management around customer accounts for all stakeholders involved to help achieve their goals. I highly recommend Alex to any company or team.",
     date: 'May 2023'
   },
@@ -263,7 +263,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/christaniguchi/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/chris-taniguchi-img.jpeg`,
     text: "Alex was my manager when I first started at Agora. He brought me onboard and taught me a lot. Alex makes things seem so effortless in the way he carries himself. He's very meticulous, highly competent, and one of the most passionate people I have ever come across. He is a true leader but even a greater mentor at heart. If organizations used lottery to select employees Alex would absolutely be a #1 draft pick. If you are an organization looking to upgrade your roster look no further than Alex Cho. He's an absolute joy to work with and someone you can definitely rely on.",
     date: 'May 2023'
   },
@@ -274,7 +274,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/siwei-shen/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/siwei-shen-img.jpeg`,
     text: "I had the pleasure of working with Alex at Agora, where he showcased exceptional skills in competitive analysis and strategy development. Utilizing tools like CompeteIQ, Alex streamlined our decision-making process and provided valuable insights. He also excelled in creating customer-facing battle cards, which played a crucial role in our frontlines' ability to win customers. Alex's collaborative nature and bilingual proficiency in English and Chinese enabled him to effectively work with cross-regional teams, such as our Chinese product managers and R&D team. In conclusion, Alex's expertise, adaptability, and global mindset truly set him apart, making him an invaluable asset to any team.",
     date: 'May 2023'
   },
@@ -285,7 +285,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/samuelwan78/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/sam-wan-img.jpeg`,
     text: "I had the great honor and privilege to work with Alex for almost 2 years at Agora. Words cannot even begin to describe what an incredible asset he was to the Product Marketing team. He is an amazing storyteller and able to see through the eyes of the customers. He is a highly driven manager, with a commanding knowledge and expertise in product messaging and sales enablement. Alex is also a highly detail-oriented and an effective team leader. But beyond his professionalism and drive for excellence, Alex has amazing and unquestionable character that stems from his high ethics and deep sense of humility. He does not compromise or cut corners at the expense of others, and he cares deeply for his team and fellow coworkers. He is an invaluable addition to any team. Do not pass up on this exceptional professional!",
     date: 'May 2023'
   },
@@ -296,7 +296,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/blaisethomas/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/blaise-thomas-img.jpeg`,
     text: "I'm thrilled to vouch for my former colleague, Alex, whom I had the pleasure of working alongside at Agora. Alex is a true go-getter/self-starter who consistently shows great initiative, thoroughness, and integrity. Alex is always eager to take on new challenges and can be trusted to handle tasks efficiently. He's known for being detail-oriented, which is evident in the high-quality work he produces. Besides his strong work ethic, Alex is great at keeping conversations focused and on track. He has a knack for steering discussions towards productive outcomes, which made our team more efficient and effective. In short, Alex is an exceptional professional, and I wholeheartedly recommend him.",
     date: 'May 2023'
   },
@@ -307,7 +307,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/patfinlayson/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/patricia-finlayson-img.jpeg`,
     text: "I had the pleasure of working with Alex at Agora, where he was a key member of the Product Management and Product Marketing teams. Alex is an exceptional product manager with a keen strategic vision and an innate ability to bring products to market successfully. He possesses strong project management skills and always closely monitors the market to ensure that products remain competitive. Alex successfully project-managed the implementation of our CompeteIQ competitive intelligence solution, allowing sales to have all the information needed to win deals. Alex is very easy to work with and overall has the skills, experience, and work ethic necessary to excel in any organization.",
     date: 'May 2023'
   },
@@ -318,7 +318,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/lu-xin-03692b88/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/jennifer-xin-img.jpeg`,
     text: "I was fortunate enough to work closely with Alex in the same team. We worked on several projects together and Alex's great project management and communication skills really impressed me. He was able to keep highly organized and everything under control even with the most challenging timelines and under multi-tasking situations. I really appreciate him Alex was very easy to work with and his natural sense of humor made him a great team player. I enjoy working together with Alex in the past year and can definitely see him fitting into any organization as a top performer!",
     date: 'May 2023'
   },
@@ -329,7 +329,7 @@ export const recommendationsData: Recommendation[] = [
     company: 'Agora',
     relationship: 'Peer',
     linkedinUrl: 'https://www.linkedin.com/in/lincoln-luk/',
-    profileImage: `${getBasePath()}/recommendations/default-avatar.png`,
+    profileImage: `${getBasePath()}/recommendations/lincoln-luk-img.jpeg`,
     text: "I've had the pleasure of working with Alex during my time at Agora.io. Alex is a rare multi-talented resource. Alex joined Agora as sales exploration then later due to executive leadership reorgs. Alex moved to account relationship and eventually Product Marketing and Product Management. During his time with each role, Alex was able to grasp the key concepts quickly and master Agora's product value pitches in much shorter amount of time then other team resources. Alex's most outstanding strengths are his market research skills as well as willingness to continuously apply deep thinking to the job(s) at hand. Where average resources would settle for a routine, Alex would happily look for out of the box thinking ideas to break a pattern (when it makes sense). I highly recommend Alex for any organization looking for a high potential team member that wont settle for the mundane.",
     date: 'October 2022'
   }

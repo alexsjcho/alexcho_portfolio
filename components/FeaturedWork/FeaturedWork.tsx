@@ -141,7 +141,7 @@ export default function FeaturedWork() {
             Featured Work
           </h2>
           <p className="text-lg text-muted-foreground max-w-6xl mb-6">
-            A selection of product or GTM initiatives that showcase strategic thinking, user empathy, and measurable results.
+            A selection of product or GTM initiatives that showcase strategic thinking, user empathy, and measurable results. Along with work examples artifacts. 
           </p>
           <div className="mb-8 w-64 mx-auto">
             <Select value={selectedCompany} onValueChange={handleCompanyChange}>

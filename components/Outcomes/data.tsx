@@ -18,6 +18,7 @@ import {
 import type { OutcomeItem, OutcomeCategory } from './types'
 
 export const ITEMS_PER_PAGE = 3
+export const CAROUSEL_INTERVAL_MS = 5000
 
 // Map categories to icons
 export const categoryIcons: Record<OutcomeCategory, React.ReactNode> = {
