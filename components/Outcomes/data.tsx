@@ -90,7 +90,7 @@ export const outcomesData: OutcomeItem[] = [
     company: 'ByteDance',
     companyTagline: 'Developer Infrastructure',
     category: 'Infrastructure Scaling',
-    description: 'Scaled 0-1 **ByteGate** (feature flag) product that accomplished **10M+ QPS reliability** and **344.80% growth** in active feature gate (221 -> 983) usage, MAU (monthly active users) **increased by ~500%** from ~100 to 600 users by executing an internal evangelism campaigns that onboarded engineering teams from  Toutiao, Lark, Capcut, TikTok Global Ecommerce engineering teams and more.'
+    description: 'Scaled 0-1 **ByteGate** (feature flag) product that accomplished **10M+ QPS reliability** and **344.80% growth** in active feature gate (221 -> 983) usage, MAU (monthly active users) **increased by ~500%** from ~100 to 600 users by executing an internal evangelism campaigns that onboarded engineering teams from  Toutiao, Lark, Capcut, TikTok Global Ecommerce and more.'
   },
   {
     id: 'bytedance-dx',
