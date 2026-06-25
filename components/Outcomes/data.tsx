@@ -53,14 +53,14 @@ export const outcomesData: OutcomeItem[] = [
     company: 'StackGen',
     companyTagline: 'Agentic Infrastructure Platform',
     category: 'Brand Authority & Positioning',
-    description: 'Accomplished a company-wide rebrand to **"Autonomous Infrastructure Platform"** by launching the **"Aiden" product suite**, resulting in a Crunchbase **"heat score" rise to 95**, comparable to industry leaders.'
+    description: 'Accomplished a company-wide rebrand to **"Autonomous Infrastructure Platform"** by launching the 4 Aiden AI Agent products, resulting in a Crunchbase **"heat score" rise to 95**, being featured in **Gartner cool vendor 2025 in 4 categories**, ranking top Autonomous Infrastructure results in GEO/AEO.'
   },
   {
     id: 'stackgen-traffic',
     company: 'StackGen',
     companyTagline: 'Agentic Infrastructure Platform',
     category: 'Organic Traffic Growth',
-    description: 'Accomplished a **55.6% YoY increase** in organic web traffic and **573.6% growth** in total impressions by deploying high-intent SEO content and launching the Aiden marketing playground.'
+    description: 'Drove a **55.6% YoY increase** in organic clicks (2.98K → 8.09K) and **573.6% growth** in total impressions (50.2K → 662K) while improving average search ranking position by **53%** (31.3 → 14.7) through deploying high-intent SEO content, landing pages, blog posts, social media, and email campaigns.'
   },
   {
     id: 'stackgen-pricing',
@@ -76,35 +76,35 @@ export const outcomesData: OutcomeItem[] = [
     company: 'ByteDance',
     companyTagline: 'Developer Infrastructure',
     category: 'Cost Efficiency',
-    description: 'Accomplished an estimated **$10,000,000** in developer cost savings by architecting the 0-to-1 **"Rollout System"** for intent-based IaC deployment, executing **320k+ deployments for TikTok Server Architecture team on new data center deployments**.'
+    description: 'Rollout System (0-1 IaC) product helped TikTok Server Architecture engineering team save an estimated **$10,000,000** in developer cost, 312 days of Developer Time,  **50% reduction** in datacenter bringup timelines (**6 months to 3 months**), and executed **320k+ deployments** on their new data center bringup deployments in Norway region.'
+  },
+  {
+    id: 'bytedance-cost-2',
+    company: 'ByteDance',
+    companyTagline: 'Developer Infrastructure',
+    category: 'Cost Efficiency',
+    description: 'Rollout System (0-1 IaC) product helped Lark PIPO engineering team automated the rollout of 200+ RDS DBs and 9,000+ RDS Tables. Compressed regional timelines from **2 months to 6 days** and slashed headcount demands from **40+ PD to less than 1.5 PD**. Average resource idle time was **reduced by 48 days** per facility (144 idle days saved in total across 3 regions) in Indonesia new data center bringup.'
   },
   {
     id: 'bytedance-scaling',
     company: 'ByteDance',
     companyTagline: 'Developer Infrastructure',
     category: 'Infrastructure Scaling',
-    description: 'Accomplished **10M+ QPS reliability** and **123% growth** in active feature gate usage by executing an internal evangelism sprint that onboarded high-impact units including Toutiao and Global Ecommerce.'
+    description: 'Scaled 0-1 **ByteGate** (feature flag) product that accomplished **10M+ QPS reliability** and **344.80% growth** in active feature gate (221 -> 983) usage, MAU (monthly active users) **increased by ~500%** from ~100 to 600 users by executing an internal evangelism campaigns that onboarded engineering teams from  Toutiao, Lark, Capcut, TikTok Global Ecommerce engineering teams and more.'
   },
   {
     id: 'bytedance-dx',
     company: 'ByteDance',
     companyTagline: 'Developer Infrastructure',
     category: 'Global Developer Experience',
-    description: 'Accomplished a **5x reduction** in page load latency (**10s+ to under 2s**) for international developers by implementing advanced load-balancing, caching, and strategic VPN routing.'
+    description: 'Improved Overseas DevInfra Platform issues by **5x reduction** in page load latency (**10s+ to under 2s**) for international developers by implementing advanced load-balancing, caching, and strategic VPN routing.'
   },
   {
     id: 'bytedance-incident',
     company: 'ByteDance',
     companyTagline: 'Developer Infrastructure',
-    category: 'Incident Resolution',
-    description: 'Accomplished a **24.16% improvement** in ticket resolution rates (**45.3% to 69.5%**) and an **8.35/10 CSAT** by bridging Bits AI troubleshooting context directly into the central Oncall platform.'
-  },
-  {
-    id: 'bytedance-velocity',
-    company: 'ByteDance',
-    companyTagline: 'Developer Infrastructure',
-    category: 'Operational Velocity',
-    description: 'Accomplished a **50% reduction** in datacenter bringup timelines (**6 months to 3 months**) and saved **312+ Person-Days** for business teams by automating the deployment of **4,000+ TCE clusters** for TikTok PIPO engineering team greenfield deployment.'
+    category: 'Global Developer Experience',
+    description: 'Managed the Overseas Product Operations of 17+ modules of DevInfra Platform and accomplished these feats: Improved Ticket Resolution Rates by a **24.16% improvement** (from **45.3% to 69.5%**). Elevated User Satisfaction Score from **7.15 to 8.35** (significantly beating the 7.5 target). Reduced Low-Score Tickets rates by **40.2%** (dropping from **3.89% to 2.78%**).'
   },
 
   // Agora
@@ -113,7 +113,7 @@ export const outcomesData: OutcomeItem[] = [
     company: 'Agora',
     companyTagline: 'Real-Time-Engagement PaaS',
     category: 'Revenue Performance',
-    description: 'Accomplished **128% of the annual revenue target** (**$511K vs $400K goal**) by executing targeted go-to-market strategies and aligning cross-functional teams for SDK/API launches.'
+    description: 'Accomplished **128% of the annual revenue target** (**$511K vs $400K goal**) by executing targeted go-to-market strategies and aligning cross-functional teams for various media solution SDK/API launches.'
   },
   {
     id: 'agora-pricing',
@@ -134,6 +134,6 @@ export const outcomesData: OutcomeItem[] = [
     company: 'Agora',
     companyTagline: 'Real-Time-Engagement PaaS',
     category: 'Competitive Intelligence',
-    description: 'Accomplished a **33% influence rate** on closed-won opportunities by managing a Market Competitive Intelligence program that created battlecards to neutralize regional competitor advantages.'
+    description: 'Accomplished a **33% influence rate** on closed-won opportunities by managing a Market Competitive Intelligence program that created battlecards and technical benchmark assets to influence deals against competitors.'
   }
 ]
