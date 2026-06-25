@@ -109,14 +109,20 @@ export const featuredWorkData: FeaturedWorkItem[] = [
         "[AWS Re:Invent 2025 Booth Design](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=66-5627&t=ytTzZUhCKdxUdLFB-1&scaling=scale-down&content-scaling=fixed&page-id=39%3A10983)",
         "[DevOps 2.0 Mumbai 2026 One Pagers](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-8509&t=mK0B7HcTzptBTM8x-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
         "[DevOps 2.0 Mumbai 2026 Banners](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=53-9961&t=pml3wsmoOpgS76Oa-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
+        "[BackStage Webinar: Tickets Bad! Self-Service Good! Build Developer Infrastructure Portals That Scale](https://drive.google.com/file/d/1LBzH97JnAYucQeQPKOYgf7bbzwn6SN4E/view?usp=sharing)",
+        "[Terraform Webinar: Backstage: Tickets bad! Self-Service Good! Developer Infrastructure Portals That Scale](https://stackgen.com/video-and-webinars/how-to-scale-terraform-with-ai-agents-for-10x-developer-velocity)",
+        "[Aiden Agent Webinar: From Prompt-to-Production Ready Infrastructure ](https://www.youtube.com/watch?v=uokZCz2LKR8)",
+        "[AWS Webinar: Improving AWS Cloud Management Through StackGen AI Agents](https://stackgen.com/videos-and-webinars/improving-aws-cloud-management-through-stackgen-ai-agents)"
 
 
       ],
       impact: [
+          "Drove $2.73M in pipeline generated mainly from in-person events in 2H 2025 and early 2026",
         "KubeCon 2025 - Booked 50 demos",
         "AWS re:Invent 2025 - Booked 91 Demos",
         "DevOps 2.0 Mumbai 2026 - Booked 31 Demos",
-        "Drove $2.73M in pipeline generated mainly from in-person events in 2H 2025 and early 2026"
+        "BackStage Integration Webinar secured 310 registrations and created enterprise LATM banking opportunity",
+        "AWS Webinar help bring in Walmart and Visa enterprise opportunity lead"
       ],
       teamOverview: {
         teamSize: "5+ (I lead as Product Marketing Manager and worked with Product, Solutions, Sales, and external Design & Web Development Agency)",
@@ -153,6 +159,7 @@ export const featuredWorkData: FeaturedWorkItem[] = [
       impact: [
         "Delivered 3 full repositioning cycles in 7 months, each tied to a GTM milestone — product launches and events like KubeCon, AWS re:Invent, and DevOps 2.0 Mumbai",
         "Evolved StackGen's core narrative from Infrastructure as Code (prior to 07/29/2025) tooling to the Autonomous Operations Platform debut at DevOps 2.0 Mumbai (02/25/2026) to position StackGen's Aiden AI Agent as the operational force that replaces manual DevOps workflows at scale ascross all 3 market segments (Infrastructure, DevOps, SRE)",
+        "StackGen was named a 2025 Gartner Cool Vendor in AI for IT Operations and a Sample Vendor in four major Hype Cycle reports in 2025"
       ],
       teamOverview: {
         teamSize: "5+ (I lead as Product Marketing Manager and worked with Product, Solutions, Sales, and external Design & Web Development Agency)",
