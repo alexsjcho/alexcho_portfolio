@@ -393,6 +393,7 @@ export const featuredWorkData: FeaturedWorkItem[] = [
       ],
       contentList: [
         "[Gaming Vertical GTM Doc](https://drive.google.com/file/d/1k8BfJETbn5wQMJJYLXe5MxY-EcyEEAzK/view?usp=sharing)",
+        "[METTRIC qualification framework](https://docs.google.com/document/d/18GnqK5mN-AtrCc8NwXV8EjAuRQSpXa_ZgBdafYVp2wc/edit?usp=sharing)",
       ],
       teamOverview: {
         teamSize: "3 (2 engineers, 1 Product Designer. I helped as PM/PMM on Overseas (non-China) side)",
