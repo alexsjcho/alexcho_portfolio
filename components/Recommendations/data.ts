@@ -8,6 +8,17 @@ export const CAROUSEL_INTERVAL_MS = 5000
 export const recommendationsData: Recommendation[] = [
   // StackGen Recommendations - All Peers
   {
+    id: 'rick-walker',
+    name: 'Rick Walker',
+    title: 'The Next Era of DevOps Is Agentic',
+    company: 'StackGen',
+    relationship: 'Peer',
+    linkedinUrl: 'https://www.linkedin.com/in/rickwalker2/',
+    profileImage: `${getBasePath()}/recommendations/rick-walker-img.png`,
+    text: "I had the pleasure of working with Alex at StackGen, where he was an outstanding partner to our sales organization As Manager of Product Marketing for Agentic DevOps, Alex had a rare ability to take highly complex software engineering concepts and translate them into clear, compelling assets that resonated with technical audiences. Whether it was messaging, visuals, sales collateral, or customer-facing content, his work consistently made difficult ideas easier to understand and easier to communicate. What stood out most was his adaptability. In a fast-moving market, our narrative and positioning often needed to evolve quickly, and Alex never treated that as a burden. He understood the pace and pressure of sales and always showed up with thoughtful, accurate, and timely support. Alex is a strong product marketer, a great cross-functional teammate, and someone I’d be excited to work with again.",
+    date: 'July 2026'
+  },
+  {
     id: 'nikhil-ravindran',
     name: 'Nikhil Ravindran',
     title: 'Product Manager at StackGen | Building AI Agents for Autonomous Infrastructure',
