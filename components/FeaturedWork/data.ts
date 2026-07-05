@@ -155,6 +155,7 @@ export const featuredWorkData: FeaturedWorkItem[] = [
         "[07/29/2025 One Pagers](https://www.figma.com/proto/qEPSOnfWhm3Qbd4RQWOAWc/alexcho-design-example?node-id=42-12053&t=2dtpPoZrR7pA3cMd-1&scaling=min-zoom&content-scaling=fixed&page-id=39%3A10983)",
         "[KubeCon 11/10/2025 Website Repositioning ](https://drive.google.com/file/d/13TJjZN6wSXHkb67PXquhEQJJi1EBOPUd/view?usp=sharing)",
         "[DevOps 2.0 Mumbai 2026 Website Repositioning](https://drive.google.com/file/d/1hLo6zPDFrNGWMFnB5RwtNkFKA-jn-ftm/view?usp=sharing)",
+         "[Repositioning & Messaging Q2 2026](https://docs.google.com/document/d/1Q22AzNszxBuNGV9fQzgXdq_ZBP72TCBDUChaIewaKNU/edit?usp=sharing)",
       ],
       impact: [
         "Delivered 3 full repositioning cycles in 7 months, each tied to a GTM milestone — product launches and events like KubeCon, AWS re:Invent, and DevOps 2.0 Mumbai",
