@@ -223,7 +223,8 @@ export const featuredWorkData: FeaturedWorkItem[] = [
       { label: "user feedback resolution", value: "+25% (50% → 75%, goal: 60%)" },
       { label: "on-call low score reduction", value: "-28.53% (3.89% → 2.78%, goal: <5%)" },
     ],
-
+    video: 'https://drive.google.com/file/d/1GotzTXtNO6rA_wJTUdmFjTjG4FwExb-9/view?usp=drive_link',
+    document: 'https://drive.google.com/file/d/1vhsloAN-kQ00VnjDcLDtZQ72alKzCz7G/view?usp=drive_link',
     description: "A product operations and developer experience (DX) transformation initiative for ByteDance’s Overseas DevInfra Platform, focused on improving reliability, feedback resolution, and satisfaction across 17+ DevOps and infrastructure tools used by global engineering teams outside China.",
 
     skills: [
@@ -246,6 +247,12 @@ export const featuredWorkData: FeaturedWorkItem[] = [
         "Raised user feedback resolution rate by +25%, significantly surpassing the original goal",
         "Reduced on-call low-score incidents by 28.53%, bringing reliability well within acceptable thresholds",
         "Established a repeatable product operations framework for overseas DevInfra teams, improving long-term scalability and transparency"
+      ],
+            contentList: [
+        "[Oncall SLA for Special Region Improvement Doc](https://drive.google.com/file/d/1vhsloAN-kQ00VnjDcLDtZQ72alKzCz7G/view?usp=sharing)",
+        "[DevInfra Platform New Dev Hire Course Outline](https://drive.google.com/file/d/1qVUL0tudx-PeQCVo_c9D60BAD7IfnccD/view?usp=sharing)",
+                "[DevInfra Server Side Module Tutorial](https://drive.google.com/file/d/1GotzTXtNO6rA_wJTUdmFjTjG4FwExb-9/view?usp=sharing)",
+
       ],
       teamOverview: {
         teamSize: "Varies (Depending on the platform team, it can range from  5-50 Product & RD teammates. I acted as the Overseas Product Operations Manager)",
