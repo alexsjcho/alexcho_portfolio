@@ -3,8 +3,8 @@ import type { FeaturedWorkItem } from './types'
 
 export const featuredWorkData: FeaturedWorkItem[] = [
   {
-    id: 'stackgen-pricing-strategy',
-    title: "StackGen Pricing Strategy",
+    id: 'stackgen-pricing-competitive-strategy',
+    title: "StackGen Pricing & Competitive Strategy",
     date: "01/25/2026",
     category: ['GTM', 'Product', 'DevOps', 'Pricing'],
     company: 'StackGen',
@@ -35,6 +35,7 @@ export const featuredWorkData: FeaturedWorkItem[] = [
         "[Product Bundling Pricing Calculator](https://docs.google.com/spreadsheets/d/1ORNb2pmk0pfTPh8rqop_T-OYvMhtVrp0/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
         "[Aiden for SRE Pricing Model Comparison](https://docs.google.com/spreadsheets/d/1XF39YVcJpgeG1IFhcqqrDqNowBmZdG4x/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
         "[Aiden for SRE RUM, User, Incident, AI SRE Instance Pricing Model](https://docs.google.com/spreadsheets/d/1YfExHh0Ij-iO8-1HWV89BpnMt_PBtToM/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
+        "[Aiden AI SRE Competitor Comparison](https://docs.google.com/spreadsheets/d/1Df47q98CC8l1XmjhJBx70Hl9_ILOI69n/edit?usp=sharing&ouid=113584550925046374551&rtpof=true&sd=true)",
 
       ],
       teamOverview: {
