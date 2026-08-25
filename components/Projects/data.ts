@@ -121,6 +121,15 @@ export const projectsData: Project[] = [
     tools: ['Cursor', 'Claude Code', 'Next.js'],
     dateAdded: '2026-03-18',
   },
+  {
+    title: 'DigitalOcean Infra Advisor demo',
+    description: 'Take home assignment to create something using DigitalOcean Serverless Inference API and other related products for developers',
+    image: `${getBasePath()}/projects_img/digitalocean-demo.png`,
+    category: ['Infrastructure'],
+    repo: 'https://github.com/alexsjcho/digitalocean-demo-2',
+    tools: ['Copilot', 'Claude Code', 'Serverless Inference API', 'DigitalOcean Marketplace API', 'Droplet API', 'Express.js', 'HTML', 'CSS', 'JavaScript'],
+    dateAdded: '2026-08-25',
+  },
 
 
 ]
