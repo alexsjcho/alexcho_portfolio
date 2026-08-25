@@ -127,7 +127,7 @@ export const projectsData: Project[] = [
     image: `${getBasePath()}/projects_img/digitalocean-demo.png`,
     category: ['Infrastructure'],
     repo: 'https://github.com/alexsjcho/digitalocean-demo-2',
-    tools: ['Copilot', 'Claude Code', 'Serverless Inference API', 'DigitalOcean Marketplace API', 'Droplet API', 'Express.js', 'HTML', 'CSS', 'JavaScript'],
+    tools: ['Copilot', 'Claude Code', 'DigitalOcean', 'Express.js', 'HTML', 'CSS', 'JavaScript'],
     dateAdded: '2026-08-25',
   },
 
