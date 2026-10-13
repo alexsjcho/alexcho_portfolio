@@ -3,6 +3,45 @@ import type { FeaturedWorkItem } from './types'
 
 export const featuredWorkData: FeaturedWorkItem[] = [
   {
+    id: 'forge-builder-persona-gtm',
+    title: "Forge Builder Persona GTM",
+    date: "10/13/2026",
+    category: ['GTM', 'Product', 'DevOps'],
+    company: 'Opsera',
+    image: `${getBasePath()}/featuredwork_img/forge-builder-page.png`,
+    metrics: [
+      { label: "Website Traffic", value: "To be tracked" },
+      { label: "Email Campaign CTR", value: "To be tracked" },
+      { label: "Design Partner Requests", value: "To be tracked" }
+    ],
+    description: "Worked as a part-time contractor Product Marketing Manager tasked to test Forge GTM of new user segmentation of Product Managers and their potential role evolution into Full Stack Builders (product, design, and engineering).",
+    skills: ['Content Marketing', 'Positioning & Messaging', 'Video creation', 'Social', 'Demand generation', 'Opportunity qualification', 'Landing page design', 'User interviews'],
+    website: 'https://alexsjcho.github.io/op-forge-builder-page/',
+    caseStudy: {
+      problem: "Opsera’s top-of-funnel lead generation pipeline and revenue forecast were below target expectations in FY Q1 2027, creating a need to test other avenues for generating lead opportunities.",
+      solution: "Defined the Builder and the evolved PM as two clear personas, anchored on one idea: the person who ships the first working version, not just the doc. Built a Messaging House around three value pillars: AI speed with governance built in, context that never expires, and original intent enforced at every SDLC stage. Translated Forge into PM terms, explaining Living Specs, Work Orders, and ForgeScore as “your PRD becomes the thing agents build from,” backed by proof like 70% faster delivery and 100% traceability. Created persona-specific content and PLG experiences, including blogs, web pages, thought leadership, and playgrounds that let a PM see a PRD turn into a governed prototype. Enabled Sales with a Builder qualification framework by adapting METTRIC with PM-specific discovery questions, stakeholder maps, and common blockers, so reps could run real conversations with PMs and the engineering and security leaders around them.",
+      impact: [
+        "Built the Builder persona from scratch as a single audience: part Product Manager, part UX/UI designer, and part frontend and backend engineer",
+        "Shipped 20+ content assets across web, blog, social, and video, all mapped to the Forge narrative of AI speed with enterprise control"
+      ],
+      contentList: [
+        "[Forge Builder landing page (prototype)](https://alexsjcho.github.io/op-forge-builder-page/)",
+        "[Opsera Forge for Builder Positioning & Messaging](https://docs.google.com/document/d/1gZA74VjbW47UxhczUB4N_5tatsLb8ejwoPEo2ppKMhk/edit?usp=sharing)",
+        "[(Video) Voice of Builders - Dealing with requirement changes](https://drive.google.com/file/d/1imfiBCpf4nPev2cvK2jMPwwBJETsT8Tg/view?usp=sharing)",
+        "[(Video) Voice of Builders - Dealing with visibility gap](https://drive.google.com/file/d/1IdJaXts60zqY6JJF2Y2RxZ3dAPluuPNf/view?usp=sharing)",
+        "[(Video) Voice of Builders - Dealing with rework](https://drive.google.com/file/d/1_ga_6T6tgxoIsaTV2hxgyQOa2_Urh-t1/view?usp=sharing)",
+        "[(Video) Voice of Builders - Dealing with Compliance](https://drive.google.com/file/d/1LL_v-5qzBxnNy2SK5bcGJoITzGzRi-XS/view?usp=sharing)",
+        "[(Video) Forge for Builder social launch](https://drive.google.com/file/d/1u4AKR8J4P5ock4xiZoUSoF4QocB8my-O/view?usp=sharing)",
+        "[Forge Builder launch video](https://drive.google.com/file/d/1EpoiLp4Kyhjizg_IIqHQXVvVinXet7fB/view?usp=sharing)"
+      ],
+      teamOverview: {
+        teamSize: "3+. Mainly solo Product Marketing Manager creating strategy and content deliverables, working with Opsera marketing team members from Demand Generation, Events, Website, and Social to launch assets",
+        scope: "Marketing asset support across blog, website, and social. Target personas: Product Managers, Technical Program Managers, and Product Designers",
+        keyStakeholders: ["Product Managers", "Technical Program Managers", "Product Designers"]
+      }
+    }
+  },
+  {
     id: 'stackgen-pricing-competitive-strategy',
     title: "StackGen Pricing & Competitive Strategy",
     date: "01/25/2026",
