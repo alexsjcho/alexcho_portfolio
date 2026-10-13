@@ -41,7 +41,7 @@ export const featuredWorkData: FeaturedWorkItem[] = [
       ],
       teamOverview: {
         teamSize: "3+. Mainly solo Product Marketing Manager creating strategy and content deliverables, working with Opsera marketing team members from Demand Generation, Events, Website, and Social to launch assets",
-        scope: "Marketing asset support across blog, website, and social.
+        scope: "Marketing asset support across blog, website, and social",
         keyStakeholders: ["Product Managers", "Technical Program Managers", "Product Designers"]
       }
     }
