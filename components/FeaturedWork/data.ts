@@ -19,12 +19,13 @@ export const featuredWorkData: FeaturedWorkItem[] = [
     website: 'https://alexsjcho.github.io/op-forge-builder-page/',
     caseStudy: {
       problem: "Opsera’s top-of-funnel lead generation pipeline and revenue forecast were below target expectations in FY Q1 2027, creating a need to test other avenues for generating lead opportunities.",
-      solution: "Defined the Builder and the evolved PM as two clear personas, anchored on one idea: the person who ships the first working version, not just the doc. Built a Messaging House around three value pillars: AI speed with governance built in, context that never expires, and original intent enforced at every SDLC stage. Translated Forge into PM terms, explaining Living Specs, Work Orders, and ForgeScore as “your PRD becomes the thing agents build from,” backed by proof like 70% faster delivery and 100% traceability. Created persona-specific content and PLG experiences, including blogs, web pages, thought leadership, and playgrounds that let a PM see a PRD turn into a governed prototype. Enabled Sales with a Builder qualification framework by adapting METTRIC with PM-specific discovery questions, stakeholder maps, and common blockers, so reps could run real conversations with PMs and the engineering and security leaders around them.",
+      solution: "Defined the Builder and anchored on one idea: the person who ships the first working version, not just the doc. Built a Messaging House around four value pillars: Work Orders that carry spec intent, shared context across Product, Design, and Engineering, faster releases with reduced rework, and compliance checked at generation time. Conducted 10+ product manager user interviews to validate Forge pain pillars for Opsera Forge and created the Voice of the Builders social video series. Created persona-specific content including blogs, web pages, thought leadership, and playgrounds that let a PM see a PRD turn into a governed prototype. Enabled Sales with a Builder qualification framework by adapting METTRIC with PM-specific discovery questions, stakeholder maps, and common blockers, so reps could run real conversations with PMs and the engineering and security leaders around them.",
       impact: [
         "Built the Builder persona from scratch as a single audience: part Product Manager, part UX/UI designer, and part frontend and backend engineer",
         "Shipped 20+ content assets across web, blog, social, and video, all mapped to the Forge narrative of AI speed with enterprise control"
       ],
       contentList: [
+         "[Forge Builder Opportunity Qualification framework](https://docs.google.com/document/d/15EqBPFTLIa-P5Ffcc0wmh38fiQ5vAT9gtGdh1SlQ7_Y/edit?usp=sharing)",
         "[Forge Builder landing page (prototype)](https://alexsjcho.github.io/op-forge-builder-page/)",
         "[Opsera Forge for Builder Positioning & Messaging](https://docs.google.com/document/d/1gZA74VjbW47UxhczUB4N_5tatsLb8ejwoPEo2ppKMhk/edit?usp=sharing)",
         "[(Video) Voice of Builders - Dealing with requirement changes](https://drive.google.com/file/d/1imfiBCpf4nPev2cvK2jMPwwBJETsT8Tg/view?usp=sharing)",
@@ -32,7 +33,11 @@ export const featuredWorkData: FeaturedWorkItem[] = [
         "[(Video) Voice of Builders - Dealing with rework](https://drive.google.com/file/d/1_ga_6T6tgxoIsaTV2hxgyQOa2_Urh-t1/view?usp=sharing)",
         "[(Video) Voice of Builders - Dealing with Compliance](https://drive.google.com/file/d/1LL_v-5qzBxnNy2SK5bcGJoITzGzRi-XS/view?usp=sharing)",
         "[(Video) Forge for Builder social launch](https://drive.google.com/file/d/1u4AKR8J4P5ock4xiZoUSoF4QocB8my-O/view?usp=sharing)",
-        "[Forge Builder launch video](https://drive.google.com/file/d/1EpoiLp4Kyhjizg_IIqHQXVvVinXet7fB/view?usp=sharing)"
+        "[(Video) Forge Builder launch](https://drive.google.com/file/d/1EpoiLp4Kyhjizg_IIqHQXVvVinXet7fB/view?usp=sharing)",
+        "[Forge Builder Modernization brochure](https://drive.google.com/file/d/1wTVpsG1JZzoOGgQn0JtkXxA5m9ys74AA/view?usp=sharing)",
+        "[Forge Builder Persona brochure](https://drive.google.com/file/d/1ZvzuB2Z5X-dxb8eVCFBcnr0dYYrlFXxi/view?usp=sharing)",
+        "[Forge Builder Blog Series](https://alexsjcho.github.io/op-forge-builder-blogs/)"
+       
       ],
       teamOverview: {
         teamSize: "3+. Mainly solo Product Marketing Manager creating strategy and content deliverables, working with Opsera marketing team members from Demand Generation, Events, Website, and Social to launch assets",
